@@ -6,7 +6,7 @@
 
 /*
  * Design system — Elisa Piovan Trainer / EP Team
- * Dark-only luxury palette: deep graphite, champagne gold, crisp white.
+ * Dark-only palette: deep graphite, rose-mauve accent, crisp white, silver gray.
  * Typography: Montserrat (display), Inter (body) — loaded via <link> in __root.tsx.
  */
 
@@ -42,47 +42,50 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-gold: var(--gold);
-  --color-gold-bright: var(--gold-bright);
-  --color-gold-muted: var(--gold-muted);
+  --color-rose: var(--rose);
+  --color-rose-bright: var(--rose-bright);
+  --color-rose-muted: var(--rose-muted);
 }
 
 :root {
   --radius: 0.625rem;
 
   /* Deep graphite base (#0F0F11) */
-  --background: oklch(0.152 0.004 264.5);
-  --foreground: oklch(0.985 0.002 247.8);
+  --background: #0f0f11;
+  --foreground: #ffffff;
 
   --card: oklch(0.185 0.005 264.5);
-  --card-foreground: oklch(0.985 0.002 247.8);
+  --card-foreground: #ffffff;
   --popover: oklch(0.185 0.005 264.5);
-  --popover-foreground: oklch(0.985 0.002 247.8);
+  --popover-foreground: #ffffff;
 
-  /* Champagne gold accent (#D4AF37) */
-  --gold: oklch(0.779 0.131 84.5);
-  --gold-bright: oklch(0.87 0.129 89);
-  --gold-muted: oklch(0.779 0.131 84.5 / 0.35);
+  /* Rose-mauve accent (#D29BB6) */
+  --rose: #d29bb6;
+  --rose-bright: #e6bcd1;
+  --rose-deep: #c2869f;
+  --rose-muted: color-mix(in srgb, var(--rose) 35%, transparent);
+  --rose-glow: color-mix(in srgb, var(--rose) 22%, transparent);
+  --rose-glow-strong: color-mix(in srgb, var(--rose) 38%, transparent);
 
-  --primary: var(--gold);
+  --primary: var(--rose);
   --primary-foreground: oklch(0.17 0.012 264.5);
 
   --secondary: oklch(0.22 0.006 264.5);
-  --secondary-foreground: oklch(0.985 0.002 247.8);
+  --secondary-foreground: #ffffff;
 
   --muted: oklch(0.22 0.006 264.5);
-  /* Soft light-gray body copy (#A1A1AA) */
-  --muted-foreground: oklch(0.712 0.013 261);
+  /* Silver gray body copy (#9E9D9F) */
+  --muted-foreground: #9e9d9f;
 
   --accent: oklch(0.22 0.006 264.5);
-  --accent-foreground: oklch(0.985 0.002 247.8);
+  --accent-foreground: #ffffff;
 
   --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.985 0.002 247.8);
+  --destructive-foreground: #ffffff;
 
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 14%);
-  --ring: var(--gold);
+  --ring: var(--rose);
 }
 
 @layer base {
@@ -103,7 +106,7 @@
   }
 
   ::selection {
-    background-color: var(--gold);
+    background-color: var(--rose);
     color: var(--primary-foreground);
   }
 }
@@ -172,8 +175,8 @@
 @utility hero-glow {
   background: radial-gradient(
     ellipse 60% 42% at 50% 0%,
-    oklch(0.779 0.131 84.5 / 0.16) 0%,
-    oklch(0.779 0.131 84.5 / 0.05) 45%,
+    color-mix(in srgb, var(--rose) 16%, transparent) 0%,
+    color-mix(in srgb, var(--rose) 5%, transparent) 45%,
     transparent 72%
   );
 }
@@ -181,26 +184,26 @@
 @utility floor-glow {
   background: radial-gradient(
     ellipse 55% 38% at 50% 100%,
-    oklch(0.779 0.131 84.5 / 0.08) 0%,
+    color-mix(in srgb, var(--rose) 8%, transparent) 0%,
     transparent 70%
   );
 }
 
-@utility hairline-gold {
+@utility hairline-rose {
   background: linear-gradient(
     90deg,
     transparent 0%,
-    oklch(0.779 0.131 84.5 / 0.7) 50%,
+    color-mix(in srgb, var(--rose) 70%, transparent) 50%,
     transparent 100%
   );
 }
 
-@utility text-gold-gradient {
+@utility text-rose-gradient {
   background: linear-gradient(
     100deg,
-    oklch(0.7 0.118 80) 0%,
-    oklch(0.87 0.129 89) 45%,
-    oklch(0.72 0.121 82) 100%
+    var(--rose-deep) 0%,
+    var(--rose-bright) 45%,
+    var(--rose-deep) 100%
   );
   -webkit-background-clip: text;
   background-clip: text;
