@@ -128,10 +128,10 @@ function MaintenancePage() {
       <main className="relative z-10 flex flex-1 flex-col items-center justify-center px-6 py-20 text-center">
         {/* Tagline badge */}
         <div className="animate-rise" style={{ animationDelay: "0.05s" }}>
-          <span className="inline-flex items-center gap-2.5 rounded-full border border-gold-muted px-5 py-2 font-display text-[0.65rem] font-semibold tracking-[0.28em] text-gold uppercase">
+          <span className="inline-flex items-center gap-2.5 rounded-full border border-rose-muted px-5 py-2 font-display text-[0.65rem] font-semibold tracking-[0.28em] text-rose uppercase">
             <span
               aria-hidden="true"
-              className="h-1 w-1 rounded-full bg-gold shadow-[0_0_8px_var(--gold)]"
+              className="h-1 w-1 rounded-full bg-rose shadow-[0_0_8px_var(--rose)]"
             />
             Elisa Piovan Trainer&nbsp;|&nbsp;EP Team
           </span>
@@ -143,13 +143,13 @@ function MaintenancePage() {
           style={{ animationDelay: "0.18s" }}
         >
           Coaching Online e Personal Training{" "}
-          <span className="text-gold-gradient">al Femminile</span>
+          <span className="text-rose-gradient">al Femminile</span>
         </h1>
 
         {/* Hairline */}
         <div
           aria-hidden="true"
-          className="hairline-gold animate-hairline mt-10 h-px w-40 sm:w-56"
+          className="hairline-rose animate-hairline mt-10 h-px w-40 sm:w-56"
           style={{ animationDelay: "0.55s" }}
         />
 
@@ -172,7 +172,7 @@ function MaintenancePage() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex w-full items-center justify-center gap-3 rounded-full bg-primary px-8 py-4 font-display text-sm font-bold tracking-wide text-primary-foreground uppercase shadow-[0_0_40px_oklch(0.779_0.131_84.5/0.22)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-gold-bright hover:shadow-[0_0_56px_oklch(0.779_0.131_84.5/0.38)] focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none sm:w-auto"
+            className="group inline-flex w-full items-center justify-center gap-3 rounded-full bg-primary px-8 py-4 font-display text-sm font-bold tracking-wide text-primary-foreground uppercase shadow-[0_0_40px_var(--rose-glow)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-rose-bright hover:shadow-[0_0_56px_var(--rose-glow-strong)] focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none sm:w-auto"
           >
             <WhatsAppIcon className="h-5 w-5" />
             Contattaci su WhatsApp
@@ -181,9 +181,9 @@ function MaintenancePage() {
             href={INSTAGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex w-full items-center justify-center gap-3 rounded-full border border-foreground/20 bg-foreground/[0.02] px-8 py-4 font-display text-sm font-bold tracking-wide text-foreground uppercase backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-gold-muted hover:text-gold focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none sm:w-auto"
+            className="group inline-flex w-full items-center justify-center gap-3 rounded-full border border-foreground/20 bg-foreground/[0.02] px-8 py-4 font-display text-sm font-bold tracking-wide text-foreground uppercase backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-rose-muted hover:text-rose focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none sm:w-auto"
           >
-            <Instagram className="h-5 w-5 transition-colors duration-300 group-hover:text-gold" />
+            <Instagram className="h-5 w-5 transition-colors duration-300 group-hover:text-rose" />
             Seguici su Instagram
             <ArrowUpRight className="h-4 w-4 opacity-40 transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:opacity-100" />
           </a>
@@ -197,7 +197,7 @@ function MaintenancePage() {
       >
         <div
           aria-hidden="true"
-          className="hairline-gold mx-auto mb-8 h-px w-24 opacity-40"
+          className="hairline-rose mx-auto mb-8 h-px w-24 opacity-40"
         />
         <p className="text-sm text-muted-foreground">
           © 2026 Elitrainer — Tutti i diritti riservati.
