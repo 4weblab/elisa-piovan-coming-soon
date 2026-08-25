@@ -4,9 +4,9 @@ import { Instagram, ArrowUpRight } from "lucide-react";
 const SITE_URL = "https://elitrainer.it";
 const LOGO_URL = "https://elitrainer.it/Eli-trainer-logo_png.png";
 const PAGE_TITLE =
-  "Coaching Online e Personal Training al Femminile | Elisa Piovan Trainer";
+  "Coaching Online e Personal Training | Elisa Piovan Trainer";
 const PAGE_DESCRIPTION =
-  "Il sito ufficiale di Elisa Piovan Trainer ed EP Team è attualmente in fase di rinnovo. I percorsi di coaching e personal training al femminile rimangono attivi via WhatsApp e Instagram.";
+  "Sito ufficiale di Elisa Piovan Trainer ed EP Team in rinnovo. I percorsi di coaching e personal training al femminile rimangono attivi via WhatsApp.";
 
 const WHATSAPP_URL =
   "https://wa.me/393278840255?text=Ciao%20Elisa,%20vorrei%20informazioni%20sui%20percorsi%20di%20coaching";
