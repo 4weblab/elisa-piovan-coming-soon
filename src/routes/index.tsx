@@ -206,7 +206,16 @@ function MaintenancePage() {
           P.IVA 05509730288
         </p>
         <p className="mt-4 text-[0.7rem] tracking-wider text-muted-foreground/50 uppercase">
-          Sito temporaneamente in manutenzione programmatica.
+          Rinnovo digitale a cura di{" "}
+          <a
+            href="https://4weblab.it"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted-foreground/70 underline decoration-rose-muted/40 underline-offset-2 transition-colors duration-300 hover:text-rose hover:decoration-rose"
+          >
+            4 Web Lab
+          </a>{" "}
+          — Siti web, SEO e ADS per il tuo business.
         </p>
       </footer>
     </div>
