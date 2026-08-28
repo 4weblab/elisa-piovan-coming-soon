@@ -6,9 +6,9 @@ import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import { INSTAGRAM_URL, SITE_URL, WHATSAPP_URL } from "@/lib/site";
 
 const PAGE_TITLE =
-  "Coaching Online e Personal Training al Femminile | Elisa Piovan Trainer";
+  "Coaching Online e Personal Trainer Padova | Elisa Piovan";
 const PAGE_DESCRIPTION =
-  "Scopri il metodo di Elisa Piovan e dell'EP Team. Percorsi di allenamento femminile, nutrizione personalizzata e supporto psicologico. Contattaci su WhatsApp.";
+  "Personal training e coaching online al femminile a Padova. Allenamento, nutrizione e benessere con Elisa Piovan Trainer. Contattaci su WhatsApp.";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -151,7 +151,7 @@ function HomePage() {
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             className="font-display text-[0.7rem] font-semibold tracking-[0.28em] text-muted-foreground uppercase"
           >
-            Elisa Piovan Trainer — EP Team
+            ELISA PIOVAN TRAINER | PADOVA & ONLINE
           </motion.p>
 
           <motion.h1
@@ -164,7 +164,7 @@ function HomePage() {
             }}
             className="mt-6 max-w-3xl text-4xl leading-[1.08] font-extrabold tracking-tight text-balance sm:text-5xl md:text-6xl"
           >
-            Trasforma il tuo corpo, riscopri la tua forza.
+            Coaching Online e Personal Training al Femminile a Padova
           </motion.h1>
 
           <motion.p
@@ -177,8 +177,9 @@ function HomePage() {
             }}
             className="mt-6 max-w-xl text-base leading-relaxed text-pretty text-muted-foreground sm:text-lg"
           >
-            Percorsi di Personal Training, Nutrizione e Benessere Psicologico al
-            femminile con Elisa Piovan e l'EP Team.
+            Elisa Piovan Trainer ed EP Team offrono percorsi integrati di
+            allenamento personalizzato, nutrizione e supporto psicologico per
+            donne a Padova, Noventa Padovana e online.
           </motion.p>
 
           <motion.div
@@ -216,12 +217,13 @@ function HomePage() {
         <div className="mx-auto max-w-6xl px-6 py-24">
           <Reveal>
             <h2 className="max-w-2xl text-3xl font-bold tracking-tight text-balance sm:text-4xl">
-              Un metodo integrato per il benessere femminile
+              Il Metodo Integrato per il Benessere Femminile
             </h2>
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-pretty text-muted-foreground">
-              Non solo allenamento. EP Team unisce fitness, nutrizione
-              personalizzata e supporto psicologico per garantirti risultati
-              reali e duraturi.
+              EP Team unisce personal training al femminile, piani alimentari
+              personalizzati e supporto per la gestione dello stress. Un
+              approccio scientifico e olistico per risultati reali e sostenibili
+              nel tempo.
             </p>
           </Reveal>
 
@@ -287,8 +289,8 @@ function HomePage() {
               Storie di Successo
             </h2>
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-pretty text-muted-foreground">
-              Percorsi reali, costruiti sulla costanza: cambiamenti di forza,
-              postura e mentalità prima ancora che di aspetto.
+              Risultati reali di donne che hanno trasformato il proprio stile di
+              vita con il coaching di Elisa Piovan.
             </p>
           </Reveal>
 
