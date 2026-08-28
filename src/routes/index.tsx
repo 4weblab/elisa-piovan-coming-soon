@@ -34,6 +34,39 @@ const jsonLd = {
     contactType: "customer service",
     availableLanguage: "Italian",
   },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5",
+    bestRating: "5",
+    worstRating: "1",
+    reviewCount: 3,
+  },
+  review: [
+    {
+      "@type": "Review",
+      name: "Evoluzione Tecnica",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      author: { "@type": "Person", name: "Cliente EP Team" },
+      reviewBody:
+        "Ho imparato ad allenarmi con costanza senza l'ossessione della bilancia, migliorando forza e postura.",
+    },
+    {
+      "@type": "Review",
+      name: "Mindset & Nutrizione",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      author: { "@type": "Person", name: "Cliente EP Team" },
+      reviewBody:
+        "Un percorso che ha stravolto il mio rapporto con il cibo e con lo specchio. Finalmente mi sento forte.",
+    },
+    {
+      "@type": "Review",
+      name: "Forza e Costanza",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      author: { "@type": "Person", name: "Cliente EP Team" },
+      reviewBody:
+        "L'approccio integrato ha fatto la differenza. I risultati estetici sono stati la naturale conseguenza del mio benessere mentale.",
+    },
+  ],
 };
 
 export const Route = createFileRoute("/")({
