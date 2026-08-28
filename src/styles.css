@@ -6,12 +6,12 @@
 
 /*
  * Design system — Elisa Piovan Trainer / EP Team
- * Dark-only palette: deep graphite, rose-mauve accent, crisp white, silver gray.
- * Typography: Montserrat (display), Inter (body) — loaded via <link> in __root.tsx.
+ * Placeholder monochrome palette: pure white, light grays, dark charcoal.
+ * Typography: Inter — loaded via <link> in __root.tsx.
  */
 
 @theme {
-  --font-display: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
 }
 
@@ -22,7 +22,6 @@
   --radius-xl: calc(var(--radius) + 4px);
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
-  --radius-4xl: calc(var(--radius) + 16px);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -42,50 +41,37 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-rose: var(--rose);
-  --color-rose-bright: var(--rose-bright);
-  --color-rose-muted: var(--rose-muted);
 }
 
 :root {
   --radius: 0.625rem;
 
-  /* Deep graphite base (#0F0F11) */
-  --background: #0f0f11;
-  --foreground: #ffffff;
+  --background: #ffffff;
+  --foreground: #16171a;
 
-  --card: oklch(0.185 0.005 264.5);
-  --card-foreground: #ffffff;
-  --popover: oklch(0.185 0.005 264.5);
-  --popover-foreground: #ffffff;
+  --card: #ffffff;
+  --card-foreground: #16171a;
+  --popover: #ffffff;
+  --popover-foreground: #16171a;
 
-  /* Rose-mauve accent (#D29BB6) */
-  --rose: #d29bb6;
-  --rose-bright: #e6bcd1;
-  --rose-deep: #c2869f;
-  --rose-muted: color-mix(in srgb, var(--rose) 35%, transparent);
-  --rose-glow: color-mix(in srgb, var(--rose) 22%, transparent);
-  --rose-glow-strong: color-mix(in srgb, var(--rose) 38%, transparent);
+  --primary: #1a1b1e;
+  --primary-foreground: #ffffff;
 
-  --primary: var(--rose);
-  --primary-foreground: oklch(0.17 0.012 264.5);
+  --secondary: #f4f4f5;
+  --secondary-foreground: #1a1b1e;
 
-  --secondary: oklch(0.22 0.006 264.5);
-  --secondary-foreground: #ffffff;
+  --muted: #f4f4f5;
+  --muted-foreground: #6b6c70;
 
-  --muted: oklch(0.22 0.006 264.5);
-  /* Silver gray body copy (#9E9D9F) */
-  --muted-foreground: #9e9d9f;
-
-  --accent: oklch(0.22 0.006 264.5);
-  --accent-foreground: #ffffff;
+  --accent: #ececee;
+  --accent-foreground: #1a1b1e;
 
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: #ffffff;
 
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 14%);
-  --ring: var(--rose);
+  --border: #e5e5e7;
+  --input: #dedee1;
+  --ring: #1a1b1e;
 }
 
 @layer base {
@@ -106,110 +92,29 @@
   }
 
   ::selection {
-    background-color: var(--rose);
-    color: var(--primary-foreground);
+    background-color: var(--foreground);
+    color: var(--background);
   }
 }
 
-/* ---- Motion: elegant staggered entrance ---- */
+/* ---- Motion ---- */
 
-@keyframes rise {
-  from {
-    opacity: 0;
-    transform: translateY(26px);
-    filter: blur(6px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-    filter: blur(0);
-  }
-}
-
-@keyframes glow-drift {
+@keyframes soft-pulse {
   0%,
   100% {
-    opacity: 0.55;
-    transform: translate(-50%, 0) scale(1);
+    box-shadow: 0 0 0 0 rgb(22 23 26 / 0.25);
   }
   50% {
-    opacity: 0.85;
-    transform: translate(-50%, -2.5%) scale(1.06);
+    box-shadow: 0 0 0 12px rgb(22 23 26 / 0);
   }
 }
 
-@keyframes hairline-sweep {
-  from {
-    transform: scaleX(0);
-    opacity: 0;
-  }
-  to {
-    transform: scaleX(1);
-    opacity: 1;
-  }
-}
-
-@utility animate-rise {
-  animation: rise 1s cubic-bezier(0.22, 1, 0.36, 1) both;
-}
-
-@utility animate-glow-drift {
-  animation: glow-drift 9s ease-in-out infinite;
-}
-
-@utility animate-hairline {
-  transform-origin: center;
-  animation: hairline-sweep 1.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+@utility animate-soft-pulse {
+  animation: soft-pulse 2.6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .animate-rise,
-  .animate-glow-drift,
-  .animate-hairline {
+  .animate-soft-pulse {
     animation: none;
   }
-}
-
-/* ---- Decorative surfaces ---- */
-
-@utility hero-glow {
-  background: radial-gradient(
-    ellipse 60% 42% at 50% 0%,
-    color-mix(in srgb, var(--rose) 16%, transparent) 0%,
-    color-mix(in srgb, var(--rose) 5%, transparent) 45%,
-    transparent 72%
-  );
-}
-
-@utility floor-glow {
-  background: radial-gradient(
-    ellipse 55% 38% at 50% 100%,
-    color-mix(in srgb, var(--rose) 8%, transparent) 0%,
-    transparent 70%
-  );
-}
-
-@utility hairline-rose {
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    color-mix(in srgb, var(--rose) 70%, transparent) 50%,
-    transparent 100%
-  );
-}
-
-@utility text-rose-gradient {
-  background: linear-gradient(
-    100deg,
-    var(--rose-deep) 0%,
-    var(--rose-bright) 45%,
-    var(--rose-deep) 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-@utility grain-overlay {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
 }
