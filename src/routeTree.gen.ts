@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ChiSonoRouteImport } from './routes/chi-sono'
+import { Route as QuizCheFisicoHaiRouteImport } from './routes/quiz-che-fisico-hai'
 import { Route as ServiziRouteImport } from './routes/servizi'
 
 const IndexRoute = IndexRouteImport.update({
@@ -23,6 +24,11 @@ const ChiSonoRoute = ChiSonoRouteImport.update({
   path: '/chi-sono',
   getParentRoute: () => rootRouteImport,
 } as any)
+const QuizCheFisicoHaiRoute = QuizCheFisicoHaiRouteImport.update({
+  id: '/quiz-che-fisico-hai',
+  path: '/quiz-che-fisico-hai',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ServiziRoute = ServiziRouteImport.update({
   id: '/servizi',
   path: '/servizi',
@@ -32,30 +38,34 @@ const ServiziRoute = ServiziRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/chi-sono': typeof ChiSonoRoute
+  '/quiz-che-fisico-hai': typeof QuizCheFisicoHaiRoute
   '/servizi': typeof ServiziRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/chi-sono': typeof ChiSonoRoute
+  '/quiz-che-fisico-hai': typeof QuizCheFisicoHaiRoute
   '/servizi': typeof ServiziRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/chi-sono': typeof ChiSonoRoute
+  '/quiz-che-fisico-hai': typeof QuizCheFisicoHaiRoute
   '/servizi': typeof ServiziRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/chi-sono' | '/servizi'
+  fullPaths: '/' | '/chi-sono' | '/quiz-che-fisico-hai' | '/servizi'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/chi-sono' | '/servizi'
-  id: '__root__' | '/' | '/chi-sono' | '/servizi'
+  to: '/' | '/chi-sono' | '/quiz-che-fisico-hai' | '/servizi'
+  id: '__root__' | '/' | '/chi-sono' | '/quiz-che-fisico-hai' | '/servizi'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ChiSonoRoute: typeof ChiSonoRoute
+  QuizCheFisicoHaiRoute: typeof QuizCheFisicoHaiRoute
   ServiziRoute: typeof ServiziRoute
 }
 
@@ -75,6 +85,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ChiSonoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/quiz-che-fisico-hai': {
+      id: '/quiz-che-fisico-hai'
+      path: '/quiz-che-fisico-hai'
+      fullPath: '/quiz-che-fisico-hai'
+      preLoaderRoute: typeof QuizCheFisicoHaiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/servizi': {
       id: '/servizi'
       path: '/servizi'
@@ -88,6 +105,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ChiSonoRoute: ChiSonoRoute,
+  QuizCheFisicoHaiRoute: QuizCheFisicoHaiRoute,
   ServiziRoute: ServiziRoute,
 }
 export const routeTree = rootRouteImport
