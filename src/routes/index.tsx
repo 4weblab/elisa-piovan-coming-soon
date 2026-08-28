@@ -278,6 +278,47 @@ function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Storie di Successo */}
+      <section className="border-t border-border">
+        <div className="mx-auto max-w-6xl px-6 py-24">
+          <Reveal>
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+              Storie di Successo
+            </h2>
+            <p className="mt-5 max-w-2xl text-base leading-relaxed text-pretty text-muted-foreground">
+              Percorsi reali, costruiti sulla costanza: cambiamenti di forza,
+              postura e mentalità prima ancora che di aspetto.
+            </p>
+          </Reveal>
+
+          <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3">
+            {SUCCESS_STORIES.map((story, i) => (
+              <Reveal key={story.tag} delay={i * 0.12} className="h-full">
+                <figure className="flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_60px_-24px_rgb(22_23_26/0.28)]">
+                  <div className="aspect-[4/5] w-full overflow-hidden bg-secondary">
+                    <img
+                      src={story.src}
+                      alt={story.alt}
+                      loading="lazy"
+                      decoding="async"
+                      className="h-full w-full object-cover object-center transition-transform duration-500 hover:scale-[1.03]"
+                    />
+                  </div>
+                  <figcaption className="flex flex-1 flex-col p-8">
+                    <span className="self-start rounded-full border border-border px-3 py-1 font-display text-[0.65rem] font-semibold tracking-[0.18em] text-muted-foreground uppercase">
+                      {story.tag}
+                    </span>
+                    <blockquote className="mt-5 flex-1 text-sm leading-relaxed text-pretty text-muted-foreground">
+                      “{story.quote}”
+                    </blockquote>
+                  </figcaption>
+                </figure>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 }
