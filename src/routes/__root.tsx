@@ -84,15 +84,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Percorsi integrati di personal training, nutrizione e coaching al femminile.",
       },
       { name: "author", content: "Elisa Piovan Trainer" },
-      { property: "og:title", content: "Elisa Piovan Trainer | EP Team" },
-      {
-        property: "og:description",
-        content:
-          "Percorsi integrati di personal training, nutrizione e coaching al femminile.",
-      },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Elisa Piovan Trainer" },
-      { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:locale", content: "it_IT" },
     ],
     links: [
       {
@@ -109,10 +103,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@600;700;800&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap",
       },
     ],
   }),
+
   shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,

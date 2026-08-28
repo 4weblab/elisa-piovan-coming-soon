@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ChiSonoRouteImport } from './routes/chi-sono'
 import { Route as ContattiRouteImport } from './routes/contatti'
+import { Route as CookiePolicyRouteImport } from './routes/cookie-policy'
 import { Route as PartnershipRouteImport } from './routes/partnership'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as QuizCheFisicoHaiRouteImport } from './routes/quiz-che-fisico-hai'
@@ -30,6 +31,11 @@ const ChiSonoRoute = ChiSonoRouteImport.update({
 const ContattiRoute = ContattiRouteImport.update({
   id: '/contatti',
   path: '/contatti',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CookiePolicyRoute = CookiePolicyRouteImport.update({
+  id: '/cookie-policy',
+  path: '/cookie-policy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PartnershipRoute = PartnershipRouteImport.update({
@@ -57,6 +63,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/chi-sono': typeof ChiSonoRoute
   '/contatti': typeof ContattiRoute
+  '/cookie-policy': typeof CookiePolicyRoute
   '/partnership': typeof PartnershipRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/quiz-che-fisico-hai': typeof QuizCheFisicoHaiRoute
@@ -66,6 +73,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/chi-sono': typeof ChiSonoRoute
   '/contatti': typeof ContattiRoute
+  '/cookie-policy': typeof CookiePolicyRoute
   '/partnership': typeof PartnershipRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/quiz-che-fisico-hai': typeof QuizCheFisicoHaiRoute
@@ -76,6 +84,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/chi-sono': typeof ChiSonoRoute
   '/contatti': typeof ContattiRoute
+  '/cookie-policy': typeof CookiePolicyRoute
   '/partnership': typeof PartnershipRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/quiz-che-fisico-hai': typeof QuizCheFisicoHaiRoute
@@ -87,6 +96,7 @@ export interface FileRouteTypes {
     | '/'
     | '/chi-sono'
     | '/contatti'
+    | '/cookie-policy'
     | '/partnership'
     | '/privacy-policy'
     | '/quiz-che-fisico-hai'
@@ -96,6 +106,7 @@ export interface FileRouteTypes {
     | '/'
     | '/chi-sono'
     | '/contatti'
+    | '/cookie-policy'
     | '/partnership'
     | '/privacy-policy'
     | '/quiz-che-fisico-hai'
@@ -105,6 +116,7 @@ export interface FileRouteTypes {
     | '/'
     | '/chi-sono'
     | '/contatti'
+    | '/cookie-policy'
     | '/partnership'
     | '/privacy-policy'
     | '/quiz-che-fisico-hai'
@@ -115,6 +127,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ChiSonoRoute: typeof ChiSonoRoute
   ContattiRoute: typeof ContattiRoute
+  CookiePolicyRoute: typeof CookiePolicyRoute
   PartnershipRoute: typeof PartnershipRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   QuizCheFisicoHaiRoute: typeof QuizCheFisicoHaiRoute
@@ -142,6 +155,13 @@ declare module '@tanstack/react-router' {
       path: '/contatti'
       fullPath: '/contatti'
       preLoaderRoute: typeof ContattiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cookie-policy': {
+      id: '/cookie-policy'
+      path: '/cookie-policy'
+      fullPath: '/cookie-policy'
+      preLoaderRoute: typeof CookiePolicyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/partnership': {
@@ -179,6 +199,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ChiSonoRoute: ChiSonoRoute,
   ContattiRoute: ContattiRoute,
+  CookiePolicyRoute: CookiePolicyRoute,
   PartnershipRoute: PartnershipRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
   QuizCheFisicoHaiRoute: QuizCheFisicoHaiRoute,
