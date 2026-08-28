@@ -82,6 +82,30 @@ const OFFERS = [
   { title: "Offerta 3", text: "Descrizione temporanea 3." },
 ];
 
+const SUCCESS_STORIES = [
+  {
+    src: "/success-1.webp",
+    alt: "Evoluzione posturale e tecnica nel coaching online al femminile",
+    tag: "Evoluzione Tecnica",
+    quote:
+      "Ho imparato ad allenarmi con costanza senza l'ossessione della bilancia, migliorando forza e postura.",
+  },
+  {
+    src: "/success-2.webp",
+    alt: "Miglioramento della composizione corporea e mindset",
+    tag: "Mindset & Nutrizione",
+    quote:
+      "Un percorso che ha stravolto il mio rapporto con il cibo e con lo specchio. Finalmente mi sento forte.",
+  },
+  {
+    src: "/success-3.webp",
+    alt: "Risultati fitness e benessere olistico femminile",
+    tag: "Forza e Costanza",
+    quote:
+      "L'approccio integrato ha fatto la differenza. I risultati estetici sono stati la naturale conseguenza del mio benessere mentale.",
+  },
+];
+
 function HomePage() {
   return (
     <>
