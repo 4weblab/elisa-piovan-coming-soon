@@ -34,6 +34,39 @@ const jsonLd = {
     contactType: "customer service",
     availableLanguage: "Italian",
   },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5",
+    bestRating: "5",
+    worstRating: "1",
+    reviewCount: 3,
+  },
+  review: [
+    {
+      "@type": "Review",
+      name: "Evoluzione Tecnica",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      author: { "@type": "Person", name: "Cliente EP Team" },
+      reviewBody:
+        "Ho imparato ad allenarmi con costanza senza l'ossessione della bilancia, migliorando forza e postura.",
+    },
+    {
+      "@type": "Review",
+      name: "Mindset & Nutrizione",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      author: { "@type": "Person", name: "Cliente EP Team" },
+      reviewBody:
+        "Un percorso che ha stravolto il mio rapporto con il cibo e con lo specchio. Finalmente mi sento forte.",
+    },
+    {
+      "@type": "Review",
+      name: "Forza e Costanza",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      author: { "@type": "Person", name: "Cliente EP Team" },
+      reviewBody:
+        "L'approccio integrato ha fatto la differenza. I risultati estetici sono stati la naturale conseguenza del mio benessere mentale.",
+    },
+  ],
 };
 
 export const Route = createFileRoute("/")({
@@ -80,6 +113,30 @@ const OFFERS = [
   { title: "Offerta 1", text: "Descrizione temporanea 1." },
   { title: "Offerta 2", text: "Descrizione temporanea 2." },
   { title: "Offerta 3", text: "Descrizione temporanea 3." },
+];
+
+const SUCCESS_STORIES = [
+  {
+    src: "/success-1.webp",
+    alt: "Evoluzione posturale e tecnica nel coaching online al femminile",
+    tag: "Evoluzione Tecnica",
+    quote:
+      "Ho imparato ad allenarmi con costanza senza l'ossessione della bilancia, migliorando forza e postura.",
+  },
+  {
+    src: "/success-2.webp",
+    alt: "Miglioramento della composizione corporea e mindset",
+    tag: "Mindset & Nutrizione",
+    quote:
+      "Un percorso che ha stravolto il mio rapporto con il cibo e con lo specchio. Finalmente mi sento forte.",
+  },
+  {
+    src: "/success-3.webp",
+    alt: "Risultati fitness e benessere olistico femminile",
+    tag: "Forza e Costanza",
+    quote:
+      "L'approccio integrato ha fatto la differenza. I risultati estetici sono stati la naturale conseguenza del mio benessere mentale.",
+  },
 ];
 
 function HomePage() {
@@ -216,6 +273,47 @@ function HomePage() {
                     Richiedi info su WhatsApp
                   </a>
                 </article>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Storie di Successo */}
+      <section className="border-t border-border">
+        <div className="mx-auto max-w-6xl px-6 py-24">
+          <Reveal>
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+              Storie di Successo
+            </h2>
+            <p className="mt-5 max-w-2xl text-base leading-relaxed text-pretty text-muted-foreground">
+              Percorsi reali, costruiti sulla costanza: cambiamenti di forza,
+              postura e mentalità prima ancora che di aspetto.
+            </p>
+          </Reveal>
+
+          <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3">
+            {SUCCESS_STORIES.map((story, i) => (
+              <Reveal key={story.tag} delay={i * 0.12} className="h-full">
+                <figure className="flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_60px_-24px_rgb(22_23_26/0.28)]">
+                  <div className="aspect-[4/5] w-full overflow-hidden bg-secondary">
+                    <img
+                      src={story.src}
+                      alt={story.alt}
+                      loading="lazy"
+                      decoding="async"
+                      className="h-full w-full object-cover object-center transition-transform duration-500 hover:scale-[1.03]"
+                    />
+                  </div>
+                  <figcaption className="flex flex-1 flex-col p-8">
+                    <span className="self-start rounded-full border border-border px-3 py-1 font-display text-[0.65rem] font-semibold tracking-[0.18em] text-muted-foreground uppercase">
+                      {story.tag}
+                    </span>
+                    <blockquote className="mt-5 flex-1 text-sm leading-relaxed text-pretty text-muted-foreground">
+                      “{story.quote}”
+                    </blockquote>
+                  </figcaption>
+                </figure>
               </Reveal>
             ))}
           </div>
