@@ -10,33 +10,128 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ChiSonoRouteImport } from './routes/chi-sono'
+import { Route as ContattiRouteImport } from './routes/contatti'
+import { Route as CookiePolicyRouteImport } from './routes/cookie-policy'
+import { Route as PartnershipRouteImport } from './routes/partnership'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
+import { Route as QuizCheFisicoHaiRouteImport } from './routes/quiz-che-fisico-hai'
+import { Route as ServiziRouteImport } from './routes/servizi'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ChiSonoRoute = ChiSonoRouteImport.update({
+  id: '/chi-sono',
+  path: '/chi-sono',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContattiRoute = ContattiRouteImport.update({
+  id: '/contatti',
+  path: '/contatti',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CookiePolicyRoute = CookiePolicyRouteImport.update({
+  id: '/cookie-policy',
+  path: '/cookie-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PartnershipRoute = PartnershipRouteImport.update({
+  id: '/partnership',
+  path: '/partnership',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QuizCheFisicoHaiRoute = QuizCheFisicoHaiRouteImport.update({
+  id: '/quiz-che-fisico-hai',
+  path: '/quiz-che-fisico-hai',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServiziRoute = ServiziRouteImport.update({
+  id: '/servizi',
+  path: '/servizi',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/chi-sono': typeof ChiSonoRoute
+  '/contatti': typeof ContattiRoute
+  '/cookie-policy': typeof CookiePolicyRoute
+  '/partnership': typeof PartnershipRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/quiz-che-fisico-hai': typeof QuizCheFisicoHaiRoute
+  '/servizi': typeof ServiziRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/chi-sono': typeof ChiSonoRoute
+  '/contatti': typeof ContattiRoute
+  '/cookie-policy': typeof CookiePolicyRoute
+  '/partnership': typeof PartnershipRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/quiz-che-fisico-hai': typeof QuizCheFisicoHaiRoute
+  '/servizi': typeof ServiziRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/chi-sono': typeof ChiSonoRoute
+  '/contatti': typeof ContattiRoute
+  '/cookie-policy': typeof CookiePolicyRoute
+  '/partnership': typeof PartnershipRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/quiz-che-fisico-hai': typeof QuizCheFisicoHaiRoute
+  '/servizi': typeof ServiziRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/chi-sono'
+    | '/contatti'
+    | '/cookie-policy'
+    | '/partnership'
+    | '/privacy-policy'
+    | '/quiz-che-fisico-hai'
+    | '/servizi'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/chi-sono'
+    | '/contatti'
+    | '/cookie-policy'
+    | '/partnership'
+    | '/privacy-policy'
+    | '/quiz-che-fisico-hai'
+    | '/servizi'
+  id:
+    | '__root__'
+    | '/'
+    | '/chi-sono'
+    | '/contatti'
+    | '/cookie-policy'
+    | '/partnership'
+    | '/privacy-policy'
+    | '/quiz-che-fisico-hai'
+    | '/servizi'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ChiSonoRoute: typeof ChiSonoRoute
+  ContattiRoute: typeof ContattiRoute
+  CookiePolicyRoute: typeof CookiePolicyRoute
+  PartnershipRoute: typeof PartnershipRoute
+  PrivacyPolicyRoute: typeof PrivacyPolicyRoute
+  QuizCheFisicoHaiRoute: typeof QuizCheFisicoHaiRoute
+  ServiziRoute: typeof ServiziRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +143,67 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/chi-sono': {
+      id: '/chi-sono'
+      path: '/chi-sono'
+      fullPath: '/chi-sono'
+      preLoaderRoute: typeof ChiSonoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contatti': {
+      id: '/contatti'
+      path: '/contatti'
+      fullPath: '/contatti'
+      preLoaderRoute: typeof ContattiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cookie-policy': {
+      id: '/cookie-policy'
+      path: '/cookie-policy'
+      fullPath: '/cookie-policy'
+      preLoaderRoute: typeof CookiePolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/partnership': {
+      id: '/partnership'
+      path: '/partnership'
+      fullPath: '/partnership'
+      preLoaderRoute: typeof PartnershipRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/quiz-che-fisico-hai': {
+      id: '/quiz-che-fisico-hai'
+      path: '/quiz-che-fisico-hai'
+      fullPath: '/quiz-che-fisico-hai'
+      preLoaderRoute: typeof QuizCheFisicoHaiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/servizi': {
+      id: '/servizi'
+      path: '/servizi'
+      fullPath: '/servizi'
+      preLoaderRoute: typeof ServiziRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ChiSonoRoute: ChiSonoRoute,
+  ContattiRoute: ContattiRoute,
+  CookiePolicyRoute: CookiePolicyRoute,
+  PartnershipRoute: PartnershipRoute,
+  PrivacyPolicyRoute: PrivacyPolicyRoute,
+  QuizCheFisicoHaiRoute: QuizCheFisicoHaiRoute,
+  ServiziRoute: ServiziRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
