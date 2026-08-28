@@ -319,6 +319,30 @@ function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Banner Quiz */}
+      <section className="border-t border-border bg-secondary">
+        <div className="mx-auto max-w-6xl px-6 py-20 text-center">
+          <Reveal>
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+              Non sai da quale percorso iniziare?
+            </h2>
+            <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-pretty text-muted-foreground">
+              Scopri il programma di allenamento e nutrizione più adatto al tuo
+              corpo. Fai il test gratuito e ricevi un'analisi personalizzata in
+              base al tuo somatotipo.
+            </p>
+            <Link
+              to="/quiz-che-fisico-hai"
+              className="animate-soft-pulse mt-10 inline-flex items-center justify-center gap-2.5 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-colors duration-300 hover:bg-foreground/85 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none"
+            >
+              Inizia il Quiz (1 min)
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </Reveal>
+        </div>
+      </section>
     </>
+
   );
 }
