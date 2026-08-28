@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ChiSonoRouteImport } from './routes/chi-sono'
+import { Route as ContattiRouteImport } from './routes/contatti'
 import { Route as PartnershipRouteImport } from './routes/partnership'
 import { Route as QuizCheFisicoHaiRouteImport } from './routes/quiz-che-fisico-hai'
 import { Route as ServiziRouteImport } from './routes/servizi'
@@ -23,6 +24,11 @@ const IndexRoute = IndexRouteImport.update({
 const ChiSonoRoute = ChiSonoRouteImport.update({
   id: '/chi-sono',
   path: '/chi-sono',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContattiRoute = ContattiRouteImport.update({
+  id: '/contatti',
+  path: '/contatti',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PartnershipRoute = PartnershipRouteImport.update({
@@ -44,6 +50,7 @@ const ServiziRoute = ServiziRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/chi-sono': typeof ChiSonoRoute
+  '/contatti': typeof ContattiRoute
   '/partnership': typeof PartnershipRoute
   '/quiz-che-fisico-hai': typeof QuizCheFisicoHaiRoute
   '/servizi': typeof ServiziRoute
@@ -51,6 +58,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/chi-sono': typeof ChiSonoRoute
+  '/contatti': typeof ContattiRoute
   '/partnership': typeof PartnershipRoute
   '/quiz-che-fisico-hai': typeof QuizCheFisicoHaiRoute
   '/servizi': typeof ServiziRoute
@@ -59,6 +67,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/chi-sono': typeof ChiSonoRoute
+  '/contatti': typeof ContattiRoute
   '/partnership': typeof PartnershipRoute
   '/quiz-che-fisico-hai': typeof QuizCheFisicoHaiRoute
   '/servizi': typeof ServiziRoute
@@ -66,13 +75,25 @@ export interface FileRoutesById {
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/chi-sono' | '/partnership' | '/quiz-che-fisico-hai' | '/servizi'
+    | '/'
+    | '/chi-sono'
+    | '/contatti'
+    | '/partnership'
+    | '/quiz-che-fisico-hai'
+    | '/servizi'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/chi-sono' | '/partnership' | '/quiz-che-fisico-hai' | '/servizi'
+  to:
+    | '/'
+    | '/chi-sono'
+    | '/contatti'
+    | '/partnership'
+    | '/quiz-che-fisico-hai'
+    | '/servizi'
   id:
     | '__root__'
     | '/'
     | '/chi-sono'
+    | '/contatti'
     | '/partnership'
     | '/quiz-che-fisico-hai'
     | '/servizi'
@@ -81,6 +102,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ChiSonoRoute: typeof ChiSonoRoute
+  ContattiRoute: typeof ContattiRoute
   PartnershipRoute: typeof PartnershipRoute
   QuizCheFisicoHaiRoute: typeof QuizCheFisicoHaiRoute
   ServiziRoute: typeof ServiziRoute
@@ -100,6 +122,13 @@ declare module '@tanstack/react-router' {
       path: '/chi-sono'
       fullPath: '/chi-sono'
       preLoaderRoute: typeof ChiSonoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contatti': {
+      id: '/contatti'
+      path: '/contatti'
+      fullPath: '/contatti'
+      preLoaderRoute: typeof ContattiRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/partnership': {
@@ -129,6 +158,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ChiSonoRoute: ChiSonoRoute,
+  ContattiRoute: ContattiRoute,
   PartnershipRoute: PartnershipRoute,
   QuizCheFisicoHaiRoute: QuizCheFisicoHaiRoute,
   ServiziRoute: ServiziRoute,
