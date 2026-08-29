@@ -53,6 +53,12 @@ const jsonLd = {
         "Percorso di supporto psicologico per migliorare l'immagine corporea, superare i blocchi emotivi e costruire abitudini durature.",
     },
   ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    "@id": `${SITE_URL}/servizi-ep-team#services`,
+    name: "Servizi EP Team",
+    url: `${SITE_URL}/servizi-ep-team`,
+  },
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "5",
