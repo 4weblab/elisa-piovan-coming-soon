@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PlaceholderPage } from "@/components/site/PlaceholderPage";
 
-const TITLE = "Servizi | Elisa Piovan Trainer & EP Team";
+const TITLE = "Servizi - EP Team | Elisa Piovan Trainer";
 const DESCRIPTION =
   "Personal training, nutrizione personalizzata e supporto psicologico: i servizi dell'EP Team per il benessere femminile.";
 
