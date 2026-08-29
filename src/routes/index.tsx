@@ -402,7 +402,7 @@ function HomePage() {
               variants={cardItem}
               className="text-center text-3xl font-bold tracking-tight sm:text-4xl"
             >
-              I Nostri Percorsi
+              INIZIA DA QUI
             </MotionH2>
 
             <MotionDiv
