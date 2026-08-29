@@ -274,9 +274,22 @@ function HomePage() {
             variants={heroItem}
             className="mt-6 max-w-xl text-base leading-relaxed text-pretty text-muted-foreground sm:text-lg"
           >
-            Elisa Piovan Trainer ed EP Team offrono percorsi integrati di
-            allenamento personalizzato, nutrizione e supporto psicologico per
-            donne a Padova, Noventa Padovana e online.
+            <MotionLink
+              to="/chi-sono"
+              className="transition-colors duration-300 hover:text-foreground"
+            >
+              Elisa Piovan
+            </MotionLink>{" "}
+            Trainer ed{" "}
+            <MotionLink
+              to="/servizi-ep-team"
+              className="transition-colors duration-300 hover:text-foreground"
+            >
+              EP Team
+            </MotionLink>{" "}
+            offrono percorsi integrati di allenamento personalizzato, nutrizione
+            e supporto psicologico per donne a Padova, Noventa Padovana e
+            online.
           </MotionP>
 
           <MotionDiv
