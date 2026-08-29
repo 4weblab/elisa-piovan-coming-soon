@@ -1,7 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { Apple, ArrowRight, Brain, Dumbbell } from "lucide-react";
-import { Reveal } from "@/components/site/Reveal";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import { INSTAGRAM_URL, SITE_URL, WHATSAPP_URL } from "@/lib/site";
 
@@ -198,181 +197,298 @@ const SUCCESS_STORIES = [
   },
 ];
 
+const MotionLink = motion(Link);
+const MotionA = motion.a;
+const MotionArticle = motion.article;
+const MotionFigure = motion.figure;
+const MotionImg = motion.img;
+const MotionDiv = motion.div;
+const MotionP = motion.p;
+const MotionH1 = motion.h1;
+const MotionH2 = motion.h2;
+const MotionUl = motion.ul;
+const MotionLi = motion.li;
+
+const heroContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.1 },
+  },
+};
+
+const heroItem = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
+  },
+};
+
+const sectionContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.2 },
+  },
+};
+
+const cardItem = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
+  },
+};
+
+const hoverSpring = { type: "spring", stiffness: 300, damping: 20 };
+
 function HomePage() {
   return (
     <>
       {/* Hero */}
       <section className="border-b border-border">
-        <div className="mx-auto max-w-6xl px-6 py-24 md:py-36">
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        <MotionDiv
+          variants={heroContainer}
+          initial="hidden"
+          animate="visible"
+          className="mx-auto max-w-6xl px-6 py-24 md:py-36"
+        >
+          <MotionP
+            variants={heroItem}
             className="font-display text-[0.7rem] font-semibold tracking-[0.28em] text-muted-foreground uppercase"
           >
             ELISA PIOVAN TRAINER | PADOVA & ONLINE
-          </motion.p>
+          </MotionP>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.8,
-              delay: 0.1,
-              ease: [0.22, 1, 0.36, 1],
-            }}
+          <MotionH1
+            variants={heroItem}
             className="mt-6 max-w-3xl text-4xl leading-[1.08] font-extrabold tracking-tight text-balance sm:text-5xl md:text-6xl"
           >
             Coaching Online e Personal Training al Femminile a Padova
-          </motion.h1>
+          </MotionH1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.8,
-              delay: 0.22,
-              ease: [0.22, 1, 0.36, 1],
-            }}
+          <MotionP
+            variants={heroItem}
             className="mt-6 max-w-xl text-base leading-relaxed text-pretty text-muted-foreground sm:text-lg"
           >
             Elisa Piovan Trainer ed EP Team offrono percorsi integrati di
             allenamento personalizzato, nutrizione e supporto psicologico per
             donne a Padova, Noventa Padovana e online.
-          </motion.p>
+          </MotionP>
 
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.8,
-              delay: 0.34,
-              ease: [0.22, 1, 0.36, 1],
-            }}
+          <MotionDiv
+            variants={heroItem}
             className="mt-10 flex flex-col gap-4 sm:flex-row"
           >
-            <a
+            <MotionA
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="animate-soft-pulse inline-flex items-center justify-center gap-3 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none"
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center justify-center gap-3 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-colors duration-300 hover:bg-foreground/85 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none"
             >
               <WhatsAppIcon className="h-4 w-4" />
               Inizia il tuo percorso (WhatsApp)
-            </a>
-            <Link
+            </MotionA>
+            <MotionLink
               to="/chi-sono"
+              whileTap={{ scale: 0.95 }}
               className="group inline-flex items-center justify-center gap-2 rounded-full border border-border px-8 py-4 text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:bg-secondary focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none"
             >
               Scopri il nostro metodo
               <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-            </Link>
-          </motion.div>
-        </div>
+            </MotionLink>
+          </MotionDiv>
+        </MotionDiv>
       </section>
 
       {/* Approccio */}
       <section className="border-b border-border">
         <div className="mx-auto max-w-6xl px-6 py-24">
-          <Reveal>
-            <h2 className="max-w-2xl text-3xl font-bold tracking-tight text-balance sm:text-4xl">
+          <MotionDiv
+            variants={sectionContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+          >
+            <MotionH2
+              variants={cardItem}
+              className="max-w-2xl text-3xl font-bold tracking-tight text-balance sm:text-4xl"
+            >
               Il Metodo Integrato per il Benessere Femminile
-            </h2>
-            <p className="mt-5 max-w-2xl text-base leading-relaxed text-pretty text-muted-foreground">
+            </MotionH2>
+            <MotionP
+              variants={cardItem}
+              className="mt-5 max-w-2xl text-base leading-relaxed text-pretty text-muted-foreground"
+            >
               EP Team unisce personal training al femminile, piani alimentari
               personalizzati e supporto per la gestione dello stress. Un
               approccio scientifico e olistico per risultati reali e sostenibili
               nel tempo.
-            </p>
-          </Reveal>
+            </MotionP>
 
-          <ul className="mt-14 grid gap-10 md:grid-cols-3">
-            {FEATURES.map((feature, i) => (
-              <li key={feature.title}>
-                <Reveal delay={i * 0.1}>
-                  <article className="h-full">
-                    <feature.icon
-                      className="h-6 w-6 text-muted-foreground"
-                      aria-hidden="true"
-                    />
-                    <h3 className="mt-5 text-lg font-semibold">
-                      {feature.title}
-                    </h3>
-                    <ul className="mt-4 flex flex-col gap-3 text-sm leading-relaxed text-muted-foreground">
-                      {feature.points.map((point) => (
-                        <li key={point.lead}>
-                          <strong className="font-semibold text-foreground">
-                            {point.lead}
-                          </strong>{" "}
-                          {point.text}
-                        </li>
-                      ))}
-                    </ul>
-                  </article>
-                </Reveal>
-              </li>
-            ))}
-          </ul>
+            <MotionUl
+              variants={sectionContainer}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              className="mt-14 grid gap-10 md:grid-cols-3"
+            >
+              {FEATURES.map((feature) => {
+                const Icon = feature.icon;
+                return (
+                  <MotionLi key={feature.title} variants={cardItem}>
+                    <MotionArticle
+                      whileHover={{
+                        y: -8,
+                        scale: 1.02,
+                        boxShadow:
+                          "0 24px 60px -24px rgba(22, 23, 26, 0.35)",
+                      }}
+                      transition={hoverSpring}
+                      className="h-full"
+                    >
+                      <Icon
+                        className="h-6 w-6 text-muted-foreground"
+                        aria-hidden="true"
+                      />
+                      <h3 className="mt-5 text-lg font-semibold">
+                        {feature.title}
+                      </h3>
+                      <ul className="mt-4 flex flex-col gap-3 text-sm leading-relaxed text-muted-foreground">
+                        {feature.points.map((point) => (
+                          <li key={point.lead}>
+                            <strong className="font-semibold text-foreground">
+                              {point.lead}
+                            </strong>{" "}
+                            {point.text}
+                          </li>
+                        ))}
+                      </ul>
+                    </MotionArticle>
+                  </MotionLi>
+                );
+              })}
+            </MotionUl>
+          </MotionDiv>
         </div>
       </section>
 
       {/* Percorsi */}
       <section>
         <div className="mx-auto max-w-6xl px-6 py-24">
-          <Reveal>
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+          <MotionDiv
+            variants={sectionContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+          >
+            <MotionH2
+              variants={cardItem}
+              className="text-3xl font-bold tracking-tight sm:text-4xl"
+            >
               I Nostri Percorsi
-            </h2>
-          </Reveal>
+            </MotionH2>
 
-          <div className="mt-14 grid gap-6 md:grid-cols-3">
-            {OFFERS.map((offer, i) => (
-              <Reveal key={offer.title} delay={i * 0.1} className="h-full">
-                <article className="flex h-full flex-col rounded-2xl border border-border bg-card p-8 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_60px_-24px_rgb(22_23_26/0.28)]">
+            <MotionDiv
+              variants={sectionContainer}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              className="mt-14 grid gap-6 md:grid-cols-3"
+            >
+              {OFFERS.map((offer) => (
+                <MotionArticle
+                  key={offer.title}
+                  variants={cardItem}
+                  whileHover={{
+                    y: -8,
+                    scale: 1.02,
+                    boxShadow: "0 24px 60px -24px rgba(22, 23, 26, 0.35)",
+                  }}
+                  transition={hoverSpring}
+                  className="flex h-full flex-col rounded-2xl border border-border bg-card p-8"
+                >
                   <h3 className="text-xl font-semibold">{offer.title}</h3>
                   <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
                     {offer.text}
                   </p>
-                  <a
+                  <MotionA
                     href={WHATSAPP_URL}
                     target="_blank"
                     rel="noopener noreferrer"
+                    whileTap={{ scale: 0.95 }}
                     className="mt-8 inline-flex items-center justify-center gap-2.5 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-colors duration-300 hover:bg-foreground/85 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none"
                   >
                     <WhatsAppIcon className="h-4 w-4" />
                     Richiedi info su WhatsApp
-                  </a>
-                </article>
-              </Reveal>
-            ))}
-          </div>
+                  </MotionA>
+                </MotionArticle>
+              ))}
+            </MotionDiv>
+          </MotionDiv>
         </div>
       </section>
 
       {/* Storie di Successo */}
       <section className="border-t border-border">
         <div className="mx-auto max-w-6xl px-6 py-24">
-          <Reveal>
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+          <MotionDiv
+            variants={sectionContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+          >
+            <MotionH2
+              variants={cardItem}
+              className="text-3xl font-bold tracking-tight sm:text-4xl"
+            >
               Storie di Successo
-            </h2>
-            <p className="mt-5 max-w-2xl text-base leading-relaxed text-pretty text-muted-foreground">
+            </MotionH2>
+            <MotionP
+              variants={cardItem}
+              className="mt-5 max-w-2xl text-base leading-relaxed text-pretty text-muted-foreground"
+            >
               Risultati reali di donne che hanno trasformato il proprio stile di
               vita con il coaching di Elisa Piovan.
-            </p>
-          </Reveal>
+            </MotionP>
 
-          <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3">
-            {SUCCESS_STORIES.map((story, i) => (
-              <Reveal key={story.tag} delay={i * 0.12} className="h-full">
-                <figure className="flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_60px_-24px_rgb(22_23_26/0.28)]">
+            <MotionDiv
+              variants={sectionContainer}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3"
+            >
+              {SUCCESS_STORIES.map((story) => (
+                <MotionFigure
+                  key={story.tag}
+                  variants={cardItem}
+                  whileHover={{
+                    y: -8,
+                    scale: 1.02,
+                    boxShadow: "0 24px 60px -24px rgba(22, 23, 26, 0.35)",
+                  }}
+                  transition={hoverSpring}
+                  className="flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card"
+                >
                   <div className="aspect-[4/5] w-full overflow-hidden bg-secondary">
-                    <img
+                    <MotionImg
                       src={story.src}
                       alt={story.alt}
                       loading="lazy"
                       decoding="async"
-                      className="h-full w-full object-cover object-center transition-transform duration-500 hover:scale-[1.03]"
+                      initial={{ scale: 1.1 }}
+                      whileInView={{ scale: 1 }}
+                      viewport={{ once: true, margin: "-100px" }}
+                      transition={{
+                        duration: 1.5,
+                        ease: [0.16, 1, 0.3, 1],
+                      }}
+                      className="h-full w-full object-cover object-center"
                     />
                   </div>
                   <figcaption className="flex flex-1 flex-col p-8">
@@ -383,36 +499,62 @@ function HomePage() {
                       “{story.quote}”
                     </blockquote>
                   </figcaption>
-                </figure>
-              </Reveal>
-            ))}
-          </div>
+                </MotionFigure>
+              ))}
+            </MotionDiv>
+          </MotionDiv>
         </div>
       </section>
 
       {/* Banner Quiz */}
       <section className="border-t border-border bg-secondary">
         <div className="mx-auto max-w-6xl px-6 py-20 text-center">
-          <Reveal>
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+          <MotionDiv
+            variants={sectionContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+          >
+            <MotionH2
+              variants={cardItem}
+              className="text-3xl font-bold tracking-tight sm:text-4xl"
+            >
               Non sai da quale percorso iniziare?
-            </h2>
-            <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-pretty text-muted-foreground">
+            </MotionH2>
+            <MotionP
+              variants={cardItem}
+              className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-pretty text-muted-foreground"
+            >
               Scopri il programma di allenamento e nutrizione più adatto al tuo
               corpo. Fai il test gratuito e ricevi un'analisi personalizzata in
               base al tuo somatotipo.
-            </p>
-            <Link
+            </MotionP>
+            <MotionLink
               to="/quiz-che-fisico-hai"
-              className="animate-soft-pulse mt-10 inline-flex items-center justify-center gap-2.5 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-colors duration-300 hover:bg-foreground/85 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none"
+              variants={cardItem}
+              whileTap={{ scale: 0.95 }}
+              animate={{
+                boxShadow: [
+                  "0px 0px 0px rgba(0,0,0,0)",
+                  "0px 0px 20px rgba(15,15,17,0.1)",
+                  "0px 0px 0px rgba(0,0,0,0)",
+                ],
+              }}
+              transition={{
+                boxShadow: {
+                  repeat: Infinity,
+                  duration: 3,
+                  ease: "easeInOut",
+                },
+              }}
+              className="mt-10 inline-flex items-center justify-center gap-2.5 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-colors duration-300 hover:bg-foreground/85 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none"
             >
               Inizia il Quiz (1 min)
               <ArrowRight className="h-4 w-4" />
-            </Link>
-          </Reveal>
+            </MotionLink>
+          </MotionDiv>
         </div>
       </section>
     </>
-
   );
 }
