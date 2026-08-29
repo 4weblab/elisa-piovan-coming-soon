@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { AnimatePresence, motion } from "framer-motion";
-import { Apple, ArrowRight, Brain, Dumbbell } from "lucide-react";
+import { Apple, ArrowRight, Brain, Dumbbell, Instagram } from "lucide-react";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import { INSTAGRAM_URL, SITE_URL, WHATSAPP_URL } from "@/lib/site";
 
@@ -494,6 +494,31 @@ function HomePage() {
                   </figcaption>
                 </MotionFigure>
               ))}
+            </MotionDiv>
+
+            {/* Instagram Social Proof */}
+            <MotionDiv
+              variants={cardItem}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              className="mt-8 flex flex-col items-center justify-center gap-4 rounded-xl border border-zinc-800 bg-zinc-900/50 py-4 px-6 text-center sm:flex-row sm:text-left"
+            >
+              <div className="flex items-center gap-3 text-muted-foreground">
+                <Instagram className="h-5 w-5" aria-hidden="true" />
+                <span className="text-sm leading-relaxed">
+                  Vuoi scoprire altre trasformazioni reali e retroscena del
+                  coaching quotidiano?
+                </span>
+              </div>
+              <MotionA
+                href="https://www.instagram.com/ep_epteam/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="whitespace-nowrap text-sm font-semibold text-foreground transition-opacity duration-300 hover:opacity-80"
+              >
+                Guarda altre storie su Instagram →
+              </MotionA>
             </MotionDiv>
           </MotionDiv>
         </div>
