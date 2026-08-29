@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { AnimatePresence, motion } from "framer-motion";
-import { Apple, ArrowRight, Brain, Dumbbell } from "lucide-react";
+import { Apple, ArrowRight, Brain, Dumbbell, Instagram } from "lucide-react";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import { INSTAGRAM_URL, SITE_URL, WHATSAPP_URL } from "@/lib/site";
 
