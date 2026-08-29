@@ -294,7 +294,7 @@ function HomePage() {
               Inizia il tuo percorso (WhatsApp)
             </MotionA>
             <MotionLink
-              to="/chi-sono"
+              to="/servizi-ep-team"
               whileTap={{ scale: 0.95 }}
               className="group inline-flex items-center justify-center gap-2 rounded-full border border-border px-8 py-4 text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:bg-secondary focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none"
             >
