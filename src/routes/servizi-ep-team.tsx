@@ -19,6 +19,6 @@ export const Route = createFileRoute("/servizi-ep-team")({
     links: [{ rel: "canonical", href: "/servizi-ep-team" }],
   }),
   component: () => (
-    <PlaceholderPage title="Servizi" subtitle="Contenuto in arrivo." />
+    <PlaceholderPage title="Servizi - EP Team" subtitle="Contenuto in arrivo." />
   ),
 });
