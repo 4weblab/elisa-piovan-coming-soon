@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { ArrowRight, Brain, Dumbbell, Salad } from "lucide-react";
+import { Apple, ArrowRight, Brain, Dumbbell } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import { INSTAGRAM_URL, SITE_URL, WHATSAPP_URL } from "@/lib/site";
@@ -34,6 +34,26 @@ const jsonLd = {
     contactType: "customer service",
     availableLanguage: "Italian",
   },
+  itemOffered: [
+    {
+      "@type": "Service",
+      name: "Allenamento Personalizzato",
+      description:
+        "Percorso di personal training al femminile con valutazione biomeccanica e posturale, progressione sostenibile e rispetto della fisiologia femminile.",
+    },
+    {
+      "@type": "Service",
+      name: "Nutrizione Consapevole",
+      description:
+        "Piani alimentari su misura basati su educazione alimentare, zero privazioni drastiche e flessibilità per integrarsi nello stile di vita quotidiano.",
+    },
+    {
+      "@type": "Service",
+      name: "Supporto Psicologico & Mindset",
+      description:
+        "Percorso di supporto psicologico per migliorare l'immagine corporea, superare i blocchi emotivi e costruire abitudini durature.",
+    },
+  ],
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "5",
@@ -94,18 +114,57 @@ export const Route = createFileRoute("/")({
 const FEATURES = [
   {
     icon: Dumbbell,
-    title: "Allenamento Personalizzato",
-    text: "Programmi costruiti sul tuo corpo, sui tuoi obiettivi e sul tuo tempo reale.",
+    title: "1. Allenamento Personalizzato",
+    points: [
+      {
+        lead: "Biomeccanica e Postura al centro:",
+        text: "Un'attenta valutazione della tua struttura e dei tuoi schemi motori per lavorare in totale sicurezza ed efficacia, rispettando la tua unicità.",
+      },
+      {
+        lead: "Progressione sostenibile:",
+        text: "Una programmazione scientifica basata sul sovraccarico progressivo e sulla qualità del movimento, lontana da schede improvvisate o prive di logica.",
+      },
+      {
+        lead: "Rispetto della fisiologia femminile:",
+        text: "Percorsi strutturati specificamente per valorizzare le tue forme, migliorare la composizione corporea e tutelare la tua salute a lungo termine.",
+      },
+    ],
   },
   {
-    icon: Salad,
-    title: "Nutrizione Clinica",
-    text: "Piani alimentari sostenibili, seguiti da professionisti e adattati nel tempo.",
+    icon: Apple,
+    title: "2. Nutrizione Consapevole",
+    points: [
+      {
+        lead: "Strategie su misura:",
+        text: "Piani alimentari calibrati con precisione sulle tue esigenze biologiche, sui tuoi ritmi quotidiani e sui tuoi gusti personali.",
+      },
+      {
+        lead: "Zero privazioni drastiche:",
+        text: "Un approccio di educazione alimentare pensato per nutrire il corpo, sostenere le performance e mantenere alta l'energia di tutti i giorni.",
+      },
+      {
+        lead: "Flessibilità e stile di vita:",
+        text: "Soluzioni flessibili progettate per integrarsi perfettamente nella tua vita sociale e lavorativa, senza stress o rinunce insostenibili.",
+      },
+    ],
   },
   {
     icon: Brain,
-    title: "Supporto Mentale",
-    text: "Un accompagnamento psicologico per costruire costanza, motivazione e fiducia.",
+    title: "3. Supporto Psicologico & Mindset",
+    points: [
+      {
+        lead: "Rapporto positivo con lo specchio:",
+        text: "Ti aiutiamo a migliorare la percezione che hai di te stessa e del tuo corpo, fornendoti strumenti concreti per superare insicurezze e costruire un'immagine corporea solida e consapevole.",
+      },
+      {
+        lead: "Superamento dei blocchi:",
+        text: "Un'analisi mirata delle dinamiche emotive legate al cibo, allo stress quotidiano e alla gestione della motivazione.",
+      },
+      {
+        lead: "Abitudini durature:",
+        text: "Un percorso trasformativo per fare spazio a uno stile di vita sano, spontaneo e capace di farti star bene davvero, per sempre.",
+      },
+    ],
   },
 ];
 
@@ -231,16 +290,25 @@ function HomePage() {
             {FEATURES.map((feature, i) => (
               <li key={feature.title}>
                 <Reveal delay={i * 0.1}>
-                  <feature.icon
-                    className="h-6 w-6 text-muted-foreground"
-                    aria-hidden="true"
-                  />
-                  <h3 className="mt-5 text-lg font-semibold">
-                    {feature.title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                    {feature.text}
-                  </p>
+                  <article className="h-full">
+                    <feature.icon
+                      className="h-6 w-6 text-muted-foreground"
+                      aria-hidden="true"
+                    />
+                    <h3 className="mt-5 text-lg font-semibold">
+                      {feature.title}
+                    </h3>
+                    <ul className="mt-4 flex flex-col gap-3 text-sm leading-relaxed text-muted-foreground">
+                      {feature.points.map((point) => (
+                        <li key={point.lead}>
+                          <strong className="font-semibold text-foreground">
+                            {point.lead}
+                          </strong>{" "}
+                          {point.text}
+                        </li>
+                      ))}
+                    </ul>
+                  </article>
                 </Reveal>
               </li>
             ))}
