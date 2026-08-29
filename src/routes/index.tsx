@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { AnimatePresence, motion } from "framer-motion";
-import { Apple, ArrowRight, Brain, Dumbbell, Instagram } from "lucide-react";
+import { Apple, ArrowRight, Brain, Check, Dumbbell, Instagram } from "lucide-react";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import { INSTAGRAM_URL, SITE_URL, WHATSAPP_URL } from "@/lib/site";
 
@@ -400,46 +400,55 @@ function HomePage() {
           >
             <MotionH2
               variants={cardItem}
-              className="text-3xl font-bold tracking-tight sm:text-4xl"
+              className="text-center text-3xl font-bold tracking-tight sm:text-4xl"
             >
               I Nostri Percorsi
             </MotionH2>
 
             <MotionDiv
-              variants={sectionContainer}
-              initial="hidden"
-              whileInView="visible"
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "-100px" }}
-              className="mt-14 grid gap-6 md:grid-cols-3"
+              transition={{ type: "spring", stiffness: 120, damping: 18 }}
+              className="mt-14 max-w-4xl mx-auto"
             >
-              {OFFERS.map((offer) => (
-                <MotionArticle
-                  key={offer.title}
-                  variants={cardItem}
-                  whileHover={{
-                    y: -8,
-                    scale: 1.02,
-                    boxShadow: "0 24px 60px -24px rgba(22, 23, 26, 0.35)",
-                  }}
-                  transition={hoverSpring}
-                  className="flex h-full flex-col rounded-2xl border border-border bg-card p-8"
-                >
-                  <h3 className="text-xl font-semibold">{offer.title}</h3>
-                  <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
-                    {offer.text}
+              <article className="grid grid-cols-1 gap-8 rounded-2xl border border-zinc-200 bg-zinc-900/5 p-8 lg:grid-cols-2 lg:items-center lg:p-10 dark:border-zinc-800 dark:bg-zinc-100/5">
+                <div className="space-y-5">
+                  <p className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
+                    Il primo passo
                   </p>
+                  <h3 className="text-2xl font-bold tracking-tight sm:text-3xl">
+                    Consulenza Strategica 1:1 | 30 minuti con Elisa
+                  </h3>
+                  <p className="text-base leading-relaxed text-muted-foreground">
+                    Non una semplice chiamata conoscitiva, ma un primo confronto
+                    tecnico e strutturato ad alto valore professionale.
+                    Un&apos;analisi dettagliata della tua situazione di partenza.
+                    Analizzerò la tua condizione attuale, affronteremo dubbi
+                    tecnici su allenamento, nutrizione e mindset e sfateremo i
+                    falsi miti che stanno ostacolando i tuoi progressi. Al termine
+                    avrai chiarezza sulla direzione da prendere e sul percorso EP
+                    più adatto a te.
+                  </p>
+                  <p className="inline-flex items-center gap-2 text-base font-semibold text-foreground">
+                    <Check className="h-5 w-5 text-primary" aria-hidden="true" />
+                    Prezzo: 25€ (Scalabili in caso di inizio percorso)
+                  </p>
+                </div>
+
+                <div className="flex flex-col items-start justify-center lg:items-end">
                   <MotionA
                     href={WHATSAPP_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     whileTap={{ scale: 0.95 }}
-                    className="mt-8 inline-flex items-center justify-center gap-2.5 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-colors duration-300 hover:bg-foreground/85 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none"
+                    className="inline-flex w-full items-center justify-center gap-3 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-colors duration-300 hover:bg-foreground/85 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none lg:w-auto"
                   >
                     <WhatsAppIcon className="h-4 w-4" />
-                    Richiedi info su WhatsApp
+                    Prenota la Consulenza su WhatsApp
                   </MotionA>
-                </MotionArticle>
-              ))}
+                </div>
+              </article>
             </MotionDiv>
           </MotionDiv>
         </div>
