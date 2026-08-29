@@ -342,23 +342,16 @@ function HomePage() {
                 return (
                   <MotionLi key={feature.title} variants={cardItem}>
                     <MotionArticle
-                      whileHover={{
-                        y: -8,
-                        scale: 1.02,
-                        boxShadow:
-                          "0 24px 60px -24px rgba(22, 23, 26, 0.35)",
-                      }}
-                      transition={hoverSpring}
-                      className="h-full"
+                      className="h-full space-y-4 rounded-2xl border border-zinc-200/60 bg-zinc-50/50 p-6 transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-xl md:p-8"
                     >
                       <Icon
                         className="h-6 w-6 text-muted-foreground"
                         aria-hidden="true"
                       />
-                      <h3 className="mt-5 text-lg font-semibold">
+                      <h3 className="text-lg font-semibold">
                         {feature.title}
                       </h3>
-                      <ul className="mt-4 flex flex-col gap-3 text-sm leading-relaxed text-muted-foreground">
+                      <ul className="space-y-3 text-sm leading-relaxed text-muted-foreground">
                         {feature.points.map((point) => (
                           <li key={point.lead}>
                             <strong className="font-semibold text-foreground">
