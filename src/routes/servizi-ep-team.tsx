@@ -1,11 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PlaceholderPage } from "@/components/site/PlaceholderPage";
 
-const TITLE = "Servizi | Elisa Piovan Trainer & EP Team";
+const TITLE = "Servizi - EP Team | Elisa Piovan Trainer";
 const DESCRIPTION =
   "Personal training, nutrizione personalizzata e supporto psicologico: i servizi dell'EP Team per il benessere femminile.";
 
-export const Route = createFileRoute("/servizi")({
+export const Route = createFileRoute("/servizi-ep-team")({
   head: () => ({
     meta: [
       { title: TITLE },
@@ -13,12 +13,12 @@ export const Route = createFileRoute("/servizi")({
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESCRIPTION },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/servizi" },
+      { property: "og:url", content: "/servizi-ep-team" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/servizi" }],
+    links: [{ rel: "canonical", href: "/servizi-ep-team" }],
   }),
   component: () => (
-    <PlaceholderPage title="Servizi" subtitle="Contenuto in arrivo." />
+    <PlaceholderPage title="Servizi - EP Team" subtitle="Contenuto in arrivo." />
   ),
 });
