@@ -5,7 +5,7 @@ const TITLE = "Servizi | Elisa Piovan Trainer & EP Team";
 const DESCRIPTION =
   "Personal training, nutrizione personalizzata e supporto psicologico: i servizi dell'EP Team per il benessere femminile.";
 
-export const Route = createFileRoute("/servizi")({
+export const Route = createFileRoute("/servizi-ep-team")({
   head: () => ({
     meta: [
       { title: TITLE },

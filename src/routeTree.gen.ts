@@ -16,7 +16,7 @@ import { Route as CookiePolicyRouteImport } from './routes/cookie-policy'
 import { Route as PartnershipRouteImport } from './routes/partnership'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as QuizCheFisicoHaiRouteImport } from './routes/quiz-che-fisico-hai'
-import { Route as ServiziRouteImport } from './routes/servizi'
+import { Route as ServiziEpTeamRouteImport } from './routes/servizi-ep-team'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -53,9 +53,9 @@ const QuizCheFisicoHaiRoute = QuizCheFisicoHaiRouteImport.update({
   path: '/quiz-che-fisico-hai',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ServiziRoute = ServiziRouteImport.update({
-  id: '/servizi',
-  path: '/servizi',
+const ServiziEpTeamRoute = ServiziEpTeamRouteImport.update({
+  id: '/servizi-ep-team',
+  path: '/servizi-ep-team',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -67,7 +67,7 @@ export interface FileRoutesByFullPath {
   '/partnership': typeof PartnershipRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/quiz-che-fisico-hai': typeof QuizCheFisicoHaiRoute
-  '/servizi': typeof ServiziRoute
+  '/servizi-ep-team': typeof ServiziEpTeamRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -77,7 +77,7 @@ export interface FileRoutesByTo {
   '/partnership': typeof PartnershipRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/quiz-che-fisico-hai': typeof QuizCheFisicoHaiRoute
-  '/servizi': typeof ServiziRoute
+  '/servizi-ep-team': typeof ServiziEpTeamRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -88,7 +88,7 @@ export interface FileRoutesById {
   '/partnership': typeof PartnershipRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/quiz-che-fisico-hai': typeof QuizCheFisicoHaiRoute
-  '/servizi': typeof ServiziRoute
+  '/servizi-ep-team': typeof ServiziEpTeamRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -100,7 +100,7 @@ export interface FileRouteTypes {
     | '/partnership'
     | '/privacy-policy'
     | '/quiz-che-fisico-hai'
-    | '/servizi'
+    | '/servizi-ep-team'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -110,7 +110,7 @@ export interface FileRouteTypes {
     | '/partnership'
     | '/privacy-policy'
     | '/quiz-che-fisico-hai'
-    | '/servizi'
+    | '/servizi-ep-team'
   id:
     | '__root__'
     | '/'
@@ -120,7 +120,7 @@ export interface FileRouteTypes {
     | '/partnership'
     | '/privacy-policy'
     | '/quiz-che-fisico-hai'
-    | '/servizi'
+    | '/servizi-ep-team'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -131,7 +131,7 @@ export interface RootRouteChildren {
   PartnershipRoute: typeof PartnershipRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   QuizCheFisicoHaiRoute: typeof QuizCheFisicoHaiRoute
-  ServiziRoute: typeof ServiziRoute
+  ServiziEpTeamRoute: typeof ServiziEpTeamRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -185,11 +185,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof QuizCheFisicoHaiRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/servizi': {
-      id: '/servizi'
-      path: '/servizi'
-      fullPath: '/servizi'
-      preLoaderRoute: typeof ServiziRouteImport
+    '/servizi-ep-team': {
+      id: '/servizi-ep-team'
+      path: '/servizi-ep-team'
+      fullPath: '/servizi-ep-team'
+      preLoaderRoute: typeof ServiziEpTeamRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -203,7 +203,7 @@ const rootRouteChildren: RootRouteChildren = {
   PartnershipRoute: PartnershipRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
   QuizCheFisicoHaiRoute: QuizCheFisicoHaiRoute,
-  ServiziRoute: ServiziRoute,
+  ServiziEpTeamRoute: ServiziEpTeamRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
