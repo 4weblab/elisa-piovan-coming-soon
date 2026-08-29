@@ -215,16 +215,16 @@ const heroContainer = {
     opacity: 1,
     transition: { staggerChildren: 0.1 },
   },
-};
+} as const;
 
 const heroItem = {
   hidden: { opacity: 0, y: 30 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
+    transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as const },
   },
-};
+} as const;
 
 const sectionContainer = {
   hidden: { opacity: 0 },
@@ -232,18 +232,18 @@ const sectionContainer = {
     opacity: 1,
     transition: { staggerChildren: 0.2 },
   },
-};
+} as const;
 
 const cardItem = {
   hidden: { opacity: 0, y: 40 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
+    transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as const },
   },
-};
+} as const;
 
-const hoverSpring = { type: "spring", stiffness: 300, damping: 20 };
+const hoverSpring = { type: "spring" as const, stiffness: 300, damping: 20 };
 
 function HomePage() {
   return (
