@@ -13,10 +13,10 @@ export const Route = createFileRoute("/servizi-ep-team")({
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESCRIPTION },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/servizi" },
+      { property: "og:url", content: "/servizi-ep-team" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/servizi" }],
+    links: [{ rel: "canonical", href: "/servizi-ep-team" }],
   }),
   component: () => (
     <PlaceholderPage title="Servizi" subtitle="Contenuto in arrivo." />
