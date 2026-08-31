@@ -27,12 +27,6 @@ const jsonLd = {
     },
     {
       "@type": "Offer",
-      name: "Codice Sconto FGM 04",
-      description: "-10% extra con il codice ELITRAINER.",
-      url: "https://fgm04.com",
-    },
-    {
-      "@type": "Offer",
       name: "Buono Sconto Karuna Estetica",
       description: "20% di sconto riservato ai nuovi clienti.",
     },
@@ -44,8 +38,9 @@ const jsonLd = {
     },
     {
       "@type": "Offer",
-      name: "Sconto 15% 4 Web Lab",
-      description: "Riservato agli iscritti EP Team.",
+      name: "Codice Sconto FGM 04",
+      description: "-10% extra con il codice ELITRAINER.",
+      url: "https://fgm04.com",
     },
   ],
 };
@@ -139,23 +134,11 @@ const PARTNERS: Partner[] = [
     },
   },
   {
-    brand: "FGM 04",
-    category: "Cura del Corpo & Leggings A Compressione",
-    description:
-      "Formulazioni cosmeceutiche Made in Italy contro ritenzione e inestetismi, abbinate a leggings a compressione graduale che stimolano il microcircolo.",
-    badge: "-10% extra con il Codice Sconto: ELITRAINER",
-    primaryCta: {
-      label: "Riscatta lo Sconto su fgm04.com",
-      href: "https://fgm04.com",
-      external: true,
-    },
-  },
-  {
     brand: "Karuna Estetica ed Olistica",
     category: "Centro Estetico (Campodarsego - PD)",
     description:
       "Percorsi personalizzati di estetica avanzata ed olistica: dai massaggi ayurveda, decontratturanti e linfodrenanti, fino a pressoterapia e laser epilazione.",
-    badge: "Buono Sconto del 20% riservato ai nuovi clienti su trattamenti o pacchetti a scelta.",
+    badge: "🎟️ Buono Sconto del 20% riservato ai nuovi clienti su trattamenti o pacchetti a scelta.",
     primaryCta: {
       label: "Scarica il Buono Sconto PDF",
       href: "#",
@@ -170,40 +153,38 @@ const PARTNERS: Partner[] = [
     category: "Integrazione & Endurance Made in Italy",
     description:
       "Eccellenza italiana dedicata allo sport: integratori alimentari ad alta tollerabilità, linea food low-carb & keto diet e abbigliamento per il fitness.",
-    badge: "Codice Sconto Esclusivo: PTELISA29",
+    badge: "🔑 Codice Sconto Esclusivo: PTELISA29",
     primaryCta: {
-      label: "Riscatta lo Sconto su pushmore.it",
+      label: "Riscatta lo Sconto su pushmore.it →",
       href: "https://pushmore.it",
       external: true,
     },
   },
   {
-    brand: "4 Web Lab",
-    category: "Produzione Siti Web & Digital • 🔒 ESCLUSIVO ISCRITTI EP TEAM",
-    exclusive: true,
+    brand: "FGM 04",
+    category: "Cura del Corpo & Leggings A Compressione",
     description:
-      "Studio web specializzato nella creazione di siti web per negozi, liberi professionisti e aziende con servizi estesi per SEO avanzato e pubblicità su Google.",
-    badge: "🏷️ Sconto 15% sul costo totale del servizio riservato ESCLUSIVAMENTE agli iscritti EP Team.",
+      "Formulazioni cosmeceutiche Made in Italy contro ritenzione e inestetismi, abbinate a leggings a compressione graduale che stimolano il microcircolo.",
+    badge: "🔑 -10% extra con il Codice Sconto: ELITRAINER",
     primaryCta: {
-      label: "Richiedi lo Sconto del 15% su WhatsApp",
-      href: "https://wa.me/393278840255?text=Ciao!%20Ti%20scrivo%20dal%20sito%20di%20Elisa%20Piovan%20per%20ricevere%20lo%20sconto%20del%2015%25%20riservato%20agli%20iscritti%20EP%20Team",
+      label: "Riscatta lo Sconto su fgm04.com →",
+      href: "https://fgm04.com",
       external: true,
-    },
-    secondaryCta: {
-      label: "Visita 4weblab.it",
-      href: "https://4weblab.it",
     },
   },
 ];
 
 function PartnerCard({ partner }: { partner: Partner }) {
+  const isWhatsApp = partner.primaryCta.href.startsWith("https://wa.me");
+
   return (
     <motion.article
       {...itemProps}
-      className="group flex flex-col rounded-2xl border border-border bg-background p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg md:p-8"
+      className="group flex h-full flex-col rounded-2xl border border-border bg-background p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg md:p-8"
     >
+      {/* HEADER */}
       <div className="mb-5 flex items-start justify-between gap-4">
-        <div>
+        <div className="min-w-0">
           <h3 className="font-display text-xl font-bold tracking-tight text-foreground md:text-2xl">
             {partner.brand}
           </h3>
@@ -222,51 +203,56 @@ function PartnerCard({ partner }: { partner: Partner }) {
         )}
       </div>
 
-      <p className="mb-5 flex-1 text-sm leading-relaxed text-muted-foreground">
+      {/* BODY */}
+      <p className="mb-6 flex-1 text-sm leading-relaxed text-muted-foreground">
         {partner.description}
       </p>
 
-      <div
-        className={`mb-6 inline-flex items-center gap-2 rounded-xl px-4 py-3 text-sm font-medium leading-snug ${
-          partner.exclusive
-            ? "border border-primary/20 bg-primary/5 text-foreground"
-            : "border border-border bg-secondary/50 text-foreground"
-        }`}
-      >
-        {partner.exclusive ? (
-          <Tag className="h-4 w-4 shrink-0 text-primary" />
-        ) : (
-          <Tag className="h-4 w-4 shrink-0 text-muted-foreground" />
-        )}
-        {partner.badge}
-      </div>
-
+      {/* FOOTER - mt-auto spinge in fondo */}
       <div className="mt-auto flex flex-col gap-3">
+        {/* BADGE: altezza minima fissa per allineare l'inizio dei bottoni */}
+        <div className="flex min-h-[88px] items-end">
+          <div
+            className={`inline-flex w-full items-start gap-2 rounded-xl px-4 py-3 text-sm font-medium leading-snug ${
+              partner.exclusive
+                ? "border border-primary/20 bg-primary/5 text-foreground"
+                : "border border-border bg-secondary/50 text-foreground"
+            }`}
+          >
+            <Tag
+              className={`h-4 w-4 shrink-0 ${partner.exclusive ? "text-primary" : "text-muted-foreground"}`}
+            />
+            <span>{partner.badge}</span>
+          </div>
+        </div>
+
+        {/* PRIMARY CTA: stessa altezza su tutte le card */}
         <a
           href={partner.primaryCta.href}
           target={partner.primaryCta.external ? "_blank" : undefined}
           rel={partner.primaryCta.external ? "noopener noreferrer" : undefined}
-          className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors duration-300 hover:bg-primary/90"
+          className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors duration-300 hover:bg-primary/90"
         >
-          {partner.primaryCta.href.startsWith("https://wa.me") && (
-            <WhatsAppIcon className="h-4 w-4" />
-          )}
-          {partner.primaryCta.label}
-          {partner.primaryCta.external && !partner.primaryCta.href.startsWith("https://wa.me") && (
-            <ExternalLink className="h-3.5 w-3.5" />
+          {isWhatsApp && <WhatsAppIcon className="h-4 w-4 shrink-0" />}
+          <span className="text-center">{partner.primaryCta.label}</span>
+          {partner.primaryCta.external && !isWhatsApp && (
+            <ExternalLink className="h-3.5 w-3.5 shrink-0" />
           )}
         </a>
 
-        {partner.secondaryCta && (
+        {/* SECONDARY CTA o SPACER INVISIBILE per allineamento */}
+        {partner.secondaryCta ? (
           <a
             href={partner.secondaryCta.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-1.5 text-sm font-medium text-muted-foreground underline-offset-4 transition-colors hover:text-foreground hover:underline"
+            className="inline-flex min-h-[24px] items-center justify-center gap-1.5 text-sm font-medium text-muted-foreground underline-offset-4 transition-colors hover:text-foreground hover:underline"
           >
             {partner.secondaryCta.label}
-            <ExternalLink className="h-3.5 w-3.5" />
+            <ExternalLink className="h-3.5 w-3.5 shrink-0" />
           </a>
+        ) : (
+          <div className="min-h-[24px]" aria-hidden="true" />
         )}
       </div>
     </motion.article>
@@ -326,10 +312,13 @@ function PartnershipPage() {
         </div>
       </section>
 
-      {/* GRIGLIA PARTNER */}
+      {/* GRIGLIA PARTNER 2x2 */}
       <section className="bg-background py-16 md:py-24">
-        <div className="mx-auto max-w-7xl px-6">
-          <motion.div {...containerProps} className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto max-w-5xl px-6">
+          <motion.div
+            {...containerProps}
+            className="grid grid-cols-1 gap-6 auto-rows-fr md:grid-cols-2"
+          >
             {PARTNERS.map((partner) => (
               <PartnerCard key={partner.brand} partner={partner} />
             ))}
