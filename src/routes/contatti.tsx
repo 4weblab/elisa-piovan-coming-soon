@@ -244,6 +244,19 @@ function ContattiPage() {
         </div>
       </section>
 
+      {/* CHIUSURA RASSICURANTE */}
+      <section className="bg-background py-12 md:py-16">
+        <div className="mx-auto max-w-4xl px-6 text-center">
+          <motion.p
+            {...revealProps}
+            className="font-display text-lg italic text-foreground md:text-xl lg:text-2xl"
+          >
+            "Ogni grande trasformazione inizia da una semplice chiacchierata tra donne."
+          </motion.p>
+        </div>
+      </section>
+
     </div>
   );
 }
+
