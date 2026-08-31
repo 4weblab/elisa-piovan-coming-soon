@@ -286,12 +286,12 @@ function HomePage() {
             >
              Elisa Piovan
             </MotionLink>{" "}
-             , fitness coach al femminile, assieme al suo Team offre
+             , fitness coach al femminile, assieme al suo{" "}
             <MotionLink
               to="/servizi-ep-team"
               className="transition-colors duration-300 hover:text-foreground"
             >
-             EP Team
+             Team
              </MotionLink>{" "}offre percorsi integrati di allenamento
              personalizzato, nutrizione e supporto psicologico per donne. A
              Padova e online.
