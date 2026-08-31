@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { ArrowRight, ExternalLink, Lock, Tag } from "lucide-react";
+import couponPdf from "@/assets/coupon_centro_estetico.pdf.asset.json";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import { WHATSAPP_URL } from "@/lib/site";
 
