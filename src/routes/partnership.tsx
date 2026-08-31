@@ -213,7 +213,7 @@ function PartnerCard({ partner }: { partner: Partner }) {
         </div>
         {partner.exclusive && (
           <span
-            className="inline-flex shrink-0 items-center gap-1 rounded-full border border-primary/30 bg-primary/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-primary"
+            className="inline-flex shrink-0 items-center gap-1 rounded-full bg-primary px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-primary-foreground"
             title="Riservato agli iscritti EP Team"
           >
             <Lock className="h-3 w-3" />
