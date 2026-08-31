@@ -317,7 +317,7 @@ function PartnershipPage() {
         <div className="mx-auto max-w-5xl px-6">
           <motion.div
             {...containerProps}
-            className="grid grid-cols-1 gap-6 md:grid-cols-2"
+            className="grid grid-cols-1 gap-6 auto-rows-fr md:grid-cols-2"
           >
             {PARTNERS.map((partner) => (
               <PartnerCard key={partner.brand} partner={partner} />
