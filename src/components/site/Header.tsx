@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import logoAsset from "@/assets/elisa-piovan-logo-header.png.asset.json";
 
 const NAV_LINKS = [
   { to: "/", label: "Home" },
@@ -21,8 +22,15 @@ export function Header() {
         <Link
           to="/"
           onClick={() => setOpen(false)}
-          className="font-display text-sm font-bold tracking-[0.22em] uppercase"
+          className="flex items-center gap-3 font-display text-sm font-bold tracking-[0.22em] uppercase"
         >
+          <img
+            src={logoAsset.url}
+            alt="Logo Elisa Piovan Personal Trainer"
+            width={40}
+            height={30}
+            className="h-8 w-auto rounded-sm"
+          />
           Elisa Piovan
         </Link>
 
