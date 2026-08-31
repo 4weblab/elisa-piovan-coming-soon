@@ -96,7 +96,7 @@ function ChiSonoPage() {
               },
             }}
           >
-            <motion.span
+            <motion.h1
               variants={{
                 hidden: { opacity: 0, y: 30 },
                 visible: { opacity: 1, y: 0 },
@@ -105,9 +105,9 @@ function ChiSonoPage() {
               className="w-fit rounded-full border border-border bg-secondary px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-muted-foreground"
             >
               Elisa Piovan | Fitness Coach al Femminile
-            </motion.span>
+            </motion.h1>
 
-            <motion.h1
+            <motion.h2
               variants={{
                 hidden: { opacity: 0, y: 30 },
                 visible: { opacity: 1, y: 0 },
@@ -116,7 +116,7 @@ function ChiSonoPage() {
               className="font-display text-3xl font-bold leading-tight tracking-tight text-foreground md:text-4xl lg:text-5xl"
             >
               Oltre l'allenamento: un invito a riscoprirti semplicemente come donna
-            </motion.h1>
+            </motion.h2>
 
             <motion.p
               variants={{
