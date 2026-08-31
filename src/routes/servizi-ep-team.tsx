@@ -345,6 +345,19 @@ function ServiziEpTeamPage() {
                 </motion.article>
               ))}
             </motion.div>
+
+            <motion.div {...itemProps} className="flex justify-center pt-4">
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center justify-center gap-3 rounded-full bg-primary px-8 py-4 text-base font-semibold text-primary-foreground transition-all duration-300 hover:bg-primary/90 hover:shadow-lg"
+              >
+                <WhatsAppIcon className="h-5 w-5" />
+                Inizia ora il tuo cambiamento
+                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </a>
+            </motion.div>
           </motion.div>
         </div>
       </section>
