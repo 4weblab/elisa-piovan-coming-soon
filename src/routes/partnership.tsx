@@ -123,7 +123,7 @@ type Partner = {
 const PARTNERS: Partner[] = [
   {
     brand: "Diagnostica Riviera",
-    category: "Servizi Sanitari",
+    category: "Servizi Sanitari • 🔒 ESCLUSIVO ISCRITTI EP TEAM",
     exclusive: true,
     description:
       "Centro medico-diagnostico all'avanguardia (sedi a Mira e Padova) specializzato in esami specialistici, apparecchiature ad alta tecnologia e convenzioni sanitarie.",
