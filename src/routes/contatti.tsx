@@ -244,17 +244,6 @@ function ContattiPage() {
         </div>
       </section>
 
-      {/* DATI SOCIETARI DISCRETI */}
-      <section className="bg-background py-10 md:py-14">
-        <div className="mx-auto max-w-4xl px-6 text-center">
-          <motion.div {...revealProps} className="flex flex-col items-center gap-4">
-            <MessageCircle className="h-5 w-5 text-muted-foreground" />
-            <p className="text-sm text-muted-foreground">
-              © 2026 Elisa Piovan - P.IVA 05509730288
-            </p>
-          </motion.div>
-        </div>
-      </section>
     </div>
   );
 }
