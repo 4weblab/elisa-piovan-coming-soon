@@ -81,7 +81,7 @@ const jsonLd = {
       reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
       author: { "@type": "Person", name: "Cliente EP Team" },
       reviewBody:
-        "Un percorso che ha stravolto il mio rapporto con il cibo e con lo specchio. Finalmente mi sento forte.",
+        "Un percorso post gravidanza, piú di un anno di percorso metodo EP allenamento personal training e alimentazione.",
     },
     {
       "@type": "Review",
@@ -89,7 +89,7 @@ const jsonLd = {
       reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
       author: { "@type": "Person", name: "Cliente EP Team" },
       reviewBody:
-        "L'approccio integrato ha fatto la differenza. I risultati estetici sono stati la naturale conseguenza del mio benessere mentale.",
+        "Il percorso EP ha fatto la differenza. I risultati estetici sono stati la naturale conseguenza del mio benessere mentale.",
     },
   ],
 };
@@ -145,11 +145,11 @@ const FEATURES = [
       },
       {
         lead: "Zero privazioni drastiche:",
-        text: "Un approccio di educazione alimentare pensato per nutrire il corpo, sostenere le performance e mantenere alta l'energia di tutti i giorni.",
+        text: "Un approccio sano ed equilibrato pensato per nutrire il corpo, sostenere le performance e mantenere alta l'energia di tutti i giorni.",
       },
       {
         lead: "Flessibilità e stile di vita:",
-        text: "Soluzioni flessibili progettate per integrarsi perfettamente nella tua vita sociale e lavorativa, senza stress o rinunce insostenibili.",
+        text: "Soluzioni progettate per integrarsi perfettamente nella tua vita sociale e lavorativa, senza stress o rinunce insostenibili.",
       },
     ],
   },
@@ -192,14 +192,14 @@ const SUCCESS_STORIES = [
     alt: "Miglioramento della composizione corporea e mindset",
     tag: "Mindset & Nutrizione",
     quote:
-      "Un percorso che ha stravolto il mio rapporto con il cibo e con lo specchio. Finalmente mi sento forte.",
+      "Un percorso post gravidanza, piú di un anno di percorso metodo EP allenamento personal training e alimentazione.",
   },
   {
     src: "/success-3.webp",
     alt: "Risultati fitness e benessere olistico femminile",
     tag: "Forza e Costanza",
     quote:
-      "L'approccio integrato ha fatto la differenza. I risultati estetici sono stati la naturale conseguenza del mio benessere mentale.",
+      "Il percorso EP ha fatto la differenza. I risultati estetici sono stati la naturale conseguenza del mio benessere mentale.",
   },
 ];
 
@@ -266,7 +266,7 @@ function HomePage() {
             variants={heroItem}
             className="font-display text-[0.7rem] font-semibold tracking-[0.28em] text-muted-foreground uppercase"
           >
-            ELISA PIOVAN TRAINER | PADOVA & ONLINE
+            ELISA PIOVAN FITNESS COACH AL FEMMINILE | PADOVA & ONLINE
           </MotionP>
 
           <MotionH1
@@ -284,18 +284,17 @@ function HomePage() {
               to="/chi-sono"
               className="transition-colors duration-300 hover:text-foreground"
             >
-              Elisa Piovan
+             Elisa Piovan
             </MotionLink>{" "}
-            Trainer ed{" "}
+             , fitness coach al femminile, assieme al suo{" "}
             <MotionLink
               to="/servizi-ep-team"
               className="transition-colors duration-300 hover:text-foreground"
             >
-              EP Team
-            </MotionLink>{" "}
-            offrono percorsi integrati di allenamento personalizzato, nutrizione
-            e supporto psicologico per donne a Padova, Noventa Padovana e
-            online.
+             Team
+             </MotionLink>{" "}offre percorsi integrati di allenamento
+             personalizzato, nutrizione e supporto psicologico per donne. A
+             Padova e online.
           </MotionP>
 
           <MotionDiv
@@ -343,10 +342,10 @@ function HomePage() {
               variants={cardItem}
               className="mt-5 max-w-2xl text-base leading-relaxed text-pretty text-muted-foreground"
             >
-              EP Team unisce personal training al femminile, piani alimentari
-              personalizzati e supporto per la gestione dello stress. Un
-              approccio scientifico e olistico per risultati reali e sostenibili
-              nel tempo.
+              Il metodo EP unisce allenamento personalizzato, personal training,
+              alimentazione personalizzata e supporto nella gestione dello
+              stress. Un approccio curato nei minimi dettagli per garantire
+              risultati reali e soprattutto duraturi.
             </MotionP>
 
             <MotionUl
