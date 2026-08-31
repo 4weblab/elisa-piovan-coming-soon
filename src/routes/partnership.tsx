@@ -179,7 +179,7 @@ const PARTNERS: Partner[] = [
   },
   {
     brand: "4 Web Lab",
-    category: "Produzione Siti Web & Digital",
+    category: "Produzione Siti Web & Digital • 🔒 ESCLUSIVO ISCRITTI EP TEAM",
     exclusive: true,
     description:
       "Studio web specializzato nella creazione di siti web per negozi, liberi professionisti e aziende con servizi estesi per SEO avanzato e pubblicità su Google.",
