@@ -265,10 +265,8 @@ function ChiSonoPage() {
                 {...revealProps}
                 className="pt-4"
               >
-                <a
-                  href={WHATSAPP_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  to="/servizi-ep-team"
                   className="group inline-flex items-center justify-center gap-3 rounded-full bg-primary px-8 py-4 text-base font-semibold text-primary-foreground transition-all duration-300 hover:bg-primary/90 hover:shadow-lg"
                 >
                   <WhatsAppIcon className="h-5 w-5" />
