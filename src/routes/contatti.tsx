@@ -30,7 +30,7 @@ const jsonLd = {
       contactType: "customer service",
       availableLanguage: "Italian",
     },
-    sameAs: [INSTAGRAM_URL],
+    sameAs: [INSTAGRAM_URL, TIKTOK_URL, GOOGLE_BUSINESS_URL],
   },
 };
 
