@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { ArrowRight, ExternalLink, Lock, Tag } from "lucide-react";
-import couponPdf from "@/assets/coupon_centro_estetico.pdf.asset.json";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import { WHATSAPP_URL } from "@/lib/site";
 
@@ -25,11 +24,6 @@ const jsonLd = {
       name: "Sconto 10% Diagnostica Riviera",
       description: "Riservato alle allieve attive del programma EP Team.",
       url: "https://wa.me/393278840255?text=Ciao%20Elisa!%20Sono%20un'iscritta%20all'EP%20Team%20e%20vorrei%20richiedere%20il%20codice%20sconto%20per%20Diagnostica%20Riviera",
-    },
-    {
-      "@type": "Offer",
-      name: "Buono Sconto Karuna Estetica",
-      description: "20% di sconto riservato ai nuovi clienti.",
     },
     {
       "@type": "Offer",
@@ -132,22 +126,6 @@ const PARTNERS: Partner[] = [
     secondaryCta: {
       label: "Visita diagnosticariviera.it",
       href: "https://diagnosticariviera.it",
-    },
-  },
-  {
-    brand: "Karuna Estetica ed Olistica",
-    category: "Centro Estetico (Campodarsego - PD)",
-    description:
-      "Percorsi personalizzati di estetica avanzata ed olistica: dai massaggi ayurveda, decontratturanti e linfodrenanti, fino a pressoterapia e laser epilazione.",
-    badge: "🎟️ Buono Sconto del 20% riservato ai nuovi clienti su trattamenti o pacchetti a scelta.",
-    primaryCta: {
-      label: "Scarica il Buono Sconto PDF",
-      href: couponPdf.url,
-      external: true,
-    },
-    secondaryCta: {
-      label: "Scopri la Sede su Mappa",
-      href: "https://www.google.com/maps/search/Karuna+Estetica+ed+Olistica+Campodarsego",
     },
   },
   {
@@ -262,6 +240,9 @@ function PartnerCard({ partner }: { partner: Partner }) {
 }
 
 function PartnershipPage() {
+  const diagnostic = PARTNERS.find((p) => p.brand === "Diagnostica Riviera")!;
+  const others = PARTNERS.filter((p) => p.brand !== "Diagnostica Riviera");
+
   return (
     <div className="flex flex-col">
       {/* HERO SECTION */}
@@ -314,14 +295,17 @@ function PartnershipPage() {
         </div>
       </section>
 
-      {/* GRIGLIA PARTNER 2x2 */}
+      {/* GRIGLIA PARTNER: Diagnostica centrata sopra, Push More e FGM 04 sotto */}
       <section className="bg-background py-16 md:py-24">
         <div className="mx-auto max-w-5xl px-6">
           <motion.div
             {...containerProps}
-            className="grid grid-cols-1 gap-6 auto-rows-fr md:grid-cols-2"
+            className="grid grid-cols-1 gap-6 md:grid-cols-2"
           >
-            {PARTNERS.map((partner) => (
+            <div className="md:col-span-2 md:max-w-2xl md:justify-self-center md:w-full">
+              <PartnerCard partner={diagnostic} />
+            </div>
+            {others.map((partner) => (
               <PartnerCard key={partner.brand} partner={partner} />
             ))}
           </motion.div>
