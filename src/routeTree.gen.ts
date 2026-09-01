@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as R4weblabRouteImport } from './routes/4weblab'
 import { Route as ChiSonoRouteImport } from './routes/chi-sono'
 import { Route as ContattiRouteImport } from './routes/contatti'
 import { Route as CookiePolicyRouteImport } from './routes/cookie-policy'
@@ -21,6 +22,11 @@ import { Route as ServiziEpTeamRouteImport } from './routes/servizi-ep-team'
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const R4weblabRoute = R4weblabRouteImport.update({
+  id: '/4weblab',
+  path: '/4weblab',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ChiSonoRoute = ChiSonoRouteImport.update({
@@ -61,6 +67,7 @@ const ServiziEpTeamRoute = ServiziEpTeamRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/4weblab': typeof R4weblabRoute
   '/chi-sono': typeof ChiSonoRoute
   '/contatti': typeof ContattiRoute
   '/cookie-policy': typeof CookiePolicyRoute
@@ -71,6 +78,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/4weblab': typeof R4weblabRoute
   '/chi-sono': typeof ChiSonoRoute
   '/contatti': typeof ContattiRoute
   '/cookie-policy': typeof CookiePolicyRoute
@@ -82,6 +90,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/4weblab': typeof R4weblabRoute
   '/chi-sono': typeof ChiSonoRoute
   '/contatti': typeof ContattiRoute
   '/cookie-policy': typeof CookiePolicyRoute
@@ -94,6 +103,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/4weblab'
     | '/chi-sono'
     | '/contatti'
     | '/cookie-policy'
@@ -104,6 +114,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/4weblab'
     | '/chi-sono'
     | '/contatti'
     | '/cookie-policy'
@@ -114,6 +125,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/4weblab'
     | '/chi-sono'
     | '/contatti'
     | '/cookie-policy'
@@ -125,6 +137,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  R4weblabRoute: typeof R4weblabRoute
   ChiSonoRoute: typeof ChiSonoRoute
   ContattiRoute: typeof ContattiRoute
   CookiePolicyRoute: typeof CookiePolicyRoute
@@ -141,6 +154,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/4weblab': {
+      id: '/4weblab'
+      path: '/4weblab'
+      fullPath: '/4weblab'
+      preLoaderRoute: typeof R4weblabRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/chi-sono': {
@@ -197,6 +217,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  R4weblabRoute: R4weblabRoute,
   ChiSonoRoute: ChiSonoRoute,
   ContattiRoute: ContattiRoute,
   CookiePolicyRoute: CookiePolicyRoute,
