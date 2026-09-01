@@ -12,6 +12,9 @@ export function Footer() {
           <p className="font-display text-sm font-bold tracking-[0.22em] uppercase">
             Elisa Piovan | fitness coach al femminile
           </p>
+          <p className="mt-1 max-w-md text-xs leading-relaxed text-muted-foreground">
+            Sito web creato e gestito da 4 Web Lab | Siti web per negozi, professionisti e aziende
+          </p>
           <p className="mt-2 text-sm text-muted-foreground">
             © 2026 Elisa Piovan - P.IVA 05509730288
           </p>
