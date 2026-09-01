@@ -575,7 +575,7 @@ function HomePage() {
               base al tuo somatotipo.
             </MotionP>
             <MotionLink
-              to="/quiz-che-fisico-hai"
+              to="/ginoide-androide-test"
               variants={cardItem}
               whileTap={{ scale: 0.95 }}
               animate={{

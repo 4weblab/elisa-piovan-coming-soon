@@ -13,10 +13,10 @@ export const Route = createFileRoute("/ginoide-androide-test")({
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESCRIPTION },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/quiz-che-fisico-hai" },
+      { property: "og:url", content: "/ginoide-androide-test" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/quiz-che-fisico-hai" }],
+    links: [{ rel: "canonical", href: "/ginoide-androide-test" }],
   }),
   component: () => (
     <PlaceholderPage
