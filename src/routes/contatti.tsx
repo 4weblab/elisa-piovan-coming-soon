@@ -156,6 +156,52 @@ function ContattiPage() {
         </div>
       </section>
 
+      {/* COSA SUCCEDE DOPO */}
+      <section className="border-y border-border/70 bg-secondary/30 py-16 md:py-24">
+        <div className="mx-auto max-w-5xl px-6">
+          <motion.div {...revealProps} className="mb-12 text-center">
+            <h2 className="font-display text-2xl font-bold tracking-tight text-foreground md:text-3xl lg:text-4xl">
+              Cosa succede dopo il tuo messaggio?
+            </h2>
+          </motion.div>
+
+          <motion.div
+            {...containerProps}
+            className="grid grid-cols-1 gap-6 md:grid-cols-3"
+          >
+            {STEPS.map((step, index) => (
+              <motion.div
+                key={step.title}
+                {...itemProps}
+                className="flex flex-col items-center rounded-2xl border border-border bg-background p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-md md:p-8"
+              >
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-sm font-bold text-primary-foreground">
+                  {index + 1}
+                </span>
+                <h3 className="mt-5 font-display text-lg font-semibold text-foreground">
+                  {step.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  {step.body}
+                </p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* FRASE CHIUSURA RASSICURANTE */}
+      <section className="bg-background py-12 md:py-16">
+        <div className="mx-auto max-w-4xl px-6 text-center">
+          <motion.p
+            {...revealProps}
+            className="font-display text-lg italic text-foreground md:text-xl lg:text-2xl"
+          >
+            "Ogni grande trasformazione inizia da una semplice chiacchierata tra donne."
+          </motion.p>
+        </div>
+      </section>
+
       {/* CANALI DIRETTI */}
       <section className="bg-background py-16 md:py-24">
         <div className="mx-auto max-w-3xl px-6">
@@ -209,54 +255,6 @@ function ContattiPage() {
           </motion.div>
         </div>
       </section>
-
-      {/* COSA SUCCEDE DOPO */}
-      <section className="border-y border-border/70 bg-secondary/30 py-16 md:py-24">
-        <div className="mx-auto max-w-5xl px-6">
-          <motion.div {...revealProps} className="mb-12 text-center">
-            <h2 className="font-display text-2xl font-bold tracking-tight text-foreground md:text-3xl lg:text-4xl">
-              Cosa succede dopo il tuo messaggio?
-            </h2>
-          </motion.div>
-
-          <motion.div
-            {...containerProps}
-            className="grid grid-cols-1 gap-6 md:grid-cols-3"
-          >
-            {STEPS.map((step, index) => (
-              <motion.div
-                key={step.title}
-                {...itemProps}
-                className="flex flex-col items-center rounded-2xl border border-border bg-background p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-md md:p-8"
-              >
-                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-sm font-bold text-primary-foreground">
-                  {index + 1}
-                </span>
-                <h3 className="mt-5 font-display text-lg font-semibold text-foreground">
-                  {step.title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  {step.body}
-                </p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* CHIUSURA RASSICURANTE */}
-      <section className="bg-background py-12 md:py-16">
-        <div className="mx-auto max-w-4xl px-6 text-center">
-          <motion.p
-            {...revealProps}
-            className="font-display text-lg italic text-foreground md:text-xl lg:text-2xl"
-          >
-            "Ogni grande trasformazione inizia da una semplice chiacchierata tra donne."
-          </motion.p>
-        </div>
-      </section>
-
     </div>
   );
 }
-
