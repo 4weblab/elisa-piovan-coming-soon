@@ -49,6 +49,15 @@ export function Footer() {
             <Instagram className="h-4 w-4" />
           </a>
           <a
+            href={TIKTOK_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="TikTok di Elisa Piovan Trainer"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border text-muted-foreground transition-all duration-300 hover:-translate-y-0.5 hover:text-foreground"
+          >
+            <TikTokIcon className="h-4 w-4" />
+          </a>
+          <a
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
