@@ -26,7 +26,28 @@ const jsonLd = {
     { "@type": "City", name: "Padova" },
     { "@type": "Country", name: "Italia" },
   ],
-  sameAs: [INSTAGRAM_URL],
+  sameAs: [INSTAGRAM_URL, TIKTOK_URL, GOOGLE_BUSINESS_URL],
+  hasMap: GOOGLE_BUSINESS_URL,
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "09:00",
+      closes: "18:30",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Saturday",
+      opens: "09:00",
+      closes: "12:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Sunday",
+      opens: "00:00",
+      closes: "00:00",
+    },
+  ],
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+393278840255",
