@@ -9,7 +9,7 @@ export function Footer() {
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-12 md:flex-row md:items-center md:justify-between">
         <div>
           <p className="font-display text-sm font-bold tracking-[0.22em] uppercase">
-            Elisa Piovan
+            Elisa Piovan | fitness coach al femminile
           </p>
           <p className="mt-2 text-sm text-muted-foreground">
             © 2026 Elisa Piovan - P.IVA 05509730288
