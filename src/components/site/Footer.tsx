@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram } from "lucide-react";
-import { INSTAGRAM_URL, WHATSAPP_URL } from "@/lib/site";
+import { INSTAGRAM_URL, TIKTOK_URL, WHATSAPP_URL } from "@/lib/site";
+import { TikTokIcon } from "@/components/site/TikTokIcon";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 
 export function Footer() {
@@ -46,6 +47,15 @@ export function Footer() {
             className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border text-muted-foreground transition-all duration-300 hover:-translate-y-0.5 hover:text-foreground"
           >
             <Instagram className="h-4 w-4" />
+          </a>
+          <a
+            href={TIKTOK_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="TikTok di Elisa Piovan Trainer"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border text-muted-foreground transition-all duration-300 hover:-translate-y-0.5 hover:text-foreground"
+          >
+            <TikTokIcon className="h-4 w-4" />
           </a>
           <a
             href={WHATSAPP_URL}
