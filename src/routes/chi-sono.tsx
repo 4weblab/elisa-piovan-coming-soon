@@ -41,6 +41,8 @@ const jsonLd = {
       description:
         "Metodo integrato di allenamento, nutrizione e mente per il benessere femminile.",
       telephone: "+393278840255",
+      sameAs: [INSTAGRAM_URL, TIKTOK_URL, GOOGLE_BUSINESS_URL],
+      hasMap: GOOGLE_BUSINESS_URL,
       areaServed: [
         { "@type": "City", name: "Padova" },
         { "@type": "City", name: "Noventa Padovana" },
