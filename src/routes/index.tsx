@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { AnimatePresence, motion } from "framer-motion";
 import { Apple, ArrowRight, Brain, Check, Dumbbell, Instagram } from "lucide-react";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
-import { INSTAGRAM_URL, SITE_URL, WHATSAPP_URL } from "@/lib/site";
+import { GOOGLE_BUSINESS_URL, GOOGLE_RATING_VALUE, GOOGLE_REVIEW_COUNT, INSTAGRAM_URL, SITE_URL, TIKTOK_URL, WHATSAPP_URL } from "@/lib/site";
 
 const PAGE_TITLE =
   "Coaching Online e Personal Trainer Padova | Elisa Piovan";
@@ -26,7 +26,28 @@ const jsonLd = {
     { "@type": "City", name: "Padova" },
     { "@type": "Country", name: "Italia" },
   ],
-  sameAs: [INSTAGRAM_URL],
+  sameAs: [INSTAGRAM_URL, TIKTOK_URL, GOOGLE_BUSINESS_URL],
+  hasMap: GOOGLE_BUSINESS_URL,
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "09:00",
+      closes: "18:30",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Saturday",
+      opens: "09:00",
+      closes: "12:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Sunday",
+      opens: "00:00",
+      closes: "00:00",
+    },
+  ],
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+393278840255",
@@ -61,10 +82,10 @@ const jsonLd = {
   },
   aggregateRating: {
     "@type": "AggregateRating",
-    ratingValue: "5",
+    ratingValue: GOOGLE_RATING_VALUE,
     bestRating: "5",
     worstRating: "1",
-    reviewCount: 3,
+    reviewCount: GOOGLE_REVIEW_COUNT,
   },
   review: [
     {
