@@ -417,7 +417,7 @@ function HomePage() {
                     Il primo passo
                   </p>
                   <h3 className="text-2xl font-bold tracking-tight sm:text-3xl">
-                    Consulenza Strategica 1:1 | 30 minuti con Elisa
+                    Consulenza Strategica 1:1
                   </h3>
                   <p className="text-base leading-relaxed text-muted-foreground">
                     Non una semplice chiamata conoscitiva, ma un primo confronto
