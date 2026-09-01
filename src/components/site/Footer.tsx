@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram } from "lucide-react";
-import { INSTAGRAM_URL, WHATSAPP_URL } from "@/lib/site";
+import { INSTAGRAM_URL, TIKTOK_URL, WHATSAPP_URL } from "@/lib/site";
+import { TikTokIcon } from "@/components/site/TikTokIcon";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 
 export function Footer() {
