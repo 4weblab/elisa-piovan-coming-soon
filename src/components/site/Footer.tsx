@@ -15,6 +15,23 @@ export function Footer() {
           <p className="mt-2 text-sm text-muted-foreground">
             © 2026 Elisa Piovan - P.IVA 05509730288
           </p>
+          <p className="mt-1 flex flex-col gap-0.5 text-sm text-muted-foreground sm:flex-row sm:gap-3">
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors hover:text-foreground"
+            >
+              +39 327 884 0255
+            </a>
+            <span className="hidden text-border sm:inline">|</span>
+            <a
+              href="mailto:elisapiovantrainer@gmail.com"
+              className="transition-colors hover:text-foreground"
+            >
+              elisapiovantrainer@gmail.com
+            </a>
+          </p>
         </div>
 
         <nav aria-label="Note legali">
