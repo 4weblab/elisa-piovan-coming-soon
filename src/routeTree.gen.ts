@@ -13,9 +13,9 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as ChiSonoRouteImport } from './routes/chi-sono'
 import { Route as ContattiRouteImport } from './routes/contatti'
 import { Route as CookiePolicyRouteImport } from './routes/cookie-policy'
+import { Route as GinoideAndroideTestRouteImport } from './routes/ginoide-androide-test'
 import { Route as PartnershipRouteImport } from './routes/partnership'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
-import { Route as QuizCheFisicoHaiRouteImport } from './routes/quiz-che-fisico-hai'
 import { Route as ServiziEpTeamRouteImport } from './routes/servizi-ep-team'
 
 const IndexRoute = IndexRouteImport.update({
@@ -38,6 +38,11 @@ const CookiePolicyRoute = CookiePolicyRouteImport.update({
   path: '/cookie-policy',
   getParentRoute: () => rootRouteImport,
 } as any)
+const GinoideAndroideTestRoute = GinoideAndroideTestRouteImport.update({
+  id: '/ginoide-androide-test',
+  path: '/ginoide-androide-test',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PartnershipRoute = PartnershipRouteImport.update({
   id: '/partnership',
   path: '/partnership',
@@ -46,11 +51,6 @@ const PartnershipRoute = PartnershipRouteImport.update({
 const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
   id: '/privacy-policy',
   path: '/privacy-policy',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const QuizCheFisicoHaiRoute = QuizCheFisicoHaiRouteImport.update({
-  id: '/quiz-che-fisico-hai',
-  path: '/quiz-che-fisico-hai',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ServiziEpTeamRoute = ServiziEpTeamRouteImport.update({
@@ -64,9 +64,9 @@ export interface FileRoutesByFullPath {
   '/chi-sono': typeof ChiSonoRoute
   '/contatti': typeof ContattiRoute
   '/cookie-policy': typeof CookiePolicyRoute
+  '/ginoide-androide-test': typeof GinoideAndroideTestRoute
   '/partnership': typeof PartnershipRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
-  '/quiz-che-fisico-hai': typeof QuizCheFisicoHaiRoute
   '/servizi-ep-team': typeof ServiziEpTeamRoute
 }
 export interface FileRoutesByTo {
@@ -74,9 +74,9 @@ export interface FileRoutesByTo {
   '/chi-sono': typeof ChiSonoRoute
   '/contatti': typeof ContattiRoute
   '/cookie-policy': typeof CookiePolicyRoute
+  '/ginoide-androide-test': typeof GinoideAndroideTestRoute
   '/partnership': typeof PartnershipRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
-  '/quiz-che-fisico-hai': typeof QuizCheFisicoHaiRoute
   '/servizi-ep-team': typeof ServiziEpTeamRoute
 }
 export interface FileRoutesById {
@@ -85,9 +85,9 @@ export interface FileRoutesById {
   '/chi-sono': typeof ChiSonoRoute
   '/contatti': typeof ContattiRoute
   '/cookie-policy': typeof CookiePolicyRoute
+  '/ginoide-androide-test': typeof GinoideAndroideTestRoute
   '/partnership': typeof PartnershipRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
-  '/quiz-che-fisico-hai': typeof QuizCheFisicoHaiRoute
   '/servizi-ep-team': typeof ServiziEpTeamRoute
 }
 export interface FileRouteTypes {
@@ -97,9 +97,9 @@ export interface FileRouteTypes {
     | '/chi-sono'
     | '/contatti'
     | '/cookie-policy'
+    | '/ginoide-androide-test'
     | '/partnership'
     | '/privacy-policy'
-    | '/quiz-che-fisico-hai'
     | '/servizi-ep-team'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -107,9 +107,9 @@ export interface FileRouteTypes {
     | '/chi-sono'
     | '/contatti'
     | '/cookie-policy'
+    | '/ginoide-androide-test'
     | '/partnership'
     | '/privacy-policy'
-    | '/quiz-che-fisico-hai'
     | '/servizi-ep-team'
   id:
     | '__root__'
@@ -117,9 +117,9 @@ export interface FileRouteTypes {
     | '/chi-sono'
     | '/contatti'
     | '/cookie-policy'
+    | '/ginoide-androide-test'
     | '/partnership'
     | '/privacy-policy'
-    | '/quiz-che-fisico-hai'
     | '/servizi-ep-team'
   fileRoutesById: FileRoutesById
 }
@@ -128,9 +128,9 @@ export interface RootRouteChildren {
   ChiSonoRoute: typeof ChiSonoRoute
   ContattiRoute: typeof ContattiRoute
   CookiePolicyRoute: typeof CookiePolicyRoute
+  GinoideAndroideTestRoute: typeof GinoideAndroideTestRoute
   PartnershipRoute: typeof PartnershipRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
-  QuizCheFisicoHaiRoute: typeof QuizCheFisicoHaiRoute
   ServiziEpTeamRoute: typeof ServiziEpTeamRoute
 }
 
@@ -164,6 +164,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CookiePolicyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ginoide-androide-test': {
+      id: '/ginoide-androide-test'
+      path: '/ginoide-androide-test'
+      fullPath: '/ginoide-androide-test'
+      preLoaderRoute: typeof GinoideAndroideTestRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/partnership': {
       id: '/partnership'
       path: '/partnership'
@@ -176,13 +183,6 @@ declare module '@tanstack/react-router' {
       path: '/privacy-policy'
       fullPath: '/privacy-policy'
       preLoaderRoute: typeof PrivacyPolicyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/quiz-che-fisico-hai': {
-      id: '/quiz-che-fisico-hai'
-      path: '/quiz-che-fisico-hai'
-      fullPath: '/quiz-che-fisico-hai'
-      preLoaderRoute: typeof QuizCheFisicoHaiRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/servizi-ep-team': {
@@ -200,9 +200,9 @@ const rootRouteChildren: RootRouteChildren = {
   ChiSonoRoute: ChiSonoRoute,
   ContattiRoute: ContattiRoute,
   CookiePolicyRoute: CookiePolicyRoute,
+  GinoideAndroideTestRoute: GinoideAndroideTestRoute,
   PartnershipRoute: PartnershipRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
-  QuizCheFisicoHaiRoute: QuizCheFisicoHaiRoute,
   ServiziEpTeamRoute: ServiziEpTeamRoute,
 }
 export const routeTree = rootRouteImport
