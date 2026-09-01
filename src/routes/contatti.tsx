@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { Instagram } from "lucide-react";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
-import { INSTAGRAM_URL, SITE_URL } from "@/lib/site";
+import { GOOGLE_BUSINESS_URL, INSTAGRAM_URL, SITE_URL, TIKTOK_URL } from "@/lib/site";
 
 const PAGE_TITLE =
   "Contatta Elisa Piovan | Coaching Online e Personal Training al Femminile";
