@@ -539,7 +539,7 @@ function HomePage() {
                 </span>
               </div>
               <MotionA
-                href="https://www.instagram.com/ep_epteam/"
+                href="https://www.instagram.com/elisapiovan.ep/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="whitespace-nowrap text-sm font-semibold text-foreground transition-opacity duration-300 hover:opacity-80"

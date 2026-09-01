@@ -21,7 +21,7 @@ const jsonLd = {
         "Fitness coach al femminile con sedici anni di esperienza. Fondatrice di EP Team, specializzata in percorsi integrati di allenamento, nutrizione e supporto psicologico per donne.",
       url: `${SITE_URL}/chi-sono`,
       image: `${SITE_URL}/favicon.png`,
-      sameAs: ["https://www.instagram.com/ep_epteam/"],
+      sameAs: ["https://www.instagram.com/elisapiovan.ep/"],
       worksFor: { "@id": `${SITE_URL}/#organization` },
       knowsAbout: [
         "Personal Training al Femminile",
