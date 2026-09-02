@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 200" width="120" height="200" role="img" aria-label="Silhouette biotipo androide">
+  <g fill="#d4d4d8">
+    <circle cx="60" cy="22" r="14"/>
+    <path d="M60 38c-16 0-30 8-33 22-2 12 0 26 4 38 3 10 10 16 12 24h34c2-8 9-14 12-24 4-12 6-26 4-38-3-14-17-22-33-22z"/>
+    <path d="M44 124c-3 22-4 46-3 66h13c1-20 3-42 5-58zM76 124c3 22 4 46 3 66H66c-1-20-3-42-5-58z"/>
+  </g>
+</svg>
