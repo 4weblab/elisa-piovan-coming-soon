@@ -355,11 +355,6 @@ function QuizExperience() {
           <ArrowRight className="h-4 w-4" />
         </button>
 
-        <p className="mt-4 flex items-center justify-center gap-2 text-xs text-muted-foreground">
-          <Lock className="h-3.5 w-3.5" />
-          Rispettiamo la tua privacy. I tuoi dati servono solo per la gestione
-          della tua analisi.
-        </p>
       </motion.form>
     );
   }
