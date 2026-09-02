@@ -218,12 +218,12 @@ const fadeUp = {
 
 function QuizExperience() {
   const [unlocked, setUnlocked] = useState(false);
-  const [sending, setSending] = useState(false);
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
   const [answers, setAnswers] = useState<Letter[]>([]);
   const [step, setStep] = useState(0);
+  const hasSubmitted = useRef(false);
 
   const finished = answers.length === QUESTIONS.length;
   const result = (() => {
@@ -233,30 +233,37 @@ function QuizExperience() {
     return a > b ? RESULTS.androide : RESULTS.ginoide;
   })();
 
-  async function handleGate(e: React.FormEvent) {
-    e.preventDefault();
-    if (!name.trim() || !phone.trim() || !privacyAccepted) return;
-    setSending(true);
+  async function submitToWeb3Forms(resultLabel: string) {
+    if (!WEB3FORMS_ACCESS_KEY) return;
     try {
-      if (WEB3FORMS_ACCESS_KEY) {
-        await fetch("https://api.web3forms.com/submit", {
-          method: "POST",
-          headers: { "Content-Type": "application/json", Accept: "application/json" },
-          body: JSON.stringify({
-            access_key: WEB3FORMS_ACCESS_KEY,
-            subject: "Nuovo lead dal Quiz Biotipo",
-            from_name: "Elisa Piovan Trainer — Quiz Biotipo",
-            Nome: name,
-            Cellulare: phone,
-          }),
-        });
-      }
+      await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: "Nuovo lead dal Quiz Biotipo",
+          from_name: "Elisa Piovan Trainer — Quiz Biotipo",
+          Nome: name,
+          Cellulare: phone,
+          Risultato_Test: `Biotipo ${resultLabel.charAt(0) + resultLabel.slice(1).toLowerCase()}`,
+        }),
+      });
     } catch {
       /* la mancata notifica non deve bloccare l'utente */
-    } finally {
-      setSending(false);
-      setUnlocked(true);
     }
+  }
+
+  useEffect(() => {
+    if (finished && result && !hasSubmitted.current) {
+      hasSubmitted.current = true;
+      submitToWeb3Forms(result.label);
+    }
+  }, [finished, result, name, phone]);
+
+  function handleGate(e: React.FormEvent) {
+    e.preventDefault();
+    if (!name.trim() || !phone.trim() || !privacyAccepted) return;
+    setUnlocked(true);
   }
 
   function answer(letter: Letter) {
@@ -266,6 +273,7 @@ function QuizExperience() {
   }
 
   function restart() {
+    hasSubmitted.current = false;
     setAnswers([]);
     setStep(0);
   }
