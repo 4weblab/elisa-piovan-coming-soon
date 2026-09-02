@@ -350,10 +350,10 @@ function QuizExperience() {
 
         <button
           type="submit"
-          disabled={sending || !privacyAccepted}
+          disabled={!privacyAccepted}
           className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-6 py-4 text-sm font-semibold text-primary-foreground transition hover:bg-primary/90 disabled:opacity-60"
         >
-          {sending ? "Attendi..." : "Inizia il test fisico"}
+          Inizia il test fisico
           <ArrowRight className="h-4 w-4" />
         </button>
 
