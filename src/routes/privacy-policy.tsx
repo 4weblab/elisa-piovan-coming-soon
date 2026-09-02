@@ -215,6 +215,7 @@ function PrivacyPolicyPage() {
                   <strong>WhatsApp Ireland LLC / Meta Platforms, Inc.</strong> — quando l’utente clicca sui pulsanti
                   WhatsApp o invia un messaggio, i dati sono trattati secondo le policy di WhatsApp e Meta, sulle quali
                   il Titolare non ha controllo diretto.
+                </li>
               </ul>
             </motion.div>
 
