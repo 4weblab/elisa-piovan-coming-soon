@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { ArrowLeft, ArrowRight, Lock, RotateCcw } from "lucide-react";
@@ -221,6 +221,7 @@ function QuizExperience() {
   const [sending, setSending] = useState(false);
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
+  const [privacyAccepted, setPrivacyAccepted] = useState(false);
   const [answers, setAnswers] = useState<Letter[]>([]);
   const [step, setStep] = useState(0);
 
@@ -234,7 +235,7 @@ function QuizExperience() {
 
   async function handleGate(e: React.FormEvent) {
     e.preventDefault();
-    if (!name.trim() || !phone.trim()) return;
+    if (!name.trim() || !phone.trim() || !privacyAccepted) return;
     setSending(true);
     try {
       if (WEB3FORMS_ACCESS_KEY) {
@@ -312,11 +313,36 @@ function QuizExperience() {
               placeholder="+39 ..."
             />
           </div>
+
+          <div className="flex items-start gap-3">
+            <input
+              id="quiz-privacy"
+              type="checkbox"
+              required
+              checked={privacyAccepted}
+              onChange={(e) => setPrivacyAccepted(e.target.checked)}
+              className="mt-0.5 h-4 w-4 shrink-0 cursor-pointer accent-current"
+            />
+            <label
+              htmlFor="quiz-privacy"
+              className="cursor-pointer text-xs leading-relaxed text-muted-foreground"
+            >
+              I dati inviati tramite il form vengono trattati secondo le regole
+              di Privacy previste e sono consultabili alla pagina{" "}
+              <Link
+                to="/privacy-policy"
+                className="font-medium text-foreground underline underline-offset-2"
+              >
+                Privacy
+              </Link>
+              .
+            </label>
+          </div>
         </div>
 
         <button
           type="submit"
-          disabled={sending}
+          disabled={sending || !privacyAccepted}
           className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-6 py-4 text-sm font-semibold text-primary-foreground transition hover:bg-primary/90 disabled:opacity-60"
         >
           {sending ? "Attendi..." : "Inizia il test fisico"}
