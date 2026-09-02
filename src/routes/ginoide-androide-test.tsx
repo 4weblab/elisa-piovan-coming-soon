@@ -205,9 +205,7 @@ const RESULTS = {
   },
 };
 
-const WEB3FORMS_ACCESS_KEY = import.meta.env["VITE_WEB3FORMS_ACCESS_KEY"] as
-  | string
-  | undefined;
+const WEB3FORMS_ACCESS_KEY = "06485748-f8b3-4782-909f-315057501c4c";
 
 const fadeUp = {
   initial: { opacity: 0, y: 20 },
