@@ -141,16 +141,19 @@ const PILASTRI = [
 
 const TEAM = [
   {
+    name: "Silvia",
     role: "Personal Training Dedicated",
     team: "EP Team",
     text: "Programmi di allenamento personalizzati e monitoraggio costante (in presenza o online) guidati da una Personal Trainer dell'EP Team per raggiungere i tuoi obiettivi fisici in totale sicurezza.",
   },
   {
+    name: "Erica",
     role: "Nutrizione e Alimentazione Funzionale",
     team: "Nutrizionista EP Team",
     text: "Piani alimentari flessibili ed educazione alimentare a cura della Nutrizionista dell'EP Team, pensati per nutrire il corpo senza privazioni o diete restrittive.",
   },
   {
+    name: "Mimì",
     role: "Mindset e Supporto Psicologico",
     team: "Psicologa EP Team",
     text: "Incontri dedicati con la Psicologa del team per superare i blocchi emotivi, gestire lo stress e costruire un rapporto sano con la tua immagine corporea. Perché il tuo unico limite sei TU.",
@@ -337,8 +340,13 @@ function ServiziEpTeamPage() {
                   {...itemProps}
                   className="rounded-2xl border border-border surface-base bg-background p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                 >
-                  <div className="w-12 h-12 rounded-full bg-muted mb-4 flex items-center justify-center text-xs text-muted-foreground">
-                    AVATAR
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center text-xs text-muted-foreground">
+                      AVATAR
+                    </div>
+                    <span className="text-base font-semibold text-foreground">
+                      {member.name}
+                    </span>
                   </div>
                   <h3 className="text-base font-semibold text-foreground">
                     {member.role}
