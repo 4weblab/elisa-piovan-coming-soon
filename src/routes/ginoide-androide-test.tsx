@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/accordion";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import ginoideIllustrazioneAsset from "@/assets/ginoide-illustrazione.webp.asset.json";
+import androideIllustrazioneAsset from "@/assets/androide-illustrazione.webp.asset.json";
 import { SITE_URL } from "@/lib/site";
 
 const PATH = "/ginoide-androide-test";
@@ -132,7 +133,7 @@ const RESULTS = {
   androide: {
     key: "androide" as const,
     label: "ANDROIDE",
-    cover: "/placeholders/androide-silhouette.svg",
+    cover: androideIllustrazioneAsset.url,
     profile:
       "Tendi ad accumulare adipe prevalentemente nella zona addominale, sul girovita, sulle braccia e in generale tutta la parte alta del corpo. La circolazione a livello di inferiori è generalmente buona e le gambe sono visivamente più asciutte e snelle rispetto al tronco.",
     tips: [
@@ -377,7 +378,7 @@ function QuizExperience() {
               alt={
                 result.key === "ginoide"
                   ? "rappresentazione fisico Ginoide"
-                  : `Illustrazione del biotipo ${result.label.toLowerCase()}`
+                  : "rappresentazione fisico Androide"
               }
               className="h-auto w-full max-w-md rounded-2xl object-contain"
               loading="lazy"
