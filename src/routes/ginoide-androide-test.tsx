@@ -371,11 +371,15 @@ function QuizExperience() {
             Il tuo Biotipo prevalente è: {result.label}
           </h2>
 
-          <div className="mt-8 flex justify-center rounded-2xl bg-secondary p-8">
+          <div className="mt-8 flex justify-center overflow-hidden rounded-3xl border border-[var(--color-terracotta)] bg-[var(--color-cream)] p-3 shadow-[0_12px_32px_-12px_var(--color-terracotta)]">
             <img
               src={result.cover}
-              alt={`Illustrazione del biotipo ${result.label.toLowerCase()}`}
-              className="h-48 w-auto"
+              alt={
+                result.key === "ginoide"
+                  ? "rappresentazione fisico Ginoide"
+                  : `Illustrazione del biotipo ${result.label.toLowerCase()}`
+              }
+              className="h-auto w-full max-w-md rounded-2xl object-contain"
               loading="lazy"
             />
           </div>
