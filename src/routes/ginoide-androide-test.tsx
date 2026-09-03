@@ -74,10 +74,6 @@ const QUESTIONS: Question[] = [
         text: "Su fianchi, glutei, cosce e “culotte de cheval”. Il girovita rimane stretto.",
         image: "/placeholders/ginoide-silhouette.svg",
       },
-      {
-        letter: "C",
-        text: "In modo omogeneo su tutto il corpo, senza una zona nettamente prevalente.",
-      },
     ],
   },
   {
