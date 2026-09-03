@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import elisaAllenamentoAsset from "@/assets/elisa-allenamento.webp.asset.json";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import { GOOGLE_BUSINESS_URL, INSTAGRAM_URL, SITE_URL, TIKTOK_URL, WHATSAPP_URL } from "@/lib/site";
 
@@ -170,9 +171,15 @@ function ChiSonoPage() {
       <section className="border-t border-border/70 bg-secondary/30 py-20 md:py-28">
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 md:grid-cols-2 md:gap-16">
           <motion.div {...revealProps}>
-            <div className="aspect-square w-full max-w-md mx-auto rounded-2xl bg-muted flex items-center justify-center text-muted-foreground font-medium text-sm tracking-widest">
-              FOTO ALLENAMENTO / DETTAGLIO
-            </div>
+            <img
+              src={elisaAllenamentoAsset.url}
+              alt="Elisa durante un allenamento"
+              width={896}
+              height={896}
+              loading="lazy"
+              decoding="async"
+              className="aspect-square w-full max-w-md mx-auto rounded-2xl object-cover"
+            />
           </motion.div>
 
           <div className="flex flex-col gap-6">
