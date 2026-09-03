@@ -147,7 +147,7 @@ function ChiSonoPage() {
             className="order-1 md:order-2"
             {...revealProps}
           >
-            <div className="aspect-[3/4] w-full rounded-xl bg-zinc-200 flex items-center justify-center text-zinc-500 font-medium text-sm tracking-widest">
+            <div className="aspect-[3/4] w-full rounded-xl bg-muted flex items-center justify-center text-muted-foreground font-medium text-sm tracking-widest">
               FOTO RITRATTO ELISA
             </div>
           </motion.div>
@@ -170,7 +170,7 @@ function ChiSonoPage() {
       <section className="border-t border-border/70 bg-secondary/30 py-20 md:py-28">
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 md:grid-cols-2 md:gap-16">
           <motion.div {...revealProps}>
-            <div className="aspect-square w-full max-w-md mx-auto rounded-2xl bg-zinc-200 flex items-center justify-center text-zinc-500 font-medium text-sm tracking-widest">
+            <div className="aspect-square w-full max-w-md mx-auto rounded-2xl bg-muted flex items-center justify-center text-muted-foreground font-medium text-sm tracking-widest">
               FOTO ALLENAMENTO / DETTAGLIO
             </div>
           </motion.div>

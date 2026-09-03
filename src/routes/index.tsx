@@ -381,7 +381,7 @@ function HomePage() {
                 return (
                   <MotionLi key={feature.title} variants={cardItem}>
                     <MotionArticle
-                      className="h-full space-y-4 rounded-2xl border border-zinc-200/60 bg-zinc-50/50 p-6 transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-xl md:p-8"
+                      className="h-full space-y-4 rounded-2xl border border-border bg-card p-6 transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-xl md:p-8"
                     >
                       <Icon
                         className="h-6 w-6 text-muted-foreground"
@@ -432,7 +432,7 @@ function HomePage() {
               transition={{ type: "spring", stiffness: 120, damping: 18 }}
               className="mt-14 max-w-4xl mx-auto"
             >
-              <article className="grid grid-cols-1 gap-8 rounded-2xl border border-zinc-200 bg-zinc-900/5 p-8 lg:grid-cols-2 lg:items-center lg:p-10 dark:border-zinc-800 dark:bg-zinc-100/5">
+              <article className="grid grid-cols-1 gap-8 rounded-2xl border border-border bg-muted p-8 lg:grid-cols-2 lg:items-center lg:p-10">
                 <div className="space-y-5">
                   <p className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
                     Il primo passo
