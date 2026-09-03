@@ -11,6 +11,8 @@ import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import elisaHeroAsset from "@/assets/elisa-hero.webp.asset.json";
 import silviaAvatarAsset from "@/assets/silvia-avatar.webp.asset.json";
 import mimiAvatarAsset from "@/assets/mimi-avatar.webp.asset.json";
+import ericaAvatarAsset from "@/assets/erica-avatar.webp.asset.json";
+
 
 
 import { INSTAGRAM_URL, SITE_URL, WHATSAPP_URL } from "@/lib/site";
@@ -162,6 +164,8 @@ const TEAM: {
     name: "Erica",
     role: "Nutrizione e Alimentazione Funzionale",
     team: "Nutrizionista EP Team",
+    photo: ericaAvatarAsset.url,
+
     text: "Piani alimentari flessibili ed educazione alimentare a cura della Nutrizionista dell'EP Team, pensati per nutrire il corpo senza privazioni o diete restrittive.",
   },
   {
