@@ -85,7 +85,7 @@ function ChiSonoPage() {
   return (
     <div className="flex flex-col">
       {/* HERO */}
-      <section className="overflow-hidden border-b border-border/70 bg-background">
+      <section className="overflow-hidden border-b border-border/70 surface-base bg-background">
         <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 md:grid-cols-2 md:items-center md:gap-16 md:py-28">
           <motion.div
             className="order-2 flex flex-col gap-6 md:order-1"
@@ -155,7 +155,7 @@ function ChiSonoPage() {
       </section>
 
       {/* METODO E CONSAPEVOLEZZA */}
-      <section className="bg-background py-20 md:py-28">
+      <section className="surface-base bg-background py-20 md:py-28">
         <div className="mx-auto max-w-3xl px-6 text-center">
           <motion.p
             {...revealProps}
@@ -208,7 +208,7 @@ function ChiSonoPage() {
       </section>
 
       {/* RUOLO E TEAM */}
-      <section className="bg-background py-20 md:py-28">
+      <section className="surface-base bg-background py-20 md:py-28">
         <div className="mx-auto max-w-4xl px-6">
           <div className="flex flex-col gap-12">
             <div className="flex flex-col gap-6">

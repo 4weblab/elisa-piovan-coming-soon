@@ -160,7 +160,7 @@ function PartnerCard({ partner }: { partner: Partner }) {
   return (
     <motion.article
       {...itemProps}
-      className="group flex h-full flex-col rounded-2xl border border-border bg-background p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg md:p-8"
+      className="group flex h-full flex-col rounded-2xl border border-border surface-base bg-background p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg md:p-8"
     >
       {/* HEADER */}
       <div className="mb-5 flex items-start justify-between gap-4">
@@ -246,7 +246,7 @@ function PartnershipPage() {
   return (
     <div className="flex flex-col">
       {/* HERO SECTION */}
-      <section className="border-b border-border/70 bg-background">
+      <section className="border-b border-border/70 surface-base bg-background">
         <div className="mx-auto max-w-4xl px-6 py-16 text-center md:py-24">
           <motion.div
             initial="hidden"
@@ -296,7 +296,7 @@ function PartnershipPage() {
       </section>
 
       {/* GRIGLIA PARTNER: Diagnostica centrata sopra, Push More e FGM 04 sotto */}
-      <section className="bg-background py-16 md:py-24">
+      <section className="surface-base bg-background py-16 md:py-24">
         <div className="mx-auto max-w-5xl px-6">
           <motion.div
             {...containerProps}

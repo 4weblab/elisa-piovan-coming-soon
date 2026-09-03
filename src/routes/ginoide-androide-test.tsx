@@ -268,7 +268,7 @@ function QuizExperience() {
       <motion.form
         {...fadeUp}
         onSubmit={handleGate}
-        className="mx-auto max-w-xl rounded-3xl border border-border bg-card p-8 shadow-sm sm:p-10"
+        className="mx-auto max-w-xl rounded-3xl border border-border surface-card bg-card p-8 shadow-sm sm:p-10"
       >
         <h2 className="text-2xl font-bold tracking-tight">
           Analisi Morfologica del Tuo Biotipo
@@ -288,7 +288,7 @@ function QuizExperience() {
               required
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="mt-2 w-full rounded-xl border border-input bg-background px-4 py-3 text-sm outline-none transition focus:border-foreground"
+              className="mt-2 w-full rounded-xl border border-input surface-base bg-background px-4 py-3 text-sm outline-none transition focus:border-foreground"
               placeholder="Il tuo nome"
             />
           </div>
@@ -301,7 +301,7 @@ function QuizExperience() {
               required
               value={surname}
               onChange={(e) => setSurname(e.target.value)}
-              className="mt-2 w-full rounded-xl border border-input bg-background px-4 py-3 text-sm outline-none transition focus:border-foreground"
+              className="mt-2 w-full rounded-xl border border-input surface-base bg-background px-4 py-3 text-sm outline-none transition focus:border-foreground"
               placeholder="Il tuo cognome"
             />
           </div>
@@ -315,7 +315,7 @@ function QuizExperience() {
               type="tel"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
-              className="mt-2 w-full rounded-xl border border-input bg-background px-4 py-3 text-sm outline-none transition focus:border-foreground"
+              className="mt-2 w-full rounded-xl border border-input surface-base bg-background px-4 py-3 text-sm outline-none transition focus:border-foreground"
               placeholder="+39 ..."
             />
           </div>
@@ -362,7 +362,7 @@ function QuizExperience() {
   if (result) {
     return (
       <motion.div {...fadeUp} className="mx-auto max-w-3xl">
-        <div className="rounded-3xl border border-border bg-card p-8 shadow-sm sm:p-12">
+        <div className="rounded-3xl border border-border surface-card bg-card p-8 shadow-sm sm:p-12">
           <span className="inline-flex rounded-full border border-border px-3 py-1 text-xs font-medium uppercase tracking-widest text-muted-foreground">
             Esito Analisi Morfologica
           </span>
@@ -458,7 +458,7 @@ function QuizExperience() {
                 <button
                   key={opt.letter}
                   onClick={() => answer(opt.letter)}
-                  className={`flex items-center gap-5 rounded-2xl border bg-card p-5 text-left transition hover:-translate-y-0.5 hover:border-foreground hover:shadow-sm ${
+                  className={`flex items-center gap-5 rounded-2xl border surface-card bg-card p-5 text-left transition hover:-translate-y-0.5 hover:border-foreground hover:shadow-sm ${
                     selected ? "border-foreground" : "border-border"
                   }`}
                 >

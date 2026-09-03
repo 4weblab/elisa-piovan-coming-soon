@@ -71,7 +71,7 @@ export function Header() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-            className="overflow-hidden border-t border-border bg-background md:hidden"
+            className="overflow-hidden border-t border-border surface-base bg-background md:hidden"
           >
             <ul className="mx-auto flex max-w-6xl flex-col px-6 py-4">
               {NAV_LINKS.map((link) => (

@@ -131,7 +131,7 @@ function FourWebLabPage() {
   return (
     <div className="flex flex-col">
       {/* HERO */}
-      <section className="relative overflow-hidden border-b border-border/70 bg-background">
+      <section className="relative overflow-hidden border-b border-border/70 surface-base bg-background">
         <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
           <motion.div
             className="mx-auto max-w-4xl text-center"
@@ -155,7 +155,7 @@ function FourWebLabPage() {
       </section>
 
       {/* QUOTE */}
-      <section className="bg-background py-16 md:py-24">
+      <section className="surface-base bg-background py-16 md:py-24">
         <div className="mx-auto max-w-4xl px-6">
           <motion.div
             {...revealProps}
@@ -181,7 +181,7 @@ function FourWebLabPage() {
       </section>
 
       {/* INTERVENTIONS GRID */}
-      <section className="border-t border-border/70 bg-background py-16 md:py-24">
+      <section className="border-t border-border/70 surface-base bg-background py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-6">
           <motion.div {...revealProps} className="mb-12 text-center">
             <h2 className="font-display text-2xl font-bold tracking-tight text-foreground md:text-3xl">
@@ -200,7 +200,7 @@ function FourWebLabPage() {
               <motion.div
                 key={item.title}
                 {...itemProps}
-                className="flex flex-col rounded-2xl border border-border bg-card p-6 transition-shadow duration-300 hover:shadow-sm"
+                className="flex flex-col rounded-2xl border border-border surface-card bg-card p-6 transition-shadow duration-300 hover:shadow-sm"
               >
                 <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-full border border-border bg-secondary">
                   <item.icon className="h-5 w-5 text-foreground" />
@@ -216,7 +216,7 @@ function FourWebLabPage() {
       </section>
 
       {/* AGENCY BOX */}
-      <section className="border-t border-border/70 bg-background py-16 md:py-24">
+      <section className="border-t border-border/70 surface-base bg-background py-16 md:py-24">
         <div className="mx-auto max-w-4xl px-6">
           <motion.div
             {...revealProps}
@@ -273,7 +273,7 @@ function FourWebLabPage() {
       </section>
 
       {/* BACK TO SITE */}
-      <section className="border-t border-border/70 bg-background py-16 md:py-20">
+      <section className="border-t border-border/70 surface-base bg-background py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-6 text-center">
           <motion.div {...revealProps}>
             <p className="text-sm text-muted-foreground">

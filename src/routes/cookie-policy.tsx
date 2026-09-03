@@ -57,7 +57,7 @@ function CookiePolicyPage() {
   return (
     <div className="flex flex-col">
       {/* HERO */}
-      <section className="border-b border-border/70 bg-background">
+      <section className="border-b border-border/70 surface-base bg-background">
         <div className="mx-auto max-w-4xl px-6 py-20 md:py-28">
           <motion.div
             className="flex flex-col items-center gap-6 text-center"
@@ -79,7 +79,7 @@ function CookiePolicyPage() {
       </section>
 
       {/* CONTENT */}
-      <section className="bg-background py-16 md:py-24">
+      <section className="surface-base bg-background py-16 md:py-24">
         <div className="mx-auto max-w-3xl px-6">
           <div className="flex flex-col gap-10">
             <motion.div {...revealProps} className="flex flex-col gap-4">

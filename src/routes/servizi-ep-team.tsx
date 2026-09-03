@@ -202,7 +202,7 @@ function ServiziEpTeamPage() {
   return (
     <div className="flex flex-col">
       {/* HERO */}
-      <section className="overflow-hidden border-b border-border/70 bg-background">
+      <section className="overflow-hidden border-b border-border/70 surface-base bg-background">
         <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 md:grid-cols-[1.2fr_1fr] md:items-center md:gap-16 md:py-28">
           <motion.div
             className="flex flex-col gap-6"
@@ -278,7 +278,7 @@ function ServiziEpTeamPage() {
       </section>
 
       {/* COSA OFFRO */}
-      <section className="bg-background py-20 md:py-28">
+      <section className="surface-base bg-background py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-6">
           <motion.div {...containerProps} className="flex flex-col gap-12">
             <div className="max-w-2xl">
@@ -292,9 +292,9 @@ function ServiziEpTeamPage() {
                 <motion.article
                   key={p.title}
                   {...itemProps}
-                  className="space-y-4 rounded-2xl border border-border bg-card p-6 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg md:p-8"
+                  className="space-y-4 rounded-2xl border border-border surface-card bg-card p-6 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg md:p-8"
                 >
-                  <span className="flex h-8 w-8 items-center justify-center rounded-full border border-border bg-background text-xs font-bold text-muted-foreground">
+                  <span className="flex h-8 w-8 items-center justify-center rounded-full border border-border surface-base bg-background text-xs font-bold text-muted-foreground">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <h3 className="text-lg font-semibold text-foreground">
@@ -328,7 +328,7 @@ function ServiziEpTeamPage() {
                 <motion.article
                   key={member.role}
                   {...itemProps}
-                  className="rounded-2xl border border-border bg-background p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                  className="rounded-2xl border border-border surface-base bg-background p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                 >
                   <div className="w-12 h-12 rounded-full bg-muted mb-4 flex items-center justify-center text-xs text-muted-foreground">
                     AVATAR
@@ -363,7 +363,7 @@ function ServiziEpTeamPage() {
       </section>
 
       {/* PERCHÉ SCEGLIERE */}
-      <section className="bg-background py-20 md:py-28">
+      <section className="surface-base bg-background py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-6">
           <motion.div {...containerProps} className="flex flex-col gap-12">
             <motion.h2 {...itemProps} className="font-display text-2xl font-bold tracking-tight text-foreground md:text-3xl lg:text-4xl">
@@ -402,7 +402,7 @@ function ServiziEpTeamPage() {
             </p>
             <Link
               to="/partnership"
-              className="group inline-flex items-center justify-center gap-2 rounded-full border border-border bg-background px-8 py-4 text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:bg-secondary"
+              className="group inline-flex items-center justify-center gap-2 rounded-full border border-border surface-base bg-background px-8 py-4 text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:bg-secondary"
             >
               Scopri le Partnership Ufficiali e i Vantaggi Esclusivi
               <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -412,7 +412,7 @@ function ServiziEpTeamPage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-background py-20 md:py-28">
+      <section className="surface-base bg-background py-20 md:py-28">
         <div className="mx-auto max-w-3xl px-6">
           <motion.div {...revealProps} className="mb-12 text-center">
             <h2 className="font-display text-2xl font-bold tracking-tight text-foreground md:text-3xl lg:text-4xl">
@@ -466,7 +466,7 @@ function ServiziEpTeamPage() {
                 href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-3 rounded-full border border-border bg-background px-8 py-4 text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:bg-secondary"
+                className="inline-flex items-center justify-center gap-3 rounded-full border border-border surface-base bg-background px-8 py-4 text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:bg-secondary"
               >
                 <Instagram className="h-4 w-4" />
                 Contattami su Instagram

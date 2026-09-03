@@ -6,7 +6,7 @@ import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-background">
+    <footer className="border-t border-border surface-base bg-background">
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-12 md:flex-row md:items-center md:justify-between">
         <div>
           <p className="font-display text-sm font-bold tracking-[0.22em] uppercase">
