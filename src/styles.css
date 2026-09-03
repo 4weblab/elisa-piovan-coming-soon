@@ -183,3 +183,30 @@
     animation: none;
   }
 }
+
+/* ---- Superfici anti auto-dark (gradiente piatto) ---- */
+
+@utility surface-base {
+  background-color: var(--color-background);
+  background-image: linear-gradient(
+    var(--color-background),
+    var(--color-background)
+  );
+}
+
+@utility surface-cream {
+  background-color: var(--color-cream);
+  background-image: linear-gradient(var(--color-cream), var(--color-cream));
+  color: var(--color-forest);
+}
+
+@utility surface-forest {
+  background-color: var(--color-forest);
+  background-image: linear-gradient(var(--color-forest), var(--color-forest));
+  color: var(--color-cream);
+}
+
+@utility surface-card {
+  background-color: var(--color-card);
+  background-image: linear-gradient(var(--color-card), var(--color-card));
+}
