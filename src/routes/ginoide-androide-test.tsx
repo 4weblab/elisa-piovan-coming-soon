@@ -52,7 +52,7 @@ const jsonLd = {
   ],
 };
 
-type Letter = "A" | "B" | "C";
+type Letter = "A" | "B";
 
 type Question = {
   title: string;
