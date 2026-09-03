@@ -384,7 +384,7 @@ function HomePage() {
                       className="h-full space-y-4 rounded-2xl border border-border surface-card bg-card p-6 transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-xl md:p-8"
                     >
                       <Icon
-                        className="h-6 w-6 text-[#C8A2C8]"
+                        className="h-6 w-6 text-muted-foreground"
                         aria-hidden="true"
                       />
                       <h3 className="text-lg font-semibold">
@@ -553,7 +553,7 @@ function HomePage() {
               viewport={{ once: true, margin: "-100px" }}
               className="mt-8 flex flex-col items-center justify-center gap-4 rounded-xl border border-border surface-card bg-card py-4 px-6 text-center sm:flex-row sm:text-left"
             >
-              <div className="flex items-center gap-3 text-[#C8A2C8]">
+              <div className="flex items-center gap-3 text-muted-foreground">
                 <Instagram className="h-5 w-5" aria-hidden="true" />
                 <span className="text-sm leading-relaxed">
                   Vuoi scoprire altre trasformazioni reali e retroscena del

@@ -175,7 +175,7 @@ function ContattiPage() {
                 {...itemProps}
                 className="flex flex-col items-center rounded-2xl border border-border surface-base bg-background p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-md md:p-8"
               >
-                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#C8A2C8] text-sm font-bold text-foreground">
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-sm font-bold text-primary-foreground">
                   {index + 1}
                 </span>
                 <h3 className="mt-5 font-display text-lg font-semibold text-foreground">
@@ -242,7 +242,7 @@ function ContattiPage() {
               rel="noopener noreferrer"
               className="group flex flex-col items-center gap-4 rounded-2xl border border-border surface-card bg-card p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-primary/20 hover:shadow-lg md:p-8"
             >
-              <span className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#C8A2C8] text-foreground">
+              <span className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-tr from-[#F58529]/10 via-[#DD2A7B]/10 to-[#8134AF]/10 text-foreground">
                 <Instagram className="h-7 w-7" />
               </span>
               <span className="font-display text-lg font-semibold text-foreground md:text-xl">
