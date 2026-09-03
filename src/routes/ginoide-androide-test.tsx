@@ -102,10 +102,6 @@ const QUESTIONS: Question[] = [
         letter: "B",
         text: "Pesanti, gonfie, con tendenza a ritenzione idrica e cellulite localizzata su cosce e glutei.",
       },
-      {
-        letter: "C",
-        text: "Sperimento gonfiore occasionale, legato prevalentemente alla fase premestruale.",
-      },
     ],
   },
   {
@@ -119,10 +115,6 @@ const QUESTIONS: Question[] = [
         letter: "B",
         text: "Accuso forte stanchezza fisica, aumento del gonfiore alle gambe e ritenzione accentuata.",
       },
-      {
-        letter: "C",
-        text: "Non noto variazioni significative nella distribuzione dei liquidi o nel sonno.",
-      },
     ],
   },
   {
@@ -131,7 +123,6 @@ const QUESTIONS: Question[] = [
     options: [
       { letter: "A", text: "Pancia e girovita." },
       { letter: "B", text: "Cosce, fianchi e glutei." },
-      { letter: "C", text: "Perdo centimetri in modo abbastanza uniforme." },
     ],
   },
 ];
