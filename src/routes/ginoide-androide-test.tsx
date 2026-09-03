@@ -52,7 +52,7 @@ const jsonLd = {
   ],
 };
 
-type Letter = "A" | "B" | "C";
+type Letter = "A" | "B";
 
 type Question = {
   title: string;
@@ -74,10 +74,6 @@ const QUESTIONS: Question[] = [
         text: "Su fianchi, glutei, cosce e “culotte de cheval”. Il girovita rimane stretto.",
         image: "/placeholders/ginoide-silhouette.svg",
       },
-      {
-        letter: "C",
-        text: "In modo omogeneo su tutto il corpo, senza una zona nettamente prevalente.",
-      },
     ],
   },
   {
@@ -91,10 +87,6 @@ const QUESTIONS: Question[] = [
       {
         letter: "B",
         text: "A “pera” o “A”: parte superiore esile (spalle/vita strette) e parte inferiore più pronunciata.",
-      },
-      {
-        letter: "C",
-        text: "A “clessidra” o “rettangolo”: proporzionata tra sopra e sotto.",
       },
     ],
   },
@@ -110,10 +102,6 @@ const QUESTIONS: Question[] = [
         letter: "B",
         text: "Pesanti, gonfie, con tendenza a ritenzione idrica e cellulite localizzata su cosce e glutei.",
       },
-      {
-        letter: "C",
-        text: "Sperimento gonfiore occasionale, legato prevalentemente alla fase premestruale.",
-      },
     ],
   },
   {
@@ -127,10 +115,6 @@ const QUESTIONS: Question[] = [
         letter: "B",
         text: "Accuso forte stanchezza fisica, aumento del gonfiore alle gambe e ritenzione accentuata.",
       },
-      {
-        letter: "C",
-        text: "Non noto variazioni significative nella distribuzione dei liquidi o nel sonno.",
-      },
     ],
   },
   {
@@ -139,7 +123,6 @@ const QUESTIONS: Question[] = [
     options: [
       { letter: "A", text: "Pancia e girovita." },
       { letter: "B", text: "Cosce, fianchi e glutei." },
-      { letter: "C", text: "Perdo centimetri in modo abbastanza uniforme." },
     ],
   },
 ];
@@ -228,7 +211,9 @@ function QuizExperience() {
     if (!finished) return null;
     const a = answers.filter((x) => x === "A").length;
     const b = answers.filter((x) => x === "B").length;
-    return a > b ? RESULTS.androide : RESULTS.ginoide;
+    if (a > b) return RESULTS.androide;
+    if (b > a) return RESULTS.ginoide;
+    return RESULTS.ginoide; // fallback in caso di parità
   })();
 
   async function submitToWeb3Forms(resultLabel: string) {
