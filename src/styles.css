@@ -109,6 +109,15 @@
     text-size-adjust: 100%;
   }
 
+  /* Blocco esplicito auto-dark (Samsung Internet / Chrome Android) */
+  :root,
+  html,
+  body {
+    color-scheme: light !important;
+    forced-color-adjust: none !important;
+    -webkit-forced-color-adjust: none !important;
+  }
+
   html {
     scroll-behavior: smooth;
     /* Nessun auto dark mode / auto contrast del browser */
@@ -117,15 +126,26 @@
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
+    /* gradiente "piatto": impedisce l'inversione automatica dei colori */
+    background-color: var(--color-background);
+    background-image: linear-gradient(
+      var(--color-background),
+      var(--color-background)
+    );
   }
 
   body {
     background-color: var(--color-background);
+    background-image: linear-gradient(
+      var(--color-background),
+      var(--color-background)
+    );
     color: var(--color-foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
 
   h1,
   h2,
