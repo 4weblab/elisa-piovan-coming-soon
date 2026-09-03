@@ -550,7 +550,7 @@ function HomePage() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
-              className="mt-8 flex flex-col items-center justify-center gap-4 rounded-xl border border-zinc-800 bg-zinc-900/50 py-4 px-6 text-center sm:flex-row sm:text-left"
+              className="mt-8 flex flex-col items-center justify-center gap-4 rounded-xl border border-border bg-card py-4 px-6 text-center sm:flex-row sm:text-left"
             >
               <div className="flex items-center gap-3 text-muted-foreground">
                 <Instagram className="h-5 w-5" aria-hidden="true" />
@@ -563,7 +563,7 @@ function HomePage() {
                 href="https://www.instagram.com/elisapiovan.ep/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="whitespace-nowrap text-sm font-semibold text-foreground transition-opacity duration-300 hover:opacity-80"
+                className="whitespace-nowrap text-sm font-semibold text-highlight transition-opacity duration-300 hover:opacity-80"
               >
                 Guarda altre storie su Instagram →
               </MotionA>
