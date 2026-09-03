@@ -235,7 +235,7 @@ function FourWebLabPage() {
                   affidabili e orientate ai risultati, con attenzione alla SEO, alla conversione e
                   alla chiarezza comunicativa.
                 </p>
-                <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <div className="mt-8 flex flex-col gap-3">
                   <Button asChild size="lg" className="gap-2">
                     <a
                       href={FOURWEBLAB_URL}
