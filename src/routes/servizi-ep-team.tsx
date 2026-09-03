@@ -141,16 +141,19 @@ const PILASTRI = [
 
 const TEAM = [
   {
+    name: "Silvia",
     role: "Personal Training Dedicated",
     team: "EP Team",
     text: "Programmi di allenamento personalizzati e monitoraggio costante (in presenza o online) guidati da una Personal Trainer dell'EP Team per raggiungere i tuoi obiettivi fisici in totale sicurezza.",
   },
   {
+    name: "Erica",
     role: "Nutrizione e Alimentazione Funzionale",
     team: "Nutrizionista EP Team",
     text: "Piani alimentari flessibili ed educazione alimentare a cura della Nutrizionista dell'EP Team, pensati per nutrire il corpo senza privazioni o diete restrittive.",
   },
   {
+    name: "Mimì",
     role: "Mindset e Supporto Psicologico",
     team: "Psicologa EP Team",
     text: "Incontri dedicati con la Psicologa del team per superare i blocchi emotivi, gestire lo stress e costruire un rapporto sano con la tua immagine corporea. Perché il tuo unico limite sei TU.",
