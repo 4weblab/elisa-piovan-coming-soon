@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { AnimatePresence, motion } from "framer-motion";
 import { Apple, ArrowRight, Brain, Check, Dumbbell, Instagram } from "lucide-react";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
+import heroBgAsset from "@/assets/elisa-hero-bg.webp.asset.json";
 import { GOOGLE_BUSINESS_URL, GOOGLE_RATING_VALUE, GOOGLE_REVIEW_COUNT, INSTAGRAM_URL, SITE_URL, TIKTOK_URL, WHATSAPP_URL } from "@/lib/site";
 
 const PAGE_TITLE =
@@ -276,41 +277,56 @@ function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="border-b border-border">
+      <section className="relative overflow-hidden border-b border-border">
+        <img
+          src={heroBgAsset.url}
+          alt="Elisa Piovan durante un allenamento in palestra"
+          className="absolute inset-0 h-full w-full object-cover object-[center_25%]"
+          loading="eager"
+          fetchPriority="high"
+        />
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 bg-forest/70"
+          style={{
+            backgroundImage:
+              "linear-gradient(105deg, rgba(44,61,42,0.92) 0%, rgba(44,61,42,0.75) 45%, rgba(44,61,42,0.55) 100%)",
+          }}
+        />
         <MotionDiv
           variants={heroContainer}
           initial="hidden"
           animate="visible"
-          className="mx-auto max-w-6xl px-6 py-24 md:py-36"
+          className="relative z-10 mx-auto max-w-6xl px-6 py-24 md:py-36"
         >
           <MotionP
             variants={heroItem}
-            className="font-display text-[0.7rem] font-semibold tracking-[0.28em] text-muted-foreground uppercase"
+            className="font-display text-[0.7rem] font-semibold tracking-[0.28em] text-cream/75 uppercase"
           >
             ELISA PIOVAN FITNESS COACH AL FEMMINILE | PADOVA & ONLINE
           </MotionP>
 
           <MotionH1
             variants={heroItem}
-            className="mt-6 max-w-3xl text-4xl leading-[1.08] font-extrabold tracking-tight text-balance sm:text-5xl md:text-6xl"
+            className="mt-6 max-w-3xl text-4xl leading-[1.08] font-extrabold tracking-tight text-balance text-cream sm:text-5xl md:text-6xl"
           >
             Coaching Online e Personal Training al Femminile a Padova
           </MotionH1>
 
           <MotionP
             variants={heroItem}
-            className="mt-6 max-w-xl text-base leading-relaxed text-pretty text-muted-foreground sm:text-lg"
+            className="mt-6 max-w-xl text-base leading-relaxed text-pretty text-cream/85 sm:text-lg"
           >
             <MotionLink
               to="/chi-sono"
-              className="transition-colors duration-300 hover:text-foreground"
+              className="underline decoration-terracotta underline-offset-4 transition-colors duration-300 hover:text-cream"
             >
              Elisa Piovan
             </MotionLink>{" "}
              , fitness coach al femminile, assieme al suo{" "}
             <MotionLink
               to="/servizi-ep-team"
-              className="transition-colors duration-300 hover:text-foreground"
+              className="underline decoration-terracotta underline-offset-4 transition-colors duration-300 hover:text-cream"
             >
              Team
              </MotionLink>{" "}offre percorsi integrati di allenamento
@@ -335,7 +351,7 @@ function HomePage() {
             <MotionLink
               to="/servizi-ep-team"
               whileTap={{ scale: 0.95 }}
-              className="group inline-flex items-center justify-center gap-2 rounded-full border border-border px-8 py-4 text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:bg-secondary focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none"
+              className="group inline-flex items-center justify-center gap-2 rounded-full border border-cream/40 px-8 py-4 text-sm font-semibold text-cream transition-all duration-300 hover:-translate-y-0.5 hover:bg-cream/10 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none"
             >
               Scopri il metodo EP
               <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
