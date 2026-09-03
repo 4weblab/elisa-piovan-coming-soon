@@ -200,6 +200,7 @@ const fadeUp = {
 function QuizExperience() {
   const [unlocked, setUnlocked] = useState(false);
   const [name, setName] = useState("");
+  const [surname, setSurname] = useState("");
   const [phone, setPhone] = useState("");
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
   const [answers, setAnswers] = useState<Letter[]>([]);
@@ -227,6 +228,7 @@ function QuizExperience() {
           subject: "Nuovo lead dal Quiz Biotipo",
           from_name: "Elisa Piovan Trainer — Quiz Biotipo",
           Nome: name,
+          Cognome: surname,
           Cellulare: phone,
           Risultato_Test: `Biotipo ${resultLabel.charAt(0) + resultLabel.slice(1).toLowerCase()}`,
         }),
@@ -241,11 +243,11 @@ function QuizExperience() {
       hasSubmitted.current = true;
       submitToWeb3Forms(result.label);
     }
-  }, [finished, result, name, phone]);
+  }, [finished, result, name, surname, phone]);
 
   function handleGate(e: React.FormEvent) {
     e.preventDefault();
-    if (!name.trim() || !phone.trim() || !privacyAccepted) return;
+    if (!name.trim() || !surname.trim() || !phone.trim() || !privacyAccepted) return;
     setUnlocked(true);
   }
 
@@ -272,7 +274,7 @@ function QuizExperience() {
           Analisi Morfologica del Tuo Biotipo
         </h2>
         <p className="mt-3 text-sm text-muted-foreground">
-          Inserisci il tuo nome e cellulare per sbloccare il test in 5 domande e
+          Inserisci nome, cognome e cellulare per sbloccare il test in 5 domande e
           accedere alla tua diagnosi personalizzata.
         </p>
 
@@ -288,6 +290,19 @@ function QuizExperience() {
               onChange={(e) => setName(e.target.value)}
               className="mt-2 w-full rounded-xl border border-input bg-background px-4 py-3 text-sm outline-none transition focus:border-foreground"
               placeholder="Il tuo nome"
+            />
+          </div>
+          <div>
+            <label htmlFor="quiz-cognome" className="text-sm font-medium">
+              Cognome
+            </label>
+            <input
+              id="quiz-cognome"
+              required
+              value={surname}
+              onChange={(e) => setSurname(e.target.value)}
+              className="mt-2 w-full rounded-xl border border-input bg-background px-4 py-3 text-sm outline-none transition focus:border-foreground"
+              placeholder="Il tuo cognome"
             />
           </div>
           <div>
