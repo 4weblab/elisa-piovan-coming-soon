@@ -10,6 +10,8 @@ import {
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import elisaHeroAsset from "@/assets/elisa-hero.webp.asset.json";
 import silviaAvatarAsset from "@/assets/silvia-avatar.webp.asset.json";
+import mimiAvatarAsset from "@/assets/mimi-avatar.webp.asset.json";
+
 
 import { INSTAGRAM_URL, SITE_URL, WHATSAPP_URL } from "@/lib/site";
 
@@ -166,6 +168,8 @@ const TEAM: {
     name: "Mimì",
     role: "Mindset e Supporto Psicologico",
     team: "Psicologa EP Team",
+    photo: mimiAvatarAsset.url,
+
     text: "Incontri dedicati con la Psicologa del team per superare i blocchi emotivi, gestire lo stress e costruire un rapporto sano con la tua immagine corporea. Perché il tuo unico limite sei TU.",
   },
 ];
