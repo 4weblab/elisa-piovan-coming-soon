@@ -106,7 +106,7 @@ function ContattiPage() {
   return (
     <div className="flex flex-col">
       {/* HERO */}
-      <section className="border-b border-border/70 bg-background">
+      <section className="border-b border-border/70 surface-base bg-background">
         <div className="mx-auto max-w-4xl px-6 py-16 text-center md:py-24">
           <motion.div
             initial="hidden"
@@ -173,7 +173,7 @@ function ContattiPage() {
               <motion.div
                 key={step.title}
                 {...itemProps}
-                className="flex flex-col items-center rounded-2xl border border-border bg-background p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-md md:p-8"
+                className="flex flex-col items-center rounded-2xl border border-border surface-base bg-background p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-md md:p-8"
               >
                 <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-sm font-bold text-primary-foreground">
                   {index + 1}
@@ -191,7 +191,7 @@ function ContattiPage() {
       </section>
 
       {/* FRASE CHIUSURA RASSICURANTE */}
-      <section className="bg-background py-12 md:py-16">
+      <section className="surface-base bg-background py-12 md:py-16">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <motion.p
             {...revealProps}
@@ -203,7 +203,7 @@ function ContattiPage() {
       </section>
 
       {/* CANALI DIRETTI */}
-      <section className="bg-background py-16 md:py-24">
+      <section className="surface-base bg-background py-16 md:py-24">
         <div className="mx-auto max-w-3xl px-6">
           <motion.div {...revealProps} className="text-center">
             <p className="text-base text-muted-foreground md:text-lg">
@@ -221,7 +221,7 @@ function ContattiPage() {
               href={CONTACT_WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex flex-col items-center gap-4 rounded-2xl border border-border bg-card p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-primary/20 hover:shadow-lg md:p-8"
+              className="group flex flex-col items-center gap-4 rounded-2xl border border-border surface-card bg-card p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-primary/20 hover:shadow-lg md:p-8"
             >
               <span className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366]/10 text-[#25D366]">
                 <WhatsAppIcon className="h-7 w-7" />
@@ -240,7 +240,7 @@ function ContattiPage() {
               href={INSTAGRAM_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex flex-col items-center gap-4 rounded-2xl border border-border bg-card p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-primary/20 hover:shadow-lg md:p-8"
+              className="group flex flex-col items-center gap-4 rounded-2xl border border-border surface-card bg-card p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-primary/20 hover:shadow-lg md:p-8"
             >
               <span className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-tr from-[#F58529]/10 via-[#DD2A7B]/10 to-[#8134AF]/10 text-foreground">
                 <Instagram className="h-7 w-7" />

@@ -45,7 +45,7 @@ export function CookieBanner() {
           transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
           role="region"
           aria-label="Informativa cookie"
-          className="fixed inset-x-0 bottom-0 z-50 border-t border-border bg-background/95 p-4 shadow-lg backdrop-blur-md sm:p-6"
+          className="fixed inset-x-0 bottom-0 z-50 border-t border-border surface-base bg-background/95 p-4 shadow-lg backdrop-blur-md sm:p-6"
         >
           <div className="mx-auto flex max-w-6xl flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex items-start gap-3 sm:items-center">
