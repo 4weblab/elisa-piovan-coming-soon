@@ -32,10 +32,10 @@ export const Route = createFileRoute("/privacy-policy")({
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESCRIPTION },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/privacy-policy" },
+      { property: "og:url", content: "https://elitrainer.it/privacy-policy" },
       { name: "twitter:card", content: "summary" },
     ],
-    links: [{ rel: "canonical", href: "/privacy-policy" }],
+    links: [{ rel: "canonical", href: "https://elitrainer.it/privacy-policy" }],
     scripts: [
       {
         type: "application/ld+json",
