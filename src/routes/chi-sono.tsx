@@ -2,7 +2,6 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import elisaAllenamentoAsset from "@/assets/elisa-allenamento.webp.asset.json";
-import elisaRitrattoAsset from "@/assets/elisa-ritratto.webp.asset.json";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import { GOOGLE_BUSINESS_URL, INSTAGRAM_URL, SITE_URL, TIKTOK_URL, WHATSAPP_URL } from "@/lib/site";
 
@@ -149,15 +148,9 @@ function ChiSonoPage() {
             className="order-1 md:order-2"
             {...revealProps}
           >
-            <img
-              src={elisaRitrattoAsset.url}
-              alt="Foto di Elisa durante una sessione di coaching"
-              width={1200}
-              height={1600}
-              loading="eager"
-              decoding="async"
-              className="aspect-[3/4] w-full rounded-xl object-cover"
-            />
+            <div className="aspect-[3/4] w-full rounded-xl bg-muted flex items-center justify-center text-muted-foreground font-medium text-sm tracking-widest">
+              FOTO RITRATTO ELISA
+            </div>
           </motion.div>
         </div>
       </section>
