@@ -9,6 +9,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
+import ginoideIllustrazioneAsset from "@/assets/ginoide-illustrazione.webp.asset.json";
 import { SITE_URL } from "@/lib/site";
 
 const PATH = "/ginoide-androide-test";
@@ -162,7 +163,7 @@ const RESULTS = {
   ginoide: {
     key: "ginoide" as const,
     label: "GINOIDE",
-    cover: "/placeholders/ginoide-silhouette.svg",
+    cover: ginoideIllustrazioneAsset.url,
     profile:
       "La concentrazione di adipe e ritenzione si localizza prevalentemente su fianchi, glutei e cosce. La parte superiore del tronco (spalle, torace, girovita) tende a rimanere sottile ed esile. Risenti maggiormente di rallentamento della microcircolazione, stasi linfatica e sensazione di pesantezza e gonfiore alle gambe.",
     tips: [
@@ -370,11 +371,15 @@ function QuizExperience() {
             Il tuo Biotipo prevalente è: {result.label}
           </h2>
 
-          <div className="mt-8 flex justify-center rounded-2xl bg-secondary p-8">
+          <div className="mt-8 flex justify-center overflow-hidden rounded-3xl border border-[var(--color-terracotta)] bg-[var(--color-cream)] p-3 shadow-[0_12px_32px_-12px_var(--color-terracotta)]">
             <img
               src={result.cover}
-              alt={`Illustrazione del biotipo ${result.label.toLowerCase()}`}
-              className="h-48 w-auto"
+              alt={
+                result.key === "ginoide"
+                  ? "rappresentazione fisico Ginoide"
+                  : `Illustrazione del biotipo ${result.label.toLowerCase()}`
+              }
+              className="h-auto w-full max-w-md rounded-2xl object-contain"
               loading="lazy"
             />
           </div>
