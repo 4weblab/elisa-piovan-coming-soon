@@ -211,7 +211,9 @@ function QuizExperience() {
     if (!finished) return null;
     const a = answers.filter((x) => x === "A").length;
     const b = answers.filter((x) => x === "B").length;
-    return a > b ? RESULTS.androide : RESULTS.ginoide;
+    if (a > b) return RESULTS.androide;
+    if (b > a) return RESULTS.ginoide;
+    return RESULTS.ginoide; // fallback in caso di parità
   })();
 
   async function submitToWeb3Forms(resultLabel: string) {
