@@ -475,7 +475,7 @@ function HomePage() {
       </section>
 
       {/* Storie di Successo */}
-      <section className="border-t border-border">
+      <section id="storie-di-successo" className="border-t border-border">
         <div className="mx-auto max-w-6xl px-6 py-24">
           <MotionDiv
             variants={sectionContainer}
