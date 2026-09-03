@@ -25,10 +25,10 @@ export const Route = createFileRoute("/cookie-policy")({
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESCRIPTION },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/cookie-policy" },
+      { property: "og:url", content: "https://elitrainer.it/cookie-policy" },
       { name: "twitter:card", content: "summary" },
     ],
-    links: [{ rel: "canonical", href: "/cookie-policy" }],
+    links: [{ rel: "canonical", href: "https://elitrainer.it/cookie-policy" }],
   }),
   component: CookiePolicyPage,
 });
