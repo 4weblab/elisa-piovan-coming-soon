@@ -88,10 +88,6 @@ const QUESTIONS: Question[] = [
         letter: "B",
         text: "A “pera” o “A”: parte superiore esile (spalle/vita strette) e parte inferiore più pronunciata.",
       },
-      {
-        letter: "C",
-        text: "A “clessidra” o “rettangolo”: proporzionata tra sopra e sotto.",
-      },
     ],
   },
   {
