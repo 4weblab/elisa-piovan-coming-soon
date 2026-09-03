@@ -384,7 +384,7 @@ function HomePage() {
                       className="h-full space-y-4 rounded-2xl border border-border surface-card bg-card p-6 transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-xl md:p-8"
                     >
                       <Icon
-                        className="h-6 w-6 text-muted-foreground"
+                        className="h-6 w-6 text-[#C8A2C8]"
                         aria-hidden="true"
                       />
                       <h3 className="text-lg font-semibold">
