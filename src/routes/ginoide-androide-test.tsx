@@ -274,7 +274,7 @@ function QuizExperience() {
           Analisi Morfologica del Tuo Biotipo
         </h2>
         <p className="mt-3 text-sm text-muted-foreground">
-          Inserisci il tuo nome e cellulare per sbloccare il test in 5 domande e
+          Inserisci nome, cognome e cellulare per sbloccare il test in 5 domande e
           accedere alla tua diagnosi personalizzata.
         </p>
 
