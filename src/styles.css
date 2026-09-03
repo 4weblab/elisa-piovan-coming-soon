@@ -17,7 +17,7 @@
   --color-forest: #2c3d2a;
   --color-sage: #a9bb93;
   --color-cream: #f3eee1;
-  --color-terracotta: #c5a0c6;
+  --color-terracotta: #c8a2c8;
 }
 
 @theme inline {
@@ -60,7 +60,7 @@
   --popover-foreground: #2c3d2a;
 
   /* CTA / conversions */
-  --primary: #c5a0c6;
+  --primary: #c8a2c8;
   --primary-foreground: #2c3d2a;
 
   /* Sage secondary surfaces & badges */
@@ -78,7 +78,7 @@
 
   --border: #ddd5c2;
   --input: #cfc7b3;
-  --ring: #c5a0c6;
+  --ring: #c8a2c8;
 }
 
 .dark,
@@ -167,10 +167,10 @@
 @keyframes soft-pulse {
   0%,
   100% {
-    box-shadow: 0 0 0 0 rgb(197 160 198 / 0.35);
+    box-shadow: 0 0 0 0 rgb(200 162 200 / 0.35);
   }
   50% {
-    box-shadow: 0 0 0 12px rgb(197 160 198 / 0);
+    box-shadow: 0 0 0 12px rgb(200 162 200 / 0);
   }
 }
 
