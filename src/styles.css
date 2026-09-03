@@ -6,13 +6,18 @@
 
 /*
  * Design system — Elisa Piovan Trainer / EP Team
- * Placeholder monochrome palette: pure white, light grays, dark charcoal.
- * Typography: Inter — loaded via <link> in __root.tsx.
+ * Brand palette: Deep Forest Green, Soft Sage, Cream, Terracotta.
+ * Typography: Cormorant Garamond (display, italic) + Plus Jakarta Sans (body).
  */
 
 @theme {
-  --font-display: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Cormorant Garamond", ui-serif, Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --color-forest: #2c3d2a;
+  --color-sage: #a9bb93;
+  --color-cream: #f3eee1;
+  --color-terracotta: #c08552;
 }
 
 @theme inline {
@@ -46,33 +51,54 @@
 :root {
   --radius: 0.625rem;
 
-  --background: #ffffff;
-  --foreground: #16171a;
+  --background: #f3eee1;
+  --foreground: #2c3d2a;
 
-  --card: #ffffff;
-  --card-foreground: #16171a;
-  --popover: #ffffff;
-  --popover-foreground: #16171a;
+  --card: #f8f5ec;
+  --card-foreground: #2c3d2a;
+  --popover: #f8f5ec;
+  --popover-foreground: #2c3d2a;
 
-  --primary: #1a1b1e;
-  --primary-foreground: #ffffff;
+  /* CTA / conversions */
+  --primary: #c08552;
+  --primary-foreground: #f3eee1;
 
-  --secondary: #f4f4f5;
-  --secondary-foreground: #1a1b1e;
+  /* Sage secondary surfaces & badges */
+  --secondary: #a9bb93;
+  --secondary-foreground: #2c3d2a;
 
-  --muted: #f4f4f5;
-  --muted-foreground: #6b6c70;
+  --muted: #e9e3d3;
+  --muted-foreground: #5c6b56;
 
-  --accent: #ececee;
-  --accent-foreground: #1a1b1e;
+  --accent: #a9bb93;
+  --accent-foreground: #2c3d2a;
 
   --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: #ffffff;
+  --destructive-foreground: #f3eee1;
 
-  --border: #e5e5e7;
-  --input: #dedee1;
-  --ring: #1a1b1e;
+  --border: #ddd5c2;
+  --input: #cfc7b3;
+  --ring: #c08552;
 }
+
+.dark,
+[data-theme="dark"] {
+  --background: #2c3d2a;
+  --foreground: #f3eee1;
+  --card: #33452f;
+  --card-foreground: #f3eee1;
+  --popover: #33452f;
+  --popover-foreground: #f3eee1;
+  --secondary: #3a4d36;
+  --secondary-foreground: #f3eee1;
+  --muted: #3a4d36;
+  --muted-foreground: #c3cdb5;
+  --accent: #a9bb93;
+  --accent-foreground: #2c3d2a;
+  --border: #445540;
+  --input: #445540;
+}
+
 
 @layer base {
   * {
@@ -91,6 +117,15 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
+  h1,
+  h2,
+  .font-display {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
   ::selection {
     background-color: var(--foreground);
     color: var(--background);
@@ -102,10 +137,10 @@
 @keyframes soft-pulse {
   0%,
   100% {
-    box-shadow: 0 0 0 0 rgb(22 23 26 / 0.25);
+    box-shadow: 0 0 0 0 rgb(192 133 82 / 0.35);
   }
   50% {
-    box-shadow: 0 0 0 12px rgb(22 23 26 / 0);
+    box-shadow: 0 0 0 12px rgb(192 133 82 / 0);
   }
 }
 
