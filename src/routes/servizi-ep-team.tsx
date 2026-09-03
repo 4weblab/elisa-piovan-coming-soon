@@ -8,6 +8,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
+import elisaHeroAsset from "@/assets/elisa-hero.webp.asset.json";
 import { INSTAGRAM_URL, SITE_URL, WHATSAPP_URL } from "@/lib/site";
 
 const PAGE_TITLE = "Metodo EP: Percorsi di Allenamento e Nutrizione per Donne";
@@ -270,9 +271,15 @@ function ServiziEpTeamPage() {
           </motion.div>
 
           <motion.div {...revealProps}>
-            <div className="aspect-[4/3] w-full rounded-2xl bg-muted flex items-center justify-center text-muted-foreground font-medium text-sm tracking-widest">
-              FOTO HERO ELISA
-            </div>
+            <img
+              src={elisaHeroAsset.url}
+              alt="Foto di Elisa durante una sessione di coaching"
+              width={1200}
+              height={900}
+              loading="eager"
+              decoding="async"
+              className="aspect-[4/3] w-full rounded-2xl object-cover"
+            />
           </motion.div>
         </div>
       </section>
