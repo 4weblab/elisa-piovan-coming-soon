@@ -9,6 +9,8 @@ import {
 } from "@/components/ui/accordion";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import elisaHeroAsset from "@/assets/elisa-hero.webp.asset.json";
+import silviaAvatarAsset from "@/assets/silvia-avatar.webp.asset.json";
+
 import { INSTAGRAM_URL, SITE_URL, WHATSAPP_URL } from "@/lib/site";
 
 const PAGE_TITLE = "Metodo EP: Percorsi di Allenamento e Nutrizione per Donne";
@@ -139,13 +141,21 @@ const PILASTRI = [
   },
 ];
 
-const TEAM = [
+const TEAM: {
+  name: string;
+  role: string;
+  team: string;
+  text: string;
+  photo?: string;
+}[] = [
   {
     name: "Silvia",
     role: "Personal Training Dedicated",
     team: "EP Team",
+    photo: silviaAvatarAsset.url,
     text: "Programmi di allenamento personalizzati e monitoraggio costante (in presenza o online) guidati da una Personal Trainer dell'EP Team per raggiungere i tuoi obiettivi fisici in totale sicurezza.",
   },
+
   {
     name: "Erica",
     role: "Nutrizione e Alimentazione Funzionale",
@@ -341,13 +351,26 @@ function ServiziEpTeamPage() {
                   className="rounded-2xl border border-border surface-base bg-background p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                 >
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center text-xs text-muted-foreground">
-                      AVATAR
-                    </div>
+                    {member.photo ? (
+                      <img
+                        src={member.photo}
+                        alt={`Foto di ${member.name}, ${member.role}`}
+                        width={48}
+                        height={48}
+                        loading="lazy"
+                        decoding="async"
+                        className="h-12 w-12 rounded-full border border-primary/30 object-cover shadow-sm"
+                      />
+                    ) : (
+                      <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center text-xs text-muted-foreground">
+                        AVATAR
+                      </div>
+                    )}
                     <span className="text-base font-semibold text-foreground">
                       {member.name}
                     </span>
                   </div>
+
                   <h3 className="text-base font-semibold text-foreground">
                     {member.role}
                   </h3>
