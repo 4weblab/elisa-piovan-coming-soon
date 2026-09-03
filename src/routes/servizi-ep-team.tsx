@@ -398,7 +398,7 @@ function ServiziEpTeamPage() {
               Gli Alleati del Tuo Benessere
             </h3>
             <p className="max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-              Per completare il tuo percorso, abbiamo selezionato marchi e prodotti di alta qualità per l'integrazione sportiva e la cura della pelle.
+              Per completare il tuo percorso, ho selezionato marchi e prodotti di alta qualità per l'integrazione sportiva e la cura della pelle.
             </p>
             <Link
               to="/partnership"
