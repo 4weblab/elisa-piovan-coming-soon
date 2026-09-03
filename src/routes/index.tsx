@@ -314,7 +314,7 @@ function HomePage() {
             >
              Team
              </MotionLink>{" "}offre percorsi integrati di allenamento
-             personalizzato, nutrizione e supporto psicologico per donne. A
+             personalizzato, nutrizione, beauty e supporto psicologico per donne. A
              Padova e online.
           </MotionP>
 
