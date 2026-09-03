@@ -143,8 +143,7 @@ function FourWebLabPage() {
               Case Study & Credits
             </p>
             <h1 className="font-display text-3xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl">
-              La Trasformazione Digitale di{" "}
-              <span className="text-muted-foreground">Elisa Piovan Trainer</span>
+              Realizzazione Sito Web per Elisa Piovan | Case Study 4 Web Lab
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
               Dietro il nuovo sito c'è un lavoro di redesign tecnico e strategico curato da{" "}
@@ -244,7 +243,7 @@ function FourWebLabPage() {
                       rel="noopener noreferrer"
                       aria-label="Visita il sito di 4 Web Lab"
                     >
-                      Visita 4weblab.it
+                      La nostra Web Agency a Padova
                       <ExternalLink className="h-4 w-4" />
                     </a>
                   </Button>
