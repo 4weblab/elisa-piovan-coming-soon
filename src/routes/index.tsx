@@ -5,9 +5,9 @@ import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import { GOOGLE_BUSINESS_URL, GOOGLE_RATING_VALUE, GOOGLE_REVIEW_COUNT, INSTAGRAM_URL, SITE_URL, TIKTOK_URL, WHATSAPP_URL } from "@/lib/site";
 
 const PAGE_TITLE =
-  "Coaching Online e Personal Trainer Padova | Elisa Piovan";
+  "Personal Trainer Padova e Coaching Online Femminile | Elisa Piovan";
 const PAGE_DESCRIPTION =
-  "Personal training e coaching online al femminile a Padova. Allenamento, nutrizione e benessere con Elisa Piovan Trainer. Contattaci su WhatsApp.";
+  "Personal training e coaching online al femminile a Padova. Allenamento, nutrizione e benessere con Elisa Piovan Trainer. Contattaci su WhatsApp."
 
 const jsonLd = {
   "@context": "https://schema.org",

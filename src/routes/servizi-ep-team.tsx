@@ -10,9 +10,9 @@ import {
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import { INSTAGRAM_URL, SITE_URL, WHATSAPP_URL } from "@/lib/site";
 
-const PAGE_TITLE = "Personal Training e Coaching Online per Donne | Elisa Piovan Trainer";
+const PAGE_TITLE = "Metodo EP: Percorsi di Allenamento e Nutrizione per Donne";
 const PAGE_DESCRIPTION =
-  "Percorsi di allenamento personalizzato, nutrizione e supporto psicologico dedicati al benessere femminile. Scopri il Coaching Online con Elisa Piovan.";
+  "Percorsi di allenamento personalizzato, nutrizione e supporto psicologico dedicati al benessere femminile. Scopri il Coaching Online con Elisa Piovan."
 
 const jsonLd = {
   "@context": "https://schema.org",
