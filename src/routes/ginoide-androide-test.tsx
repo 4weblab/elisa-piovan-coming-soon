@@ -200,6 +200,7 @@ const fadeUp = {
 function QuizExperience() {
   const [unlocked, setUnlocked] = useState(false);
   const [name, setName] = useState("");
+  const [surname, setSurname] = useState("");
   const [phone, setPhone] = useState("");
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
   const [answers, setAnswers] = useState<Letter[]>([]);
@@ -227,6 +228,7 @@ function QuizExperience() {
           subject: "Nuovo lead dal Quiz Biotipo",
           from_name: "Elisa Piovan Trainer — Quiz Biotipo",
           Nome: name,
+          Cognome: surname,
           Cellulare: phone,
           Risultato_Test: `Biotipo ${resultLabel.charAt(0) + resultLabel.slice(1).toLowerCase()}`,
         }),
@@ -241,11 +243,11 @@ function QuizExperience() {
       hasSubmitted.current = true;
       submitToWeb3Forms(result.label);
     }
-  }, [finished, result, name, phone]);
+  }, [finished, result, name, surname, phone]);
 
   function handleGate(e: React.FormEvent) {
     e.preventDefault();
-    if (!name.trim() || !phone.trim() || !privacyAccepted) return;
+    if (!name.trim() || !surname.trim() || !phone.trim() || !privacyAccepted) return;
     setUnlocked(true);
   }
 
