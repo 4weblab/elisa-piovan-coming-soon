@@ -103,10 +103,20 @@
 @layer base {
   * {
     border-color: var(--color-border);
+    /* Blocca l'override dei colori da parte di temi forzati del browser/OS */
+    forced-color-adjust: none;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
   }
 
   html {
     scroll-behavior: smooth;
+    /* Nessun auto dark mode / auto contrast del browser */
+    color-scheme: only light;
+    forced-color-adjust: none;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
   }
 
   body {
