@@ -422,7 +422,7 @@ function HomePage() {
               variants={cardItem}
               className="text-center text-3xl font-bold tracking-tight sm:text-4xl"
             >
-              INIZIA DA QUI
+              Come iniziare il tuo percorso di Personal Training
             </MotionH2>
 
             <MotionDiv
