@@ -270,7 +270,7 @@ function ServiziEpTeamPage() {
           </motion.div>
 
           <motion.div {...revealProps}>
-            <div className="aspect-[4/3] w-full rounded-2xl bg-zinc-200 flex items-center justify-center text-zinc-500 font-medium text-sm tracking-widest">
+            <div className="aspect-[4/3] w-full rounded-2xl bg-muted flex items-center justify-center text-muted-foreground font-medium text-sm tracking-widest">
               FOTO HERO ELISA
             </div>
           </motion.div>
@@ -292,7 +292,7 @@ function ServiziEpTeamPage() {
                 <motion.article
                   key={p.title}
                   {...itemProps}
-                  className="space-y-4 rounded-2xl border border-zinc-200/60 bg-zinc-50/50 p-6 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg md:p-8"
+                  className="space-y-4 rounded-2xl border border-border bg-card p-6 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg md:p-8"
                 >
                   <span className="flex h-8 w-8 items-center justify-center rounded-full border border-border bg-background text-xs font-bold text-muted-foreground">
                     {String(i + 1).padStart(2, "0")}
@@ -330,7 +330,7 @@ function ServiziEpTeamPage() {
                   {...itemProps}
                   className="rounded-2xl border border-border bg-background p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                 >
-                  <div className="w-12 h-12 rounded-full bg-zinc-200 mb-4 flex items-center justify-center text-xs text-zinc-500">
+                  <div className="w-12 h-12 rounded-full bg-muted mb-4 flex items-center justify-center text-xs text-muted-foreground">
                     AVATAR
                   </div>
                   <h3 className="text-base font-semibold text-foreground">
