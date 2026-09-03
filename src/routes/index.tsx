@@ -442,7 +442,8 @@ function HomePage() {
                   </h3>
                   <p className="text-base leading-relaxed text-muted-foreground">
                     Non una semplice chiamata conoscitiva, ma un primo confronto
-                    tecnico e strutturato ad alto valore professionale.
+                     tecnico e strutturato ad alto valore professionale della durata
+                     di 25 minuti.
                     Un&apos;analisi dettagliata della tua situazione di partenza.
                     Analizzerò la tua condizione attuale, affronteremo dubbi
                     tecnici su allenamento, nutrizione e mindset e sfateremo i
