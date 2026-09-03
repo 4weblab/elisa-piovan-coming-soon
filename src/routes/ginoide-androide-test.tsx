@@ -163,7 +163,7 @@ const RESULTS = {
   ginoide: {
     key: "ginoide" as const,
     label: "GINOIDE",
-    cover: "/placeholders/ginoide-silhouette.svg",
+    cover: ginoideIllustrazioneAsset.url,
     profile:
       "La concentrazione di adipe e ritenzione si localizza prevalentemente su fianchi, glutei e cosce. La parte superiore del tronco (spalle, torace, girovita) tende a rimanere sottile ed esile. Risenti maggiormente di rallentamento della microcircolazione, stasi linfatica e sensazione di pesantezza e gonfiore alle gambe.",
     tips: [
