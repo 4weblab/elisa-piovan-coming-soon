@@ -340,8 +340,13 @@ function ServiziEpTeamPage() {
                   {...itemProps}
                   className="rounded-2xl border border-border surface-base bg-background p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                 >
-                  <div className="w-12 h-12 rounded-full bg-muted mb-4 flex items-center justify-center text-xs text-muted-foreground">
-                    AVATAR
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center text-xs text-muted-foreground">
+                      AVATAR
+                    </div>
+                    <span className="text-base font-semibold text-foreground">
+                      {member.name}
+                    </span>
                   </div>
                   <h3 className="text-base font-semibold text-foreground">
                     {member.role}
