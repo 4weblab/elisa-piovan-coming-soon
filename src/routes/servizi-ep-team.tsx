@@ -319,7 +319,7 @@ function ServiziEpTeamPage() {
                 L'EP Team: Le Specialiste a Supporto della Tua Trasformazione
               </motion.h2>
               <motion.p {...itemProps} className="mt-5 text-base leading-relaxed text-muted-foreground md:text-lg">
-                Per garantirti un affiancamento integrato a 360°, il Metodo EP si avvale del supporto di specialiste autonome che lavorano in costante sinergia su di te:
+                Per garantirti un affiancamento integrato a 360°, il Metodo EP si avvale del supporto di specialiste che lavorano in costante sinergia su di te:
               </motion.p>
             </div>
 
