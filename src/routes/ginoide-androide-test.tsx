@@ -293,6 +293,19 @@ function QuizExperience() {
             />
           </div>
           <div>
+            <label htmlFor="quiz-cognome" className="text-sm font-medium">
+              Cognome
+            </label>
+            <input
+              id="quiz-cognome"
+              required
+              value={surname}
+              onChange={(e) => setSurname(e.target.value)}
+              className="mt-2 w-full rounded-xl border border-input bg-background px-4 py-3 text-sm outline-none transition focus:border-foreground"
+              placeholder="Il tuo cognome"
+            />
+          </div>
+          <div>
             <label htmlFor="quiz-tel" className="text-sm font-medium">
               Cellulare / WhatsApp
             </label>
