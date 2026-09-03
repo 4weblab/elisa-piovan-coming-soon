@@ -9,6 +9,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
+import ginoideIllustrazioneAsset from "@/assets/ginoide-illustrazione.webp.asset.json";
 import { SITE_URL } from "@/lib/site";
 
 const PATH = "/ginoide-androide-test";
