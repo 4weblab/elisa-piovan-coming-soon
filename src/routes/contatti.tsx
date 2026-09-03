@@ -175,7 +175,7 @@ function ContattiPage() {
                 {...itemProps}
                 className="flex flex-col items-center rounded-2xl border border-border surface-base bg-background p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-md md:p-8"
               >
-                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-sm font-bold text-primary-foreground">
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#C8A2C8] text-sm font-bold text-foreground">
                   {index + 1}
                 </span>
                 <h3 className="mt-5 font-display text-lg font-semibold text-foreground">
