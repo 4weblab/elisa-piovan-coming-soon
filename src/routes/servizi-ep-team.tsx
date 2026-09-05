@@ -363,11 +363,11 @@ function ServiziEpTeamPage() {
                       <img
                         src={member.photo}
                         alt={`Foto di ${member.name}, ${member.role}`}
-                        width={48}
-                        height={48}
+                        width={53}
+                        height={53}
                         loading="lazy"
                         decoding="async"
-                        className="h-12 w-12 rounded-full border border-primary/30 object-cover shadow-sm"
+                        className="h-[53px] w-[53px] rounded-full border border-primary/30 object-cover shadow-sm"
                       />
                     ) : (
                       <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center text-xs text-muted-foreground">
