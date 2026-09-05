@@ -358,19 +358,19 @@ function ServiziEpTeamPage() {
                   {...itemProps}
                   className="rounded-2xl border border-border surface-base bg-background p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                 >
-                  <div className="flex items-center gap-3 mb-4">
+                  <div className="flex flex-col items-center gap-3 mb-4">
                     {member.photo ? (
                       <img
                         src={member.photo}
                         alt={`Foto di ${member.name}, ${member.role}`}
-                        width={53}
-                        height={53}
+                        width={106}
+                        height={106}
                         loading="lazy"
                         decoding="async"
-                        className="h-[53px] w-[53px] rounded-full border border-primary/30 object-cover shadow-sm"
+                        className="h-[106px] w-[106px] rounded-full border border-primary/30 object-cover shadow-sm"
                       />
                     ) : (
-                      <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center text-xs text-muted-foreground">
+                      <div className="w-[106px] h-[106px] rounded-full bg-muted flex items-center justify-center text-xs text-muted-foreground">
                         AVATAR
                       </div>
                     )}
