@@ -276,7 +276,7 @@ function ChiSonoPage() {
               >
                 <Link
                   to="/servizi-ep-team"
-                  className="group inline-flex items-center justify-center gap-3 rounded-full bg-primary px-8 py-4 text-base font-semibold text-primary-foreground transition-all duration-300 hover:bg-primary/90 hover:shadow-lg"
+                  className="shadow-premium hover:shadow-premium-hover group inline-flex items-center justify-center gap-3 rounded-full bg-primary px-8 py-4 text-base font-semibold text-primary-foreground transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/90"
                 >
                   <WhatsAppIcon className="h-5 w-5" />
                   Scopri il metodo EP
