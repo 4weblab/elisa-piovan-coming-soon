@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import logoAsset from "@/assets/elisa-piovan-logo-header.png.asset.json";
+import logoAsset from "@/assets/elisa-piovan-logo-header.webp.asset.json";
 
 const NAV_LINKS = [
   { to: "/", label: "Home" },
