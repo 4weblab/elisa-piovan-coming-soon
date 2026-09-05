@@ -352,7 +352,7 @@ function HomePage() {
             <MotionLink
               to="/servizi-ep-team"
               whileTap={{ scale: 0.95 }}
-              className="group inline-flex items-center justify-center gap-2 rounded-full border border-cream/40 px-8 py-4 text-sm font-semibold text-cream transition-all duration-300 hover:-translate-y-0.5 hover:bg-cream/10 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none"
+              className="shadow-premium hover:shadow-premium-hover group inline-flex items-center justify-center gap-2 rounded-full border border-cream/40 bg-cream/5 px-8 py-4 text-sm font-semibold text-cream backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-cream/10 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none"
             >
               Scopri il metodo EP
               <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -480,7 +480,8 @@ function HomePage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     whileTap={{ scale: 0.95 }}
-                    className="inline-flex w-full items-center justify-center gap-3 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-colors duration-300 hover:bg-foreground/85 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none lg:w-auto"
+                    whileHover={{ y: -2 }}
+                    className="shadow-premium hover:shadow-premium-hover inline-flex w-full items-center justify-center gap-3 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:bg-foreground/85 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none lg:w-auto"
                   >
                     <WhatsAppIcon className="h-4 w-4" />
                     Prenota la Consulenza su WhatsApp
@@ -617,11 +618,12 @@ function HomePage() {
               to="/ginoide-androide-test"
               variants={cardItem}
               whileTap={{ scale: 0.95 }}
+              whileHover={{ y: -2 }}
               animate={{
                 boxShadow: [
-                  "0px 0px 0px rgba(0,0,0,0)",
-                  "0px 0px 20px rgba(15,15,17,0.1)",
-                  "0px 0px 0px rgba(0,0,0,0)",
+                  "0 1px 1px rgba(44,61,42,0.06), 0 4px 8px rgba(44,61,42,0.08), 0 8px 24px rgba(44,61,42,0.12), 0 24px 48px rgba(44,61,42,0.14)",
+                  "0 2px 2px rgba(44,61,42,0.08), 0 8px 16px rgba(44,61,42,0.12), 0 16px 40px rgba(44,61,42,0.16), 0 40px 72px rgba(44,61,42,0.20)",
+                  "0 1px 1px rgba(44,61,42,0.06), 0 4px 8px rgba(44,61,42,0.08), 0 8px 24px rgba(44,61,42,0.12), 0 24px 48px rgba(44,61,42,0.14)",
                 ],
               }}
               transition={{
@@ -631,7 +633,7 @@ function HomePage() {
                   ease: "easeInOut",
                 },
               }}
-              className="mt-10 inline-flex items-center justify-center gap-2.5 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-colors duration-300 hover:bg-foreground/85 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none"
+              className="mt-10 inline-flex items-center justify-center gap-2.5 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:bg-foreground/85 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none"
             >
               Inizia il Quiz (1 min)
               <ArrowRight className="h-4 w-4" />
