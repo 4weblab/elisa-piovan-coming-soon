@@ -211,7 +211,7 @@ function PartnerCard({ partner }: { partner: Partner }) {
           href={partner.primaryCta.href}
           target={partner.primaryCta.external ? "_blank" : undefined}
           rel={partner.primaryCta.external ? "noopener noreferrer" : undefined}
-          className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors duration-300 hover:bg-primary/90"
+          className="group inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-premium shadow-premium-hover transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/90"
         >
           {isWhatsApp && <WhatsAppIcon className="h-4 w-4 shrink-0" />}
           <span className="text-center">{partner.primaryCta.label}</span>
