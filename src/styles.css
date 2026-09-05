@@ -184,6 +184,32 @@
   }
 }
 
+/* ---- Ombre premium per profondità ---- */
+
+@utility shadow-premium {
+  box-shadow:
+    0 1px 1px rgb(44 61 42 / 0.06),
+    0 4px 8px rgb(44 61 42 / 0.08),
+    0 8px 24px rgb(44 61 42 / 0.12),
+    0 24px 48px rgb(44 61 42 / 0.14);
+}
+
+@utility shadow-premium-hover {
+  box-shadow:
+    0 2px 2px rgb(44 61 42 / 0.05),
+    0 8px 16px rgb(44 61 42 / 0.10),
+    0 16px 40px rgb(44 61 42 / 0.14),
+    0 40px 72px rgb(44 61 42 / 0.18);
+}
+
+@utility shadow-premium-dark {
+  box-shadow:
+    0 1px 1px rgb(0 0 0 / 0.18),
+    0 6px 12px rgb(0 0 0 / 0.22),
+    0 18px 36px rgb(0 0 0 / 0.28),
+    0 40px 64px rgb(0 0 0 / 0.32);
+}
+
 /* ---- Superfici anti auto-dark (gradiente piatto) ---- */
 
 @utility surface-base {
