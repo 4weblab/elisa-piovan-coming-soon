@@ -237,7 +237,7 @@ function ChiSonoPage() {
                 {...revealProps}
                 className="text-center text-base leading-relaxed text-muted-foreground md:text-lg"
               >
-                Non credo nel personal trainer o nel coach come "salvatore": è una narrazione comoda ma disonesta, perché scarica sull'altro una responsabilità che in realtà resta sempre nelle mani della persona. Il mio ruolo è essere la mappa, non le gambe che camminano. Posso indicarti la strada più efficace, posso correggerti quando stai sbagliando esecuzione o direzione, posso esserci nei momenti in cui la motivazione cala — ma il percorso lo percorri tu.
+                Non credo nel personal trainer o nel coach come "salvatore": è una narrazione comoda ma disonesta, perché scarica sull'altro una responsabilità che in realtà resta sempre nelle mani della persona. Il mio ruolo è essere la mappa, non le gambe che camminano. Posso indicarti la strada più efficace, posso correggerti quando stai sbagliando esecuzione o direzione, posso esserci nei momenti in cui la motivazione cala — ma il cammino lo percorri tu.
               </motion.p>
             </div>
 
