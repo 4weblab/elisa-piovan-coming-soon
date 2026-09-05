@@ -211,7 +211,7 @@ function PartnerCard({ partner }: { partner: Partner }) {
           href={partner.primaryCta.href}
           target={partner.primaryCta.external ? "_blank" : undefined}
           rel={partner.primaryCta.external ? "noopener noreferrer" : undefined}
-          className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors duration-300 hover:bg-primary/90"
+          className="group inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-premium shadow-premium-hover transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/90"
         >
           {isWhatsApp && <WhatsAppIcon className="h-4 w-4 shrink-0" />}
           <span className="text-center">{partner.primaryCta.label}</span>
@@ -226,7 +226,7 @@ function PartnerCard({ partner }: { partner: Partner }) {
             href={partner.secondaryCta.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex min-h-[24px] items-center justify-center gap-1.5 text-sm font-medium text-muted-foreground underline-offset-4 transition-colors hover:text-foreground hover:underline"
+            className="group inline-flex min-h-[40px] items-center justify-center gap-1.5 rounded-full border border-border surface-base bg-background px-5 py-2 text-sm font-medium text-foreground shadow-premium shadow-premium-hover transition-all duration-300 hover:-translate-y-0.5 hover:bg-secondary"
           >
             {partner.secondaryCta.label}
             <ExternalLink className="h-3.5 w-3.5 shrink-0" />
@@ -327,7 +327,7 @@ function PartnershipPage() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="group mt-2 inline-flex items-center justify-center gap-3 rounded-full bg-primary px-8 py-4 text-base font-semibold text-primary-foreground transition-all duration-300 hover:bg-primary/90 hover:shadow-lg"
+              className="group mt-2 inline-flex items-center justify-center gap-3 rounded-full bg-primary px-8 py-4 text-base font-semibold text-primary-foreground shadow-premium shadow-premium-hover transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/90"
             >
               <WhatsAppIcon className="h-5 w-5" />
               Scrivi a Elisa su WhatsApp
