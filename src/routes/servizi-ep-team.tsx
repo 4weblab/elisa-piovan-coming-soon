@@ -397,7 +397,7 @@ function ServiziEpTeamPage() {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center justify-center gap-3 rounded-full bg-primary px-8 py-4 text-base font-semibold text-primary-foreground transition-all duration-300 hover:bg-primary/90 hover:shadow-lg"
+                className="group inline-flex items-center justify-center gap-3 rounded-full bg-primary px-8 py-4 text-base font-semibold text-primary-foreground shadow-premium shadow-premium-hover transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/90"
               >
                 <WhatsAppIcon className="h-5 w-5" />
                 Inizia ora il tuo cambiamento
@@ -503,7 +503,7 @@ function ServiziEpTeamPage() {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-3 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-colors duration-300 hover:bg-primary/90"
+                className="inline-flex items-center justify-center gap-3 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground shadow-premium shadow-premium-hover transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/90"
               >
                 <WhatsAppIcon className="h-4 w-4" />
                 Scrivimi su WhatsApp
@@ -512,7 +512,7 @@ function ServiziEpTeamPage() {
                 href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-3 rounded-full border border-border surface-base bg-background px-8 py-4 text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:bg-secondary"
+                className="inline-flex items-center justify-center gap-3 rounded-full border border-border surface-base bg-background px-8 py-4 text-sm font-semibold shadow-premium shadow-premium-hover transition-all duration-300 hover:-translate-y-0.5 hover:bg-secondary"
               >
                 <Instagram className="h-4 w-4" />
                 Contattami su Instagram
