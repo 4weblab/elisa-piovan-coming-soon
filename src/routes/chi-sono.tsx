@@ -180,12 +180,12 @@ function ChiSonoPage() {
           <motion.div {...revealProps}>
             <img
               src={elisaAllenamentoAsset.url}
-              alt="Elisa durante un allenamento"
-              width={896}
-              height={896}
+              alt="Elisa Piovan in allenamento"
+              width={900}
+              height={1350}
               loading="lazy"
               decoding="async"
-              className="aspect-square w-full max-w-md mx-auto rounded-2xl object-cover"
+              className="w-full max-w-md mx-auto rounded-2xl"
             />
           </motion.div>
 
