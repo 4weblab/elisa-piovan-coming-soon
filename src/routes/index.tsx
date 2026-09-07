@@ -285,14 +285,6 @@ function HomePage() {
           loading="eager"
           fetchPriority="high"
         />
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 bg-forest/70"
-          style={{
-            backgroundImage:
-              "linear-gradient(105deg, rgba(44,61,42,0.92) 0%, rgba(44,61,42,0.75) 45%, rgba(44,61,42,0.55) 100%)",
-          }}
-        />
         <MotionDiv
           variants={heroContainer}
           initial="hidden"
