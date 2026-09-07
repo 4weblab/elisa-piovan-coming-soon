@@ -111,7 +111,7 @@ const jsonLd = {
       reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
       author: { "@type": "Person", name: "Giulia Bernardi" },
       reviewBody:
-        "Il percorso EP ha fatto la differenza. I risultati estetici sono stati la naturale conseguenza del mio benessere mentale.",
+        "È un'esperienza che consiglio fortemente perché qualsiasi percorso si voglia affrontare lo si affronta assieme ad un team di persone competenti e sempre disponibili ad accogliere e dissipare ogni dubbio.",
     },
   ],
 };
