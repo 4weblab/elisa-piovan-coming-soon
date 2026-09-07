@@ -109,7 +109,7 @@ const jsonLd = {
       "@type": "Review",
       name: "Recensione Google — Giulia Bernardi",
       reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      author: { "@type": "Person", name: "Cliente EP Team" },
+      author: { "@type": "Person", name: "Giulia Bernardi" },
       reviewBody:
         "Il percorso EP ha fatto la differenza. I risultati estetici sono stati la naturale conseguenza del mio benessere mentale.",
     },
