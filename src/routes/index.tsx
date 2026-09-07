@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { AnimatePresence, motion } from "framer-motion";
-import { Apple, ArrowRight, Brain, Check, Dumbbell, Instagram } from "lucide-react";
+import { Apple, ArrowRight, Brain, Check, Dumbbell, Instagram, Star } from "lucide-react";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import heroBgAsset from "@/assets/elisa-hero-bg.webp.asset.json";
 import { GOOGLE_BUSINESS_URL, GOOGLE_RATING_VALUE, GOOGLE_REVIEW_COUNT, INSTAGRAM_URL, SITE_URL, TIKTOK_URL, WHATSAPP_URL } from "@/lib/site";
@@ -83,7 +83,7 @@ const jsonLd = {
   },
   aggregateRating: {
     "@type": "AggregateRating",
-    ratingValue: GOOGLE_RATING_VALUE,
+    ratingValue: "5",
     bestRating: "5",
     worstRating: "1",
     reviewCount: GOOGLE_REVIEW_COUNT,
@@ -91,27 +91,27 @@ const jsonLd = {
   review: [
     {
       "@type": "Review",
-      name: "Evoluzione Tecnica",
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      author: { "@type": "Person", name: "Cliente EP Team" },
+      name: "Recensione Google — Patrizia Laveneziana",
+      reviewRating: { "@type": "Rating", ratingValue: "4", bestRating: "5" },
+      author: { "@type": "Person", name: "Patrizia Laveneziana" },
       reviewBody:
-        "Ho imparato ad allenarmi con costanza senza l'ossessione della bilancia, migliorando forza e postura.",
+        "Elisa e' davvero appassionata del proprio lavoro, trasmette entusiasmo, molto empatica, professionale e preparata!",
     },
     {
       "@type": "Review",
-      name: "Mindset & Nutrizione",
+      name: "Recensione Google — Vittoria Todescato",
       reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      author: { "@type": "Person", name: "Cliente EP Team" },
+      author: { "@type": "Person", name: "Vittoria Todescato" },
       reviewBody:
-        "Un percorso post gravidanza, piú di un anno di percorso metodo EP allenamento personal training e alimentazione.",
+        "Preparata, professionale, empatica attenta alla tue esigenze, disponibile, incoraggiante coinvolgente motivante…Elisa è tutto questo e molto di più!",
     },
     {
       "@type": "Review",
-      name: "Forza e Costanza",
+      name: "Recensione Google — Giulia Bernardi",
       reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      author: { "@type": "Person", name: "Cliente EP Team" },
+      author: { "@type": "Person", name: "Giulia Bernardi" },
       reviewBody:
-        "Il percorso EP ha fatto la differenza. I risultati estetici sono stati la naturale conseguenza del mio benessere mentale.",
+        "È un'esperienza che consiglio fortemente perché qualsiasi percorso si voglia affrontare lo si affronta assieme ad un team di persone competenti e sempre disponibili ad accogliere e dissipare ogni dubbio.",
     },
   ],
 };
@@ -222,6 +222,24 @@ const SUCCESS_STORIES = [
     tag: "Forza e Costanza",
     quote:
       "Il percorso EP ha fatto la differenza. I risultati estetici sono stati la naturale conseguenza del mio benessere mentale.",
+  },
+];
+
+const GOOGLE_REVIEWS = [
+  {
+    name: "Patrizia Laveneziana",
+    rating: 4,
+    text: "Elisa e' davvero appassionata del proprio lavoro, trasmette entusiasmo, molto empatica, professionale e preparata!",
+  },
+  {
+    name: "Vittoria Todescato",
+    rating: 5,
+    text: "Preparata, professionale, empatica attenta alla tue esigenze, disponibile, incoraggiante coinvolgente motivante…Elisa è tutto questo e molto di più!",
+  },
+  {
+    name: "Giulia Bernardi",
+    rating: 5,
+    text: "È un'esperienza che consiglio fortemente perché qualsiasi percorso si voglia affrontare lo si affronta assieme ad un team di persone competenti e sempre disponibili ad accogliere e dissipare ogni dubbio.",
   },
 ];
 
@@ -579,6 +597,127 @@ function HomePage() {
                 Guarda altre storie su Instagram →
               </MotionA>
             </MotionDiv>
+          </MotionDiv>
+        </div>
+      </section>
+
+      {/* Recensioni Google */}
+      <section className="border-t border-border">
+        <div className="mx-auto max-w-6xl px-6 py-24">
+          <MotionDiv
+            variants={sectionContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            className="text-center"
+          >
+            <MotionH2
+              variants={cardItem}
+              className="text-3xl font-bold tracking-tight sm:text-4xl"
+            >
+              Cosa dicono di noi
+            </MotionH2>
+            <MotionDiv
+              variants={cardItem}
+              className="mt-5 inline-flex items-center justify-center gap-2 rounded-full border border-border bg-card px-4 py-2"
+            >
+              <div className="flex">
+                {[...Array(5)].map((_, i) => (
+                  <Star
+                    key={i}
+                    className="h-4 w-4 fill-primary text-primary"
+                    aria-hidden="true"
+                  />
+                ))}
+              </div>
+              <span className="text-sm font-semibold text-foreground">
+                5.0 su 5
+              </span>
+              <span className="text-sm text-muted-foreground">
+                basato su {GOOGLE_REVIEW_COUNT} recensioni Google
+              </span>
+            </MotionDiv>
+          </MotionDiv>
+
+          <MotionDiv
+            variants={sectionContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3"
+          >
+            {GOOGLE_REVIEWS.map((review) => {
+              const initials = review.name
+                .split(" ")
+                .map((n) => n[0])
+                .join("");
+              return (
+                <MotionArticle
+                  key={review.name}
+                  variants={cardItem}
+                  whileHover={{ y: -6 }}
+                  transition={hoverSpring}
+                  className="flex h-full flex-col rounded-2xl border border-border surface-card bg-card p-7 transition-shadow duration-300 hover:shadow-xl"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-full bg-secondary font-display text-sm font-semibold text-secondary-foreground">
+                      {initials}
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-sm font-semibold text-foreground">
+                        {review.name}
+                      </p>
+                      <div className="flex items-center gap-0.5">
+                        {[...Array(5)].map((_, i) => (
+                          <Star
+                            key={i}
+                            className={`h-3.5 w-3.5 ${
+                              i < review.rating
+                                ? "fill-primary text-primary"
+                                : "text-border"
+                            }`}
+                            aria-hidden="true"
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  <blockquote className="mt-5 flex-1 text-sm leading-relaxed text-pretty text-muted-foreground">
+                    “{review.text}”
+                  </blockquote>
+                  <div className="mt-6 flex items-center gap-2 text-xs text-muted-foreground">
+                    <svg
+                      className="h-4 w-4"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path d="M12.545 10.239v3.821h5.445c-.712 2.315-2.647 3.972-5.445 3.972a6.033 6.033 0 110-12.064c1.498 0 2.866.549 3.921 1.453l2.814-2.814A9.969 9.969 0 0012.545 2C6.477 2 1.545 6.932 1.545 13s4.932 11 11 11 11-4.932 11-11c0-.732-.074-1.446-.214-2.139h-10.786z" />
+                    </svg>
+                    Recensione Google
+                  </div>
+                </MotionArticle>
+              );
+            })}
+          </MotionDiv>
+
+          <MotionDiv
+            variants={cardItem}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            className="mt-12 text-center"
+          >
+            <MotionA
+              href={GOOGLE_BUSINESS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground transition-all duration-300 hover:bg-muted focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none"
+            >
+              Leggi tutte le recensioni su Google
+              <ArrowRight className="h-4 w-4" />
+            </MotionA>
           </MotionDiv>
         </div>
       </section>
