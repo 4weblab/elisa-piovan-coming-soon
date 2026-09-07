@@ -91,11 +91,11 @@ const jsonLd = {
   review: [
     {
       "@type": "Review",
-      name: "Evoluzione Tecnica",
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      author: { "@type": "Person", name: "Cliente EP Team" },
+      name: "Recensione Google — Patrizia Laveneziana",
+      reviewRating: { "@type": "Rating", ratingValue: "4", bestRating: "5" },
+      author: { "@type": "Person", name: "Patrizia Laveneziana" },
       reviewBody:
-        "Ho imparato ad allenarmi con costanza senza l'ossessione della bilancia, migliorando forza e postura.",
+        "Elisa e' davvero appassionata del proprio lavoro, trasmette entusiasmo, molto empatica, professionale e preparata!",
     },
     {
       "@type": "Review",
