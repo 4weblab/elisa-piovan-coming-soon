@@ -83,7 +83,7 @@ const jsonLd = {
   },
   aggregateRating: {
     "@type": "AggregateRating",
-    ratingValue: GOOGLE_RATING_VALUE,
+    ratingValue: "5",
     bestRating: "5",
     worstRating: "1",
     reviewCount: GOOGLE_REVIEW_COUNT,
