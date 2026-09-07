@@ -294,12 +294,12 @@ function ServiziEpTeamPage() {
           <motion.div {...revealProps}>
             <img
               src={elisaHeroAsset.url}
-              alt="Foto di Elisa durante una sessione di coaching"
+              alt="Elisa Piovan in sessione di coaching"
               width={1200}
-              height={900}
+              height={1089}
               loading="eager"
               decoding="async"
-              className="aspect-[4/3] w-full rounded-2xl object-cover"
+              className="w-full rounded-2xl"
             />
           </motion.div>
         </div>
