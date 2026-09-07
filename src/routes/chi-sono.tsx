@@ -153,10 +153,10 @@ function ChiSonoPage() {
               src={elisaRitrattoAsset.url}
               alt="foto primo piano Elisa Piovan"
               width={900}
-              height={1200}
+              height={1462}
               loading="lazy"
               decoding="async"
-              className="aspect-[3/4] w-full rounded-xl object-cover"
+              className="w-full rounded-xl"
             />
           </motion.div>
         </div>
