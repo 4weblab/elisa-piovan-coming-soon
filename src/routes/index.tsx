@@ -99,11 +99,11 @@ const jsonLd = {
     },
     {
       "@type": "Review",
-      name: "Mindset & Nutrizione",
+      name: "Recensione Google — Vittoria Todescato",
       reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      author: { "@type": "Person", name: "Cliente EP Team" },
+      author: { "@type": "Person", name: "Vittoria Todescato" },
       reviewBody:
-        "Un percorso post gravidanza, piú di un anno di percorso metodo EP allenamento personal training e alimentazione.",
+        "Preparata, professionale, empatica attenta alla tue esigenze, disponibile, incoraggiante coinvolgente motivante…Elisa è tutto questo e molto di più!",
     },
     {
       "@type": "Review",
