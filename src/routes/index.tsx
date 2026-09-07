@@ -631,10 +631,10 @@ function HomePage() {
                 ))}
               </div>
               <span className="text-sm font-semibold text-foreground">
-                5.0 su 5
+                5 su 5
               </span>
               <span className="text-sm text-muted-foreground">
-                basato su {GOOGLE_REVIEW_COUNT} recensioni Google
+                {"\n"}
               </span>
             </MotionDiv>
           </MotionDiv>
