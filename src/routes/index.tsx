@@ -107,7 +107,7 @@ const jsonLd = {
     },
     {
       "@type": "Review",
-      name: "Forza e Costanza",
+      name: "Recensione Google — Giulia Bernardi",
       reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
       author: { "@type": "Person", name: "Cliente EP Team" },
       reviewBody:
