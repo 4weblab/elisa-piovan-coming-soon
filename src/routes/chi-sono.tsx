@@ -253,14 +253,14 @@ function ChiSonoPage() {
                 {...revealProps}
                 className="font-display text-xl font-bold tracking-tight text-foreground md:text-2xl"
               >
-                Il ruolo dell'EP Team
+                Il ruolo del Team EP
               </motion.h3>
 
               <motion.p
                 {...revealProps}
                 className="text-base leading-relaxed text-muted-foreground md:text-lg"
               >
-                Ed è qui che entra in gioco l'EP Team. Non si tratta solo del mio nome con un'etichetta diversa: è un vero lavoro di squadra, nato per garantirti un affiancamento completo. Io porto la visione, l'esperienza e la supervisione di ogni percorso, ma dietro di me c'è un team di professioniste (Nutrizionista, Psicologa e Trainer) che lavora in perfetto coordinamento.
+                Ed è qui che entra in gioco il Team EP. Non si tratta solo del mio nome con un'etichetta diversa: è un vero lavoro di squadra, nato per garantirti un affiancamento completo. Io porto la visione, l'esperienza e la supervisione di ogni percorso, ma dietro di me c'è un team di professioniste (Nutrizionista, Psicologa e Trainer) che lavora in perfetto coordinamento.
               </motion.p>
 
               <motion.p
