@@ -155,7 +155,7 @@ const TEAM: {
   {
     name: "Silvia",
     role: "Personal Training Dedicated",
-    team: "EP Team",
+    team: "TEAM EP",
     photo: silviaAvatarAsset.url,
     text: "Programmi di allenamento personalizzati e monitoraggio costante (in presenza o online) guidati da una Personal Trainer dell'EP Team per raggiungere i tuoi obiettivi fisici in totale sicurezza.",
   },
@@ -163,7 +163,7 @@ const TEAM: {
   {
     name: "Erica",
     role: "Nutrizione e Alimentazione Funzionale",
-    team: "Nutrizionista EP Team",
+    team: "NUTRIZIONISTA TEAM EP",
     photo: ericaAvatarAsset.url,
 
     text: "Piani alimentari flessibili ed educazione alimentare a cura della Nutrizionista dell'EP Team, pensati per nutrire il corpo senza privazioni o diete restrittive.",
@@ -171,7 +171,7 @@ const TEAM: {
   {
     name: "Mimì",
     role: "Mindset e Supporto Psicologico",
-    team: "Psicologa EP Team",
+    team: "PSICOLOGA TEAM EP",
     photo: mimiAvatarAsset.url,
 
     text: "Incontri dedicati con la Psicologa del team per superare i blocchi emotivi, gestire lo stress e costruire un rapporto sano con la tua immagine corporea. Perché il tuo unico limite sei TU.",
@@ -344,7 +344,7 @@ function ServiziEpTeamPage() {
           <motion.div {...containerProps} className="flex flex-col gap-12">
             <div className="max-w-3xl">
               <motion.h2 {...itemProps} className="font-display text-2xl font-bold tracking-tight text-foreground md:text-3xl lg:text-4xl">
-                L'EP Team: Le Specialiste a Supporto della Tua Trasformazione
+                Team EP: Le Specialiste a Supporto della Tua Trasformazione
               </motion.h2>
               <motion.p {...itemProps} className="mt-5 text-base leading-relaxed text-muted-foreground md:text-lg">
                 Per garantirti un affiancamento integrato a 360°, il Metodo EP si avvale del supporto di specialiste che lavorano in costante sinergia su di te:
