@@ -227,17 +227,17 @@ const SUCCESS_STORIES = [
 
 const GOOGLE_REVIEWS = [
   {
-    name: "Patrizia Laveneziana",
+    name: "Patrizia L.",
     rating: 4,
     text: "Elisa e' davvero appassionata del proprio lavoro, trasmette entusiasmo, molto empatica, professionale e preparata!",
   },
   {
-    name: "Vittoria Todescato",
+    name: "Vittoria T.",
     rating: 5,
     text: "Preparata, professionale, empatica attenta alla tue esigenze, disponibile, incoraggiante coinvolgente motivante…Elisa è tutto questo e molto di più!",
   },
   {
-    name: "Giulia Bernardi",
+    name: "Giulia B.",
     rating: 5,
     text: "È un'esperienza che consiglio fortemente perché qualsiasi percorso si voglia affrontare lo si affronta assieme ad un team di persone competenti e sempre disponibili ad accogliere e dissipare ogni dubbio.",
   },
