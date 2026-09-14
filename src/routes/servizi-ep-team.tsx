@@ -211,7 +211,7 @@ const FAQ = [
   {
     domanda: "Come si integra il supporto della Nutrizionista e della Psicologa?",
     risposta:
-      "L'EP Team lavora in totale sinergia. In base alle tue esigenze potrai integrare la nutrizione o il supporto psicologico nello stesso percorso, senza dover ricominciare da capo con professionisti differenti.",
+      "IL Team EP lavora in totale sinergia. In base alle tue esigenze potrai integrare la nutrizione o il supporto psicologico nello stesso percorso, senza dover ricominciare da capo con professionisti differenti.",
   },
   {
     domanda: "Come posso conoscere i prezzi dei percorsi?",
