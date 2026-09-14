@@ -7,7 +7,7 @@ import logoAsset from "@/assets/elisa-piovan-logo-header.webp.asset.json";
 const NAV_LINKS = [
   { to: "/", label: "Home" },
   { to: "/chi-sono", label: "Chi Sono" },
-  { to: "/servizi-ep-team", label: "Servizi  EP Team" },
+  { to: "/servizi-ep-team", label: "Servizi Team EP" },
   { to: "/ginoide-androide-test", label: "Quiz" },
   { to: "/partnership", label: "Partnership" },
   { to: "/contatti", label: "Contatti" },
