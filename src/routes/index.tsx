@@ -303,6 +303,7 @@ function HomePage() {
           loading="eager"
           fetchPriority="high"
         />
+        <div className="absolute inset-0 bg-forest/25" aria-hidden="true" />
         <MotionDiv
           variants={heroContainer}
           initial="hidden"
