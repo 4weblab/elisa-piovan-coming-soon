@@ -9,9 +9,9 @@ import {
 } from "@/components/ui/accordion";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import elisaHeroAsset from "@/assets/elisa-hero.webp.asset.json";
-import silviaAvatarAsset from "@/assets/silvia-avatar.webp.asset.json";
-import mimiAvatarAsset from "@/assets/mimi-avatar.webp.asset.json";
-import ericaAvatarAsset from "@/assets/erica-avatar.webp.asset.json";
+import silviaTeamAsset from "@/assets/silvia-team-placeholder.webp.asset.json";
+import mimiTeamAsset from "@/assets/mimi-team.webp.asset.json";
+import ericaTeamAsset from "@/assets/erica-team.webp.asset.json";
 
 
 
@@ -150,13 +150,17 @@ const TEAM: {
   role: string;
   team: string;
   text: string;
-  photo?: string;
+  photo: string;
+  photoAlt: string;
+  photoSurface: string;
 }[] = [
   {
     name: "Silvia",
     role: "Personal Training Dedicated",
     team: "TEAM EP",
-    photo: silviaAvatarAsset.url,
+    photo: silviaTeamAsset.url,
+    photoAlt: "Segnaposto temporaneo per la foto di Silvia",
+    photoSurface: "bg-secondary",
     text: "Programmi di allenamento personalizzati e monitoraggio costante (in presenza o online) guidati da una Personal Trainer dell'EP Team per raggiungere i tuoi obiettivi fisici in totale sicurezza.",
   },
 
@@ -164,7 +168,9 @@ const TEAM: {
     name: "Erica",
     role: "Nutrizione e Alimentazione Funzionale",
     team: "NUTRIZIONISTA TEAM EP",
-    photo: ericaAvatarAsset.url,
+    photo: ericaTeamAsset.url,
+    photoAlt: "Foto di Erica, nutrizionista del Team EP",
+    photoSurface: "surface-forest",
 
     text: "Piani alimentari flessibili ed educazione alimentare a cura della Nutrizionista dell'EP Team, pensati per nutrire il corpo senza privazioni o diete restrittive.",
   },
@@ -172,7 +178,9 @@ const TEAM: {
     name: "Mimì",
     role: "Mindset e Supporto Psicologico",
     team: "PSICOLOGA TEAM EP",
-    photo: mimiAvatarAsset.url,
+    photo: mimiTeamAsset.url,
+    photoAlt: "Foto di Mimì, psicologa del Team EP",
+    photoSurface: "bg-primary",
 
     text: "Incontri dedicati con la Psicologa del team per superare i blocchi emotivi, gestire lo stress e costruire un rapporto sano con la tua immagine corporea. Perché il tuo unico limite sei TU.",
   },
@@ -356,38 +364,35 @@ function ServiziEpTeamPage() {
                 <motion.article
                   key={member.role}
                   {...itemProps}
-                  className="rounded-2xl border border-border surface-base bg-background p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                  className="group grid min-h-full grid-rows-[17rem_1fr] overflow-hidden rounded-2xl border border-border surface-card bg-card shadow-premium transition-all duration-300 hover:-translate-y-1 hover:shadow-premium-hover"
                 >
-                  <div className="flex flex-col items-center gap-3 mb-4">
-                    {member.photo ? (
-                      <img
-                        src={member.photo}
-                        alt={`Foto di ${member.name}, ${member.role}`}
-                        width={106}
-                        height={106}
-                        loading="lazy"
-                        decoding="async"
-                        className="h-[106px] w-[106px] rounded-full border border-primary/30 object-cover shadow-sm"
-                      />
-                    ) : (
-                      <div className="w-[106px] h-[106px] rounded-full bg-muted flex items-center justify-center text-xs text-muted-foreground">
-                        AVATAR
-                      </div>
-                    )}
-                    <span className="text-base font-semibold text-foreground">
-                      {member.name}
-                    </span>
+                  <div className={`relative flex items-end justify-center overflow-hidden ${member.photoSurface}`}>
+                    <img
+                      src={member.photo}
+                      alt={member.photoAlt}
+                      width={800}
+                      height={680}
+                      loading="lazy"
+                      decoding="async"
+                      className="h-full w-full object-contain object-bottom transition-transform duration-500 ease-out group-hover:scale-[1.025]"
+                    />
                   </div>
 
-                  <h3 className="text-base font-semibold text-foreground">
-                    {member.role}
-                  </h3>
-                  <p className="mt-1 text-xs font-medium uppercase tracking-wider text-muted-foreground">
-                    {member.team}
-                  </p>
-                  <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                    {member.text}
-                  </p>
+                  <div className="flex flex-col p-6 md:p-7">
+                    <span className="font-display text-3xl font-semibold text-foreground">
+                      {member.name}
+                    </span>
+                    <h3 className="mt-3 text-base font-semibold text-foreground">
+                      {member.role}
+                    </h3>
+                    <p className="mt-1 text-xs font-semibold uppercase text-primary">
+                      {member.team}
+                    </p>
+                    <div className="my-5 h-px w-12 bg-primary/60" aria-hidden="true" />
+                    <p className="text-sm leading-relaxed text-muted-foreground">
+                      {member.text}
+                    </p>
+                  </div>
                 </motion.article>
               ))}
             </motion.div>
