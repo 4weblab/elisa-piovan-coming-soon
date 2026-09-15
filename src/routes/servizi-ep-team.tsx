@@ -15,7 +15,7 @@ import ericaTeamAsset from "@/assets/erica-team.webp.asset.json";
 
 
 
-import { INSTAGRAM_URL, SITE_URL, WHATSAPP_URL } from "@/lib/site";
+import { INSTAGRAM_URL, ORGANIZATION_JSON_LD, SITE_URL, WHATSAPP_URL } from "@/lib/site";
 
 const PAGE_TITLE = "Metodo EP: Percorsi di Allenamento e Nutrizione per Donne";
 const PAGE_DESCRIPTION =

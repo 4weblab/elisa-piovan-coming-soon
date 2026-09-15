@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Apple, ArrowRight, Brain, Check, Dumbbell, Instagram, Star } from "lucide-react";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import heroBgAsset from "@/assets/elisa-hero-bg.webp.asset.json";
-import { GOOGLE_BUSINESS_URL, GOOGLE_RATING_VALUE, GOOGLE_REVIEW_COUNT, INSTAGRAM_URL, SITE_URL, TIKTOK_URL, WHATSAPP_URL } from "@/lib/site";
+import { GOOGLE_BUSINESS_URL, GOOGLE_RATING_VALUE, GOOGLE_REVIEW_COUNT, ORGANIZATION_JSON_LD, SITE_URL, WHATSAPP_URL } from "@/lib/site";
 
 const PAGE_TITLE =
   "Personal Trainer Padova e Coaching Online Femminile | Elisa Piovan";

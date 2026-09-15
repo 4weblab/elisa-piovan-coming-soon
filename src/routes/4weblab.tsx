@@ -14,6 +14,7 @@ import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import {
   FOURWEBLAB_URL,
   FOURWEBLAB_WHATSAPP_URL,
+  ORGANIZATION_JSON_LD,
   SITE_URL,
 } from "@/lib/site";
 

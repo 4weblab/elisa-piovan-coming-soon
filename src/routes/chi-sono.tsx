@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import elisaAllenamentoAsset from "@/assets/elisa-allenamento.webp.asset.json";
 import elisaRitrattoAsset from "@/assets/elisa-ritratto.webp.asset.json";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
-import { GOOGLE_BUSINESS_URL, INSTAGRAM_URL, SITE_URL, TIKTOK_URL, WHATSAPP_URL } from "@/lib/site";
+import { ORGANIZATION_JSON_LD, SITE_URL } from "@/lib/site";
 
 const PAGE_TITLE = "Elisa Piovan | Fitness Coach al Femminile";
 const PAGE_DESCRIPTION =
