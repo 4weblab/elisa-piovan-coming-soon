@@ -18,20 +18,7 @@ const jsonLd = {
   name: PAGE_TITLE,
   description: PAGE_DESCRIPTION,
   url: `${SITE_URL}/contatti`,
-  mainEntity: {
-    "@type": "HealthAndBeautyBusiness",
-    name: "Elisa Piovan Trainer",
-    alternateName: "EP Team",
-    url: SITE_URL,
-    telephone: "+393278840255",
-    contactPoint: {
-      "@type": "ContactPoint",
-      telephone: "+393278840255",
-      contactType: "customer service",
-      availableLanguage: "Italian",
-    },
-    sameAs: [INSTAGRAM_URL, TIKTOK_URL, GOOGLE_BUSINESS_URL],
-  },
+  mainEntity: ORGANIZATION_JSON_LD,
 };
 
 export const Route = createFileRoute("/contatti")({

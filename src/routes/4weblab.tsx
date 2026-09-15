@@ -39,12 +39,7 @@ const jsonLd = {
         description: "Siti web per negozi, professionisti e aziende.",
       },
     },
-    {
-      "@type": "Organization",
-      "@id": `${SITE_URL}/#organization`,
-      name: "Elisa Piovan Trainer",
-      url: `${SITE_URL}/`,
-    },
+    ORGANIZATION_JSON_LD,
   ],
 };
 

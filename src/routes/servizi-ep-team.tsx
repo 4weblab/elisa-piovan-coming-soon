@@ -25,18 +25,8 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "HealthAndBeautyBusiness",
-      "@id": `${SITE_URL}/#organization`,
-      name: "Elisa Piovan Trainer",
-      alternateName: ["EP Team", "Elitrainer"],
-      url: `${SITE_URL}/`,
+      ...ORGANIZATION_JSON_LD,
       description: PAGE_DESCRIPTION,
-      telephone: "+393278840255",
-      areaServed: [
-        { "@type": "City", name: "Padova" },
-        { "@type": "Country", name: "Italia" },
-      ],
-      sameAs: [INSTAGRAM_URL],
       hasOfferCatalog: {
         "@type": "OfferCatalog",
         "@id": `${SITE_URL}/servizi-ep-team#services`,

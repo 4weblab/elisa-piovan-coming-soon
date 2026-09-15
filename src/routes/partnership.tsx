@@ -10,14 +10,9 @@ const PAGE_DESCRIPTION =
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "HealthAndBeautyBusiness",
-  name: "Elisa Piovan Trainer",
+  ...ORGANIZATION_JSON_LD,
   url: "https://elitrainer.it/partnership",
   description: PAGE_DESCRIPTION,
-  areaServed: [
-    { "@type": "City", name: "Padova" },
-    { "@type": "Country", name: "Italia" },
-  ],
   makesOffer: [
     {
       "@type": "Offer",

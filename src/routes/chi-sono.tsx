@@ -34,22 +34,10 @@ const jsonLd = {
       ],
     },
     {
-      "@type": "HealthAndBeautyBusiness",
-      "@id": `${SITE_URL}/#organization`,
-      name: "EP Team",
-      alternateName: ["Elisa Piovan Trainer", "Elitrainer"],
-      url: `${SITE_URL}/`,
+      ...ORGANIZATION_JSON_LD,
       founder: { "@id": `${SITE_URL}/#elisa-piovan` },
       description:
         "Metodo integrato di allenamento, nutrizione e mente per il benessere femminile.",
-      telephone: "+393278840255",
-      sameAs: [INSTAGRAM_URL, TIKTOK_URL, GOOGLE_BUSINESS_URL],
-      hasMap: GOOGLE_BUSINESS_URL,
-      areaServed: [
-        { "@type": "City", name: "Padova" },
-        { "@type": "City", name: "Noventa Padovana" },
-        { "@type": "Country", name: "Italia" },
-      ],
     },
   ],
 };
