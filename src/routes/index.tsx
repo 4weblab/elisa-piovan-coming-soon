@@ -83,7 +83,7 @@ const jsonLd = {
   },
   aggregateRating: {
     "@type": "AggregateRating",
-    ratingValue: "5",
+    ratingValue: GOOGLE_RATING_VALUE,
     bestRating: "5",
     worstRating: "1",
     reviewCount: GOOGLE_REVIEW_COUNT,
@@ -632,7 +632,7 @@ function HomePage() {
                 ))}
               </div>
               <span className="text-sm font-semibold text-foreground">
-                5 su 5
+                {GOOGLE_RATING_VALUE} su 5
               </span>
               <span className="text-sm text-muted-foreground">
                 {"\n"}
