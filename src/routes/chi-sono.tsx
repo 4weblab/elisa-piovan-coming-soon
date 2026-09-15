@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import elisaAllenamentoAsset from "@/assets/elisa-allenamento.webp.asset.json";
 import elisaRitrattoAsset from "@/assets/elisa-ritratto.webp.asset.json";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
-import { GOOGLE_BUSINESS_URL, INSTAGRAM_URL, SITE_URL, TIKTOK_URL, WHATSAPP_URL } from "@/lib/site";
+import { INSTAGRAM_URL, ORGANIZATION_JSON_LD, SITE_URL, TIKTOK_URL } from "@/lib/site";
 
 const PAGE_TITLE = "Elisa Piovan | Fitness Coach al Femminile";
 const PAGE_DESCRIPTION =
@@ -34,22 +34,10 @@ const jsonLd = {
       ],
     },
     {
-      "@type": "HealthAndBeautyBusiness",
-      "@id": `${SITE_URL}/#organization`,
-      name: "EP Team",
-      alternateName: ["Elisa Piovan Trainer", "Elitrainer"],
-      url: `${SITE_URL}/`,
+      ...ORGANIZATION_JSON_LD,
       founder: { "@id": `${SITE_URL}/#elisa-piovan` },
       description:
         "Metodo integrato di allenamento, nutrizione e mente per il benessere femminile.",
-      telephone: "+393278840255",
-      sameAs: [INSTAGRAM_URL, TIKTOK_URL, GOOGLE_BUSINESS_URL],
-      hasMap: GOOGLE_BUSINESS_URL,
-      areaServed: [
-        { "@type": "City", name: "Padova" },
-        { "@type": "City", name: "Noventa Padovana" },
-        { "@type": "Country", name: "Italia" },
-      ],
     },
   ],
 };

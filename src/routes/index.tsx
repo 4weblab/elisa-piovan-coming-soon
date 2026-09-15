@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Apple, ArrowRight, Brain, Check, Dumbbell, Instagram, Star } from "lucide-react";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import heroBgAsset from "@/assets/elisa-hero-bg.webp.asset.json";
-import { GOOGLE_BUSINESS_URL, GOOGLE_RATING_VALUE, GOOGLE_REVIEW_COUNT, INSTAGRAM_URL, SITE_URL, TIKTOK_URL, WHATSAPP_URL } from "@/lib/site";
+import { GOOGLE_BUSINESS_URL, GOOGLE_RATING_VALUE, GOOGLE_REVIEW_COUNT, ORGANIZATION_JSON_LD, SITE_URL, WHATSAPP_URL } from "@/lib/site";
 
 const PAGE_TITLE =
   "Personal Trainer Padova e Coaching Online Femminile | Elisa Piovan";
@@ -12,22 +12,10 @@ const PAGE_DESCRIPTION =
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "HealthAndBeautyBusiness",
-  "@id": `${SITE_URL}/#organization`,
-  name: "Elisa Piovan Trainer",
-  alternateName: ["EP Team", "Elitrainer"],
-  url: `${SITE_URL}/`,
+  ...ORGANIZATION_JSON_LD,
   description: PAGE_DESCRIPTION,
   vatID: "05509730288",
   taxID: "05509730288",
-  telephone: "+393278840255",
-  areaServed: [
-    { "@type": "City", name: "Noventa Padovana" },
-    { "@type": "City", name: "Vigonza" },
-    { "@type": "City", name: "Padova" },
-    { "@type": "Country", name: "Italia" },
-  ],
-  sameAs: [INSTAGRAM_URL, TIKTOK_URL, GOOGLE_BUSINESS_URL],
   hasMap: GOOGLE_BUSINESS_URL,
   openingHoursSpecification: [
     {
@@ -49,12 +37,6 @@ const jsonLd = {
       closes: "00:00",
     },
   ],
-  contactPoint: {
-    "@type": "ContactPoint",
-    telephone: "+393278840255",
-    contactType: "customer service",
-    availableLanguage: "Italian",
-  },
   itemOffered: [
     {
       "@type": "Service",

@@ -17,3 +17,25 @@ export const GOOGLE_BUSINESS_URL =
 
 export const GOOGLE_RATING_VALUE = "4.9";
 export const GOOGLE_REVIEW_COUNT = 15;
+
+export const ORGANIZATION_JSON_LD = {
+  "@type": "HealthAndBeautyBusiness",
+  "@id": `${SITE_URL}/#organization`,
+  name: "Elisa Piovan Trainer",
+  alternateName: ["EP Team", "Elitrainer"],
+  url: `${SITE_URL}/`,
+  telephone: "+393278840255",
+  areaServed: [
+    { "@type": "City", name: "Noventa Padovana" },
+    { "@type": "City", name: "Vigonza" },
+    { "@type": "City", name: "Padova" },
+    { "@type": "Country", name: "Italia" },
+  ],
+  sameAs: [INSTAGRAM_URL, TIKTOK_URL, GOOGLE_BUSINESS_URL],
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+393278840255",
+    contactType: "customer service",
+    availableLanguage: "Italian",
+  },
+};

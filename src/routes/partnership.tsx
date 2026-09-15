@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { ArrowRight, ExternalLink, Lock, Tag } from "lucide-react";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
-import { WHATSAPP_URL } from "@/lib/site";
+import { ORGANIZATION_JSON_LD, WHATSAPP_URL } from "@/lib/site";
 
 const PAGE_TITLE = "Partnership e Collaborazioni Ufficiali | Elisa Piovan Trainer";
 const PAGE_DESCRIPTION =
@@ -10,14 +10,9 @@ const PAGE_DESCRIPTION =
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "HealthAndBeautyBusiness",
-  name: "Elisa Piovan Trainer",
+  ...ORGANIZATION_JSON_LD,
   url: "https://elitrainer.it/partnership",
   description: PAGE_DESCRIPTION,
-  areaServed: [
-    { "@type": "City", name: "Padova" },
-    { "@type": "Country", name: "Italia" },
-  ],
   makesOffer: [
     {
       "@type": "Offer",

@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { Instagram } from "lucide-react";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
-import { GOOGLE_BUSINESS_URL, INSTAGRAM_URL, SITE_URL, TIKTOK_URL } from "@/lib/site";
+import { INSTAGRAM_URL, ORGANIZATION_JSON_LD, SITE_URL } from "@/lib/site";
 
 const PAGE_TITLE =
   "Contatta Elisa Piovan | Coaching Online e Personal Training al Femminile";
@@ -18,20 +18,7 @@ const jsonLd = {
   name: PAGE_TITLE,
   description: PAGE_DESCRIPTION,
   url: `${SITE_URL}/contatti`,
-  mainEntity: {
-    "@type": "HealthAndBeautyBusiness",
-    name: "Elisa Piovan Trainer",
-    alternateName: "EP Team",
-    url: SITE_URL,
-    telephone: "+393278840255",
-    contactPoint: {
-      "@type": "ContactPoint",
-      telephone: "+393278840255",
-      contactType: "customer service",
-      availableLanguage: "Italian",
-    },
-    sameAs: [INSTAGRAM_URL, TIKTOK_URL, GOOGLE_BUSINESS_URL],
-  },
+  mainEntity: ORGANIZATION_JSON_LD,
 };
 
 export const Route = createFileRoute("/contatti")({
