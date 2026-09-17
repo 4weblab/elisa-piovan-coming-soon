@@ -9,9 +9,9 @@ import {
 } from "@/components/ui/accordion";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import elisaHeroAsset from "@/assets/elisa-hero.webp.asset.json";
-import silviaTeamAsset from "@/assets/silvia-team-placeholder.webp.asset.json";
-import mimiTeamAsset from "@/assets/mimi-team.webp.asset.json";
-import ericaTeamAsset from "@/assets/erica-team.webp.asset.json";
+import silviaTeamAsset from "@/assets/silvia-team-2026.webp.asset.json";
+import mimiTeamAsset from "@/assets/mimi-team-2026.webp.asset.json";
+import ericaTeamAsset from "@/assets/erica-team-2026.webp.asset.json";
 
 
 
@@ -142,15 +142,13 @@ const TEAM: {
   text: string;
   photo: string;
   photoAlt: string;
-  photoSurface: string;
 }[] = [
   {
     name: "Silvia",
     role: "Personal Training Dedicated",
     team: "TEAM EP",
     photo: silviaTeamAsset.url,
-    photoAlt: "Segnaposto temporaneo per la foto di Silvia",
-    photoSurface: "bg-secondary",
+    photoAlt: "Foto di Silvia, personal trainer del Team EP",
     text: "Programmi di allenamento personalizzati e monitoraggio costante (in presenza o online) guidati da una Personal Trainer dell'EP Team per raggiungere i tuoi obiettivi fisici in totale sicurezza.",
   },
 
@@ -160,7 +158,6 @@ const TEAM: {
     team: "NUTRIZIONISTA TEAM EP",
     photo: ericaTeamAsset.url,
     photoAlt: "Foto di Erica, nutrizionista del Team EP",
-    photoSurface: "surface-forest",
 
     text: "Piani alimentari flessibili ed educazione alimentare a cura della Nutrizionista dell'EP Team, pensati per nutrire il corpo senza privazioni o diete restrittive.",
   },
@@ -170,7 +167,6 @@ const TEAM: {
     team: "PSICOLOGA TEAM EP",
     photo: mimiTeamAsset.url,
     photoAlt: "Foto di Mimì, psicologa del Team EP",
-    photoSurface: "bg-primary",
 
     text: "Incontri dedicati con la Psicologa del team per superare i blocchi emotivi, gestire lo stress e costruire un rapporto sano con la tua immagine corporea. Perché il tuo unico limite sei TU.",
   },
@@ -356,7 +352,7 @@ function ServiziEpTeamPage() {
                   {...itemProps}
                   className="group grid min-h-full grid-rows-[17rem_1fr] overflow-hidden rounded-2xl border border-border surface-card bg-card shadow-premium transition-all duration-300 hover:-translate-y-1 hover:shadow-premium-hover"
                 >
-                  <div className={`relative flex items-end justify-center overflow-hidden ${member.photoSurface}`}>
+                  <div className="relative flex items-end justify-center overflow-hidden bg-card">
                     <img
                       src={member.photo}
                       alt={member.photoAlt}
