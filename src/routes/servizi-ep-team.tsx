@@ -8,10 +8,10 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
-import elisaHeroAsset from "@/assets/elisa-hero.webp.asset.json";
-import silviaTeamAsset from "@/assets/silvia-team-2026.webp.asset.json";
-import mimiTeamAsset from "@/assets/mimi-team-2026.webp.asset.json";
-import ericaTeamAsset from "@/assets/erica-team-2026.webp.asset.json";
+import elisaHeroAsset from "@/assets/elisa-hero.webp";
+import silviaTeamAsset from "@/assets/silvia-team-2026.webp";
+import mimiTeamAsset from "@/assets/mimi-team-2026.webp";
+import ericaTeamAsset from "@/assets/erica-team-2026.webp";
 
 
 
@@ -147,7 +147,7 @@ const TEAM: {
     name: "Silvia",
     role: "Personal Training Dedicated",
     team: "TEAM EP",
-    photo: silviaTeamAsset.url,
+    photo: silviaTeamAsset,
     photoAlt: "Foto di Silvia, personal trainer del Team EP",
     text: "Programmi di allenamento personalizzati e monitoraggio costante (in presenza o online) guidati da una Personal Trainer dell'EP Team per raggiungere i tuoi obiettivi fisici in totale sicurezza.",
   },
@@ -156,7 +156,7 @@ const TEAM: {
     name: "Erica",
     role: "Nutrizione e Alimentazione Funzionale",
     team: "NUTRIZIONISTA TEAM EP",
-    photo: ericaTeamAsset.url,
+    photo: ericaTeamAsset,
     photoAlt: "Foto di Erica, nutrizionista del Team EP",
 
     text: "Piani alimentari flessibili ed educazione alimentare a cura della Nutrizionista dell'EP Team, pensati per nutrire il corpo senza privazioni o diete restrittive.",
@@ -165,7 +165,7 @@ const TEAM: {
     name: "Mimì",
     role: "Mindset e Supporto Psicologico",
     team: "PSICOLOGA TEAM EP",
-    photo: mimiTeamAsset.url,
+    photo: mimiTeamAsset,
     photoAlt: "Foto di Mimì, psicologa del Team EP",
 
     text: "Incontri dedicati con la Psicologa del team per superare i blocchi emotivi, gestire lo stress e costruire un rapporto sano con la tua immagine corporea.",
@@ -252,7 +252,7 @@ function ServiziEpTeamPage() {
 
           <motion.div {...revealProps}>
             <img
-              src={elisaHeroAsset.url}
+              src={elisaHeroAsset}
               alt="Elisa Piovan in sessione di coaching"
               width={1200}
               height={1089}

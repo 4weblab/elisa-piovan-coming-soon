@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { AnimatePresence, motion } from "framer-motion";
 import { Apple, ArrowRight, Brain, Check, Dumbbell, Instagram, Star } from "lucide-react";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
-import heroBgAsset from "@/assets/elisa-hero-bg.webp.asset.json";
+import heroBgAsset from "@/assets/elisa-hero-bg.webp";
 import { GOOGLE_BUSINESS_URL, GOOGLE_RATING_VALUE, GOOGLE_REVIEW_COUNT, ORGANIZATION_JSON_LD, SITE_URL, WHATSAPP_URL } from "@/lib/site";
 
 const PAGE_TITLE = "Personal Trainer Padova e Coaching Online Femminile";
@@ -255,7 +255,7 @@ function HomePage() {
       {/* Hero */}
       <section className="relative overflow-hidden border-b border-border">
         <img
-          src={heroBgAsset.url}
+          src={heroBgAsset}
           alt="Elisa Piovan durante un allenamento in palestra"
           className="absolute inset-0 h-full w-full object-cover object-[center_25%]"
           loading="eager"
