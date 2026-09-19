@@ -4,7 +4,7 @@ import { ArrowRight, ExternalLink, Lock, Tag } from "lucide-react";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import { ORGANIZATION_JSON_LD, WHATSAPP_URL } from "@/lib/site";
 
-const PAGE_TITLE = "Partnership e Collaborazioni Ufficiali | Elisa Piovan Trainer";
+const PAGE_TITLE = "Partnership e Collaborazioni Ufficiali | Elisa Piovan";
 const PAGE_DESCRIPTION =
   "Scopri i marchi e i centri d'eccellenza selezionati da Elisa Piovan per il benessere femminile. Sconti e vantaggi esclusivi riservati all'EP Team.";
 

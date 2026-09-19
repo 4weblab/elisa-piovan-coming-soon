@@ -5,8 +5,7 @@ import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import heroBgAsset from "@/assets/elisa-hero-bg.webp.asset.json";
 import { GOOGLE_BUSINESS_URL, GOOGLE_RATING_VALUE, GOOGLE_REVIEW_COUNT, ORGANIZATION_JSON_LD, SITE_URL, WHATSAPP_URL } from "@/lib/site";
 
-const PAGE_TITLE =
-  "Personal Trainer Padova e Coaching Online Femminile | Elisa Piovan";
+const PAGE_TITLE = "Personal Trainer Padova e Coaching Online Femminile";
 const PAGE_DESCRIPTION =
   "Personal training e coaching online al femminile a Padova. Allenamento, nutrizione e benessere con Elisa Piovan Trainer. Contattaci su WhatsApp."
 
@@ -29,12 +28,6 @@ const jsonLd = {
       dayOfWeek: "Saturday",
       opens: "09:00",
       closes: "12:00",
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: "Sunday",
-      opens: "00:00",
-      closes: "00:00",
     },
   ],
   itemOffered: [
@@ -236,23 +229,6 @@ const MotionH1 = motion.h1;
 const MotionH2 = motion.h2;
 const MotionUl = motion.ul;
 const MotionLi = motion.li;
-
-const heroContainer = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.1 },
-  },
-} as const;
-
-const heroItem = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as const },
-  },
-} as const;
 
 const sectionContainer = {
   hidden: { opacity: 0 },

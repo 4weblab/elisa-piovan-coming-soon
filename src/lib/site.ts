@@ -24,6 +24,8 @@ export const ORGANIZATION_JSON_LD = {
   name: "Elisa Piovan Trainer",
   alternateName: ["EP Team", "Elitrainer"],
   url: `${SITE_URL}/`,
+  logo: `${SITE_URL}/apple-touch-icon.png`,
+  image: `${SITE_URL}/og-cover.jpg`,
   telephone: "+393278840255",
   areaServed: [
     { "@type": "City", name: "Noventa Padovana" },

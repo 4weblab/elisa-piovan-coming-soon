@@ -5,7 +5,7 @@ import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import { INSTAGRAM_URL, ORGANIZATION_JSON_LD, SITE_URL } from "@/lib/site";
 
 const PAGE_TITLE =
-  "Contatta Elisa Piovan | Coaching Online e Personal Training al Femminile";
+  "Contatta Elisa Piovan | Personal Trainer al Femminile";
 const PAGE_DESCRIPTION =
   "Fai il primo passo verso il tuo benessere. Contatta direttamente Elisa su WhatsApp o Instagram per iniziare il tuo percorso personalizzato.";
 

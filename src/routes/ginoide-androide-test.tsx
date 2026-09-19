@@ -14,8 +14,7 @@ import androideIllustrazioneAsset from "@/assets/androide-illustrazione.webp.ass
 import { SITE_URL } from "@/lib/site";
 
 const PATH = "/ginoide-androide-test";
-const TITLE =
-  "Quiz Fisico & Biotipo Test: Scopri se sei Ginoide o Androide | Elisa Piovan";
+const TITLE = "Test Ginoide o Androide: scopri il tuo biotipo";
 const DESCRIPTION =
   "Fai il test fisico gratuito in 5 domande. Scopri se il tuo biotipo è Androide o Ginoide e ricevi la strategia di allenamento e nutrizione ideale.";
 
