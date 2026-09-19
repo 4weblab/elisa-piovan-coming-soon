@@ -191,7 +191,8 @@ function PrivacyPolicyPage() {
                 strettamente necessario a gestire la richiesta di contatto e gli eventuali scambi informativi/precontrattuali,
                 e comunque non oltre <strong>24 mesi</strong> dalla raccolta, salvo obblighi di legge o richiesta di
                 cancellazione anticipata da parte dell’utente. I log tecnici sono conservati secondo i tempi previsti dal
-                provider di hosting, generalmente pochi giorni/settimane.
+                provider di hosting, generalmente pochi giorni/settimane. Per i curricula ricevuti valgono
+                i tempi indicati nella sezione 10.
               </p>
             </motion.div>
 
@@ -216,6 +217,10 @@ function PrivacyPolicyPage() {
                   WhatsApp o invia un messaggio, i dati sono trattati secondo le policy di WhatsApp e Meta, sulle quali
                   il Titolare non ha controllo diretto.
                 </li>
+                <li>
+                  <strong>Google (Gmail, servizio di posta elettronica)</strong> — per la ricezione e la gestione delle
+                  email inviate al Titolare, comprese le candidature spontanee.
+                </li>
               </ul>
             </motion.div>
 
@@ -224,7 +229,8 @@ function PrivacyPolicyPage() {
                 7. Trasferimento dei dati all’estero
               </h2>
               <p className="text-base leading-relaxed text-muted-foreground">
-                Alcuni fornitori di servizi tecnici (come Web3Forms e WhatsApp/Meta) potrebbero trattare i dati in server
+                Alcuni fornitori di servizi tecnici (come Web3Forms, WhatsApp/Meta e Google — Gmail, servizio di posta
+                elettronica) potrebbero trattare i dati in server
                 situati al di fuori dello Spazio Economico Europeo. In tali casi, il trasferimento avviene sulla base di
                 adeguate garanzie previste dal GDPR, quali le Clausole Contrattuali Standard (SCC) approvate dalla
                 Commissione Europea, o altri meccanismi legalmente riconosciuti.
@@ -274,7 +280,7 @@ function PrivacyPolicyPage() {
 
             <motion.div {...revealProps} className="flex flex-col gap-4">
               <h2 className="font-display text-xl font-bold tracking-tight text-foreground md:text-2xl">
-                10. Disclaimer sui contenuti del quiz
+                11. Disclaimer sui contenuti del quiz
               </h2>
               <p className="text-base leading-relaxed text-muted-foreground">
                 Il risultato del quiz “Che fisico hai?” e le indicazioni fornite hanno esclusivamente scopo informativo e
