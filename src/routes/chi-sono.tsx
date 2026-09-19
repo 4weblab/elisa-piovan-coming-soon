@@ -79,54 +79,23 @@ function ChiSonoPage() {
         <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 md:grid-cols-2 md:items-center md:gap-16 md:py-28">
           <motion.div
             className="order-2 flex flex-col gap-6 md:order-1"
-            initial="hidden"
-            animate="visible"
-            variants={{
-              hidden: {},
-              visible: {
-                transition: { staggerChildren: 0.1 },
-              },
-            }}
           >
             <motion.h1
-              variants={{
-                hidden: { opacity: 0, y: 30 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               className="w-fit rounded-full border border-border bg-secondary px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-muted-foreground"
             >
               Elisa Piovan | Fitness Coach al Femminile
             </motion.h1>
-
             <motion.h2
-              variants={{
-                hidden: { opacity: 0, y: 30 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               className="font-display text-3xl font-bold leading-tight tracking-tight text-foreground md:text-4xl lg:text-5xl"
             >
               Oltre l'allenamento: un invito a riscoprirti semplicemente come donna
             </motion.h2>
-
             <motion.p
-              variants={{
-                hidden: { opacity: 0, y: 30 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               className="text-base leading-relaxed text-muted-foreground md:text-lg"
             >
               In sedici anni di lavoro ho allenato tantissime donne, e ho visto ripetersi sempre la stessa scena: arrivavano da me con un obiettivo estetico — dimagrire, tonificare, "sistemare" qualcosa — ma dietro quell'obiettivo c'era quasi sempre qualcos'altro. Una donna che si era persa un po' di vista. Che aveva passato anni a dare priorità a tutto e tutti tranne che a se stessa: il lavoro, i figli, la famiglia, le aspettative degli altri. Il corpo era solo il sintomo più visibile di un ascolto che mancava da tempo.
             </motion.p>
-
             <motion.p
-              variants={{
-                hidden: { opacity: 0, y: 30 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               className="text-base leading-relaxed text-muted-foreground md:text-lg"
             >
               Ho capito che per affrontare davvero questo, serviva uno spazio pensato unicamente per l'esperienza femminile — un programma fitness costruito partendo da come il corpo e la mente di una donna cambiano nel tempo: il ciclo, la maternità, la menopausa, i momenti di transizione che nessun percorso standard tiene davvero in considerazione. Da donna a donna, capisco certe cose ancora prima che mi vengano dette.

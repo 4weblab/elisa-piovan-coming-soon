@@ -287,27 +287,19 @@ function HomePage() {
         />
         <div className="absolute inset-0 bg-forest/25" aria-hidden="true" />
         <MotionDiv
-          variants={heroContainer}
-          initial="hidden"
-          animate="visible"
           className="relative z-10 mx-auto max-w-6xl px-6 py-24 md:py-36"
         >
           <MotionP
-            variants={heroItem}
             className="font-display text-[0.7rem] font-semibold tracking-[0.28em] text-cream/75 uppercase"
           >
             ELISA PIOVAN FITNESS COACH AL FEMMINILE | PADOVA & ONLINE
           </MotionP>
-
           <MotionH1
-            variants={heroItem}
             className="mt-6 max-w-3xl text-4xl leading-[1.08] font-extrabold tracking-tight text-balance text-cream sm:text-5xl md:text-6xl"
           >
             Coaching Online e Personal Training al Femminile a Padova
           </MotionH1>
-
           <MotionP
-            variants={heroItem}
             className="mt-6 max-w-xl text-base leading-relaxed text-pretty text-cream/85 sm:text-lg"
           >
             <MotionLink
@@ -326,9 +318,7 @@ function HomePage() {
              personalizzato, nutrizione, beauty e supporto psicologico per donne. A
              Padova e online.
           </MotionP>
-
           <MotionDiv
-            variants={heroItem}
             className="mt-10 flex flex-col gap-4 sm:flex-row"
           >
             <MotionA

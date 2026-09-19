@@ -244,43 +244,20 @@ function PartnershipPage() {
       <section className="border-b border-border/70 surface-base bg-background">
         <div className="mx-auto max-w-4xl px-6 py-16 text-center md:py-24">
           <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={{
-              hidden: {},
-              visible: { transition: { staggerChildren: 0.1 } },
-            }}
             className="flex flex-col items-center gap-5"
           >
             <motion.p
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
               className="max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg"
             >
               Condivido con la mia community solo ciò che ho testato e valutato personalmente per il
               benessere femminile.
             </motion.p>
-
             <motion.h1
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
               className="font-display text-3xl font-bold tracking-tight text-foreground md:text-4xl lg:text-5xl"
             >
               Gli Alleati del Tuo Benessere: Le Partnership Ufficiali
             </motion.h1>
-
             <motion.p
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
               className="max-w-3xl text-base leading-relaxed text-muted-foreground md:text-lg"
             >
               Ho selezionato marchi, centri medico-diagnostici e realtà eccellenti del settore per

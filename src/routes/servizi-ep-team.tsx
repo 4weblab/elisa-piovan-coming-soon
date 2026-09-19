@@ -222,63 +222,28 @@ function ServiziEpTeamPage() {
         <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 md:grid-cols-[1.2fr_1fr] md:items-center md:gap-16 md:py-28">
           <motion.div
             className="flex flex-col gap-6"
-            initial="hidden"
-            animate="visible"
-            variants={{
-              hidden: {},
-              visible: { transition: { staggerChildren: 0.1 } },
-            }}
           >
             <motion.h1
-              variants={{
-                hidden: { opacity: 0, y: 30 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               className="w-fit rounded-full border border-border bg-secondary px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-muted-foreground"
             >
               Coaching Online e Personal Training al Femminile: Il Metodo EP
             </motion.h1>
-
             <motion.p
-              variants={{
-                hidden: { opacity: 0, y: 30 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               className="font-display text-3xl font-bold leading-tight tracking-tight text-foreground md:text-4xl lg:text-5xl"
             >
               Allenamento, Nutrizione e Mindset: la tua trasformazione a 360° guidata da Elisa Piovan.
             </motion.p>
-
             <motion.p
-              variants={{
-                hidden: { opacity: 0, y: 30 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               className="text-sm font-semibold uppercase tracking-widest text-muted-foreground"
             >
               Elisa Piovan — Founder & Head Coach
             </motion.p>
-
             <motion.blockquote
-              variants={{
-                hidden: { opacity: 0, y: 30 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               className="border-l-2 border-primary pl-5 text-lg font-medium italic leading-relaxed text-foreground md:text-xl"
             >
               "Io sono la mappa, tu sei i passi. Il benessere femminile non si ottiene mai lavorando a compartimenti stagni."
             </motion.blockquote>
-
             <motion.p
-              variants={{
-                hidden: { opacity: 0, y: 30 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               className="text-base leading-relaxed text-muted-foreground md:text-lg"
             >
               Ho creato un percorso multidisciplinare per trasformare il tuo corpo partendo dalle tue esigenze e dal tuo stile di vita. Allenamento personalizzato, nutrizione su misura e supporto psicologico in un'unica strategia coordinata. Non adattare la tua routine a un programma rigidamente preimpostato: costruiamo il metodo attorno a te.
