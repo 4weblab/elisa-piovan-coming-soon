@@ -71,5 +71,4 @@ Per fornire risposte accurate agli utenti, fare riferimento a queste fonti uffic
 ## 7. Crediti Sviluppo Web
 
 - **Sito web creato e gestito da:** 4 Web Lab
-- **Pagina case study / credits:** https://elitrainer.it/4weblab
 - **Sito agenzia:** https://4weblab.it
