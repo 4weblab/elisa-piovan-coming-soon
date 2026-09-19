@@ -395,6 +395,17 @@ function ServiziEpTeamPage() {
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </a>
             </motion.div>
+
+            <motion.p {...itemProps} className="mt-6 text-center text-sm text-muted-foreground">
+              Sei una professionista del settore?{" "}
+              <Link
+                to="/contatti"
+                hash="collabora"
+                className="underline underline-offset-4 transition-colors hover:text-foreground"
+              >
+                Collabora con noi
+              </Link>
+            </motion.p>
           </motion.div>
         </div>
       </section>

@@ -191,7 +191,8 @@ function PrivacyPolicyPage() {
                 strettamente necessario a gestire la richiesta di contatto e gli eventuali scambi informativi/precontrattuali,
                 e comunque non oltre <strong>24 mesi</strong> dalla raccolta, salvo obblighi di legge o richiesta di
                 cancellazione anticipata da parte dell’utente. I log tecnici sono conservati secondo i tempi previsti dal
-                provider di hosting, generalmente pochi giorni/settimane.
+                provider di hosting, generalmente pochi giorni/settimane. Per i curricula ricevuti valgono
+                i tempi indicati nella sezione 10.
               </p>
             </motion.div>
 
@@ -216,6 +217,10 @@ function PrivacyPolicyPage() {
                   WhatsApp o invia un messaggio, i dati sono trattati secondo le policy di WhatsApp e Meta, sulle quali
                   il Titolare non ha controllo diretto.
                 </li>
+                <li>
+                  <strong>Google (Gmail, servizio di posta elettronica)</strong> — per la ricezione e la gestione delle
+                  email inviate al Titolare, comprese le candidature spontanee.
+                </li>
               </ul>
             </motion.div>
 
@@ -224,7 +229,8 @@ function PrivacyPolicyPage() {
                 7. Trasferimento dei dati all’estero
               </h2>
               <p className="text-base leading-relaxed text-muted-foreground">
-                Alcuni fornitori di servizi tecnici (come Web3Forms e WhatsApp/Meta) potrebbero trattare i dati in server
+                Alcuni fornitori di servizi tecnici (come Web3Forms, WhatsApp/Meta e Google — Gmail, servizio di posta
+                elettronica) potrebbero trattare i dati in server
                 situati al di fuori dello Spazio Economico Europeo. In tali casi, il trasferimento avviene sulla base di
                 adeguate garanzie previste dal GDPR, quali le Clausole Contrattuali Standard (SCC) approvate dalla
                 Commissione Europea, o altri meccanismi legalmente riconosciuti.
@@ -272,9 +278,61 @@ function PrivacyPolicyPage() {
               </p>
             </motion.div>
 
+            <motion.div
+              {...revealProps}
+              id="candidature"
+              className="flex scroll-mt-28 flex-col gap-4"
+            >
+              <h2 className="font-display text-xl font-bold tracking-tight text-foreground md:text-2xl">
+                10. Candidature spontanee e curriculum
+              </h2>
+              <p className="text-base leading-relaxed text-muted-foreground">
+                Se invii il tuo curriculum all’indirizzo email indicato nella pagina Contatti, i dati
+                contenuti nella candidatura (dati anagrafici e di contatto, incluso l’indirizzo email del
+                mittente, formazione ed esperienze professionali) sono trattati dal Titolare (vedi sezione 1)
+                esclusivamente a uso interno.
+              </p>
+              <ul className="list-disc space-y-2 pl-5 text-base leading-relaxed text-muted-foreground">
+                <li>
+                  <strong>Finalità:</strong> valutare la tua candidatura e l’eventuale instaurazione di una
+                  collaborazione professionale e, se opportuno, ricontattarti a questo scopo.
+                </li>
+                <li>
+                  <strong>Base giuridica:</strong> misure precontrattuali adottate su tua richiesta (art. 6,
+                  par. 1, lett. b, GDPR). Ai sensi dell’art. 111-bis del D.Lgs. 196/2003, per i curricula
+                  inviati spontaneamente non è richiesto il consenso.
+                </li>
+                <li>
+                  <strong>Natura del conferimento:</strong> facoltativa; senza il curriculum non è possibile
+                  valutare la candidatura.
+                </li>
+                <li>
+                  <strong>Uso esclusivamente interno:</strong> i dati non sono ceduti né comunicati a terzi,
+                  non sono diffusi e non sono utilizzati per newsletter, comunicazioni promozionali,
+                  profilazione o processi decisionali automatizzati.
+                </li>
+                <li>
+                  <strong>Destinatari:</strong> solo soggetti autorizzati dal Titolare e i fornitori tecnici
+                  del servizio di posta elettronica (Google/Gmail).
+                </li>
+                <li>
+                  <strong>Conservazione:</strong> 12 mesi dalla ricezione, poi i dati vengono cancellati.
+                  Puoi chiedere la cancellazione anticipata in qualsiasi momento.
+                </li>
+                <li>
+                  <strong>Dati non pertinenti:</strong> ti invitiamo a non includere nel curriculum
+                  informazioni non necessarie alla valutazione professionale (ad esempio dati sulla salute,
+                  opinioni politiche o convinzioni religiose).
+                </li>
+              </ul>
+              <p className="text-base leading-relaxed text-muted-foreground">
+                Per l’esercizio dei diritti e per il reclamo al Garante valgono le indicazioni della sezione 8.
+              </p>
+            </motion.div>
+
             <motion.div {...revealProps} className="flex flex-col gap-4">
               <h2 className="font-display text-xl font-bold tracking-tight text-foreground md:text-2xl">
-                10. Disclaimer sui contenuti del quiz
+                11. Disclaimer sui contenuti del quiz
               </h2>
               <p className="text-base leading-relaxed text-muted-foreground">
                 Il risultato del quiz “Che fisico hai?” e le indicazioni fornite hanno esclusivamente scopo informativo e

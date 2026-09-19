@@ -62,6 +62,15 @@ export function Footer() {
                 Cookie Policy
               </Link>
             </li>
+            <li>
+              <Link
+                to="/contatti"
+                hash="collabora"
+                className="transition-colors hover:text-foreground"
+              >
+                Collabora con noi
+              </Link>
+            </li>
           </ul>
         </nav>
 
