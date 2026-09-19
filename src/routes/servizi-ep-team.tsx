@@ -168,7 +168,7 @@ const TEAM: {
     photo: mimiTeamAsset.url,
     photoAlt: "Foto di Mimì, psicologa del Team EP",
 
-    text: "Incontri dedicati con la Psicologa del team per superare i blocchi emotivi, gestire lo stress e costruire un rapporto sano con la tua immagine corporea. Perché il tuo unico limite sei TU.",
+    text: "Incontri dedicati con la Psicologa del team per superare i blocchi emotivi, gestire lo stress e costruire un rapporto sano con la tua immagine corporea.",
   },
 ];
 
