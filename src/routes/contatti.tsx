@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { Instagram } from "lucide-react";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
@@ -239,6 +239,45 @@ function ContattiPage() {
                 (Puoi scrivermi nei DM per qualsiasi informazione)
               </span>
             </motion.a>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* COLLABORA CON NOI */}
+      <section
+        id="collabora"
+        className="scroll-mt-28 border-t border-border/70 surface-base bg-background pb-16 md:pb-24"
+      >
+        <div className="mx-auto max-w-3xl px-6 pt-16 md:pt-20">
+          <motion.div
+            {...revealProps}
+            className="flex flex-col items-center gap-4 rounded-2xl border border-border bg-secondary/20 p-8 text-center md:p-10"
+          >
+            <h2 className="font-display text-2xl font-bold tracking-tight text-foreground md:text-3xl">
+              Fai parte del network EP Team
+            </h2>
+            <p className="max-w-2xl text-base leading-relaxed text-muted-foreground">
+              Sei una personal trainer, una nutrizionista o una psicologa specializzata in
+              fitness? Inviaci il curriculum: valutiamo con costanza l'ampliamento dei servizi
+              che offriamo.
+            </p>
+            <a
+              href="mailto:elisapiovantrainer@gmail.com?subject=Candidatura%20spontanea"
+              className="mt-2 inline-flex items-center justify-center rounded-full border border-border px-7 py-3 text-sm font-semibold text-foreground transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/40"
+            >
+              Invia il tuo CV
+            </a>
+            <p className="max-w-xl text-xs leading-relaxed text-muted-foreground">
+              I dati che ci invii sono usati solo internamente per valutare la tua candidatura.{" "}
+              <Link
+                to="/privacy-policy"
+                hash="candidature"
+                className="underline underline-offset-4 transition-colors hover:text-foreground"
+              >
+                Leggi l'informativa sulle candidature
+              </Link>
+              .
+            </p>
           </motion.div>
         </div>
       </section>
