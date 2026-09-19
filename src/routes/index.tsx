@@ -5,8 +5,7 @@ import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import heroBgAsset from "@/assets/elisa-hero-bg.webp.asset.json";
 import { GOOGLE_BUSINESS_URL, GOOGLE_RATING_VALUE, GOOGLE_REVIEW_COUNT, ORGANIZATION_JSON_LD, SITE_URL, WHATSAPP_URL } from "@/lib/site";
 
-const PAGE_TITLE =
-  "Personal Trainer Padova e Coaching Online Femminile | Elisa Piovan";
+const PAGE_TITLE = "Personal Trainer Padova e Coaching Online Femminile";
 const PAGE_DESCRIPTION =
   "Personal training e coaching online al femminile a Padova. Allenamento, nutrizione e benessere con Elisa Piovan Trainer. Contattaci su WhatsApp."
 
@@ -29,12 +28,6 @@ const jsonLd = {
       dayOfWeek: "Saturday",
       opens: "09:00",
       closes: "12:00",
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: "Sunday",
-      opens: "00:00",
-      closes: "00:00",
     },
   ],
   itemOffered: [
@@ -237,23 +230,6 @@ const MotionH2 = motion.h2;
 const MotionUl = motion.ul;
 const MotionLi = motion.li;
 
-const heroContainer = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.1 },
-  },
-} as const;
-
-const heroItem = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as const },
-  },
-} as const;
-
 const sectionContainer = {
   hidden: { opacity: 0 },
   visible: {
@@ -287,27 +263,19 @@ function HomePage() {
         />
         <div className="absolute inset-0 bg-forest/25" aria-hidden="true" />
         <MotionDiv
-          variants={heroContainer}
-          initial="hidden"
-          animate="visible"
           className="relative z-10 mx-auto max-w-6xl px-6 py-24 md:py-36"
         >
           <MotionP
-            variants={heroItem}
             className="font-display text-[0.7rem] font-semibold tracking-[0.28em] text-cream/75 uppercase"
           >
             ELISA PIOVAN FITNESS COACH AL FEMMINILE | PADOVA & ONLINE
           </MotionP>
-
           <MotionH1
-            variants={heroItem}
             className="mt-6 max-w-3xl text-4xl leading-[1.08] font-extrabold tracking-tight text-balance text-cream sm:text-5xl md:text-6xl"
           >
             Coaching Online e Personal Training al Femminile a Padova
           </MotionH1>
-
           <MotionP
-            variants={heroItem}
             className="mt-6 max-w-xl text-base leading-relaxed text-pretty text-cream/85 sm:text-lg"
           >
             <MotionLink
@@ -326,9 +294,7 @@ function HomePage() {
              personalizzato, nutrizione, beauty e supporto psicologico per donne. A
              Padova e online.
           </MotionP>
-
           <MotionDiv
-            variants={heroItem}
             className="mt-10 flex flex-col gap-4 sm:flex-row"
           >
             <MotionA

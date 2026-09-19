@@ -2,50 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://elitrainer.it/</loc>
-    <lastmod>2026-09-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-09-19</lastmod>
   </url>
   <url>
     <loc>https://elitrainer.it/chi-sono</loc>
-    <lastmod>2026-09-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-09-19</lastmod>
   </url>
   <url>
     <loc>https://elitrainer.it/servizi-ep-team</loc>
-    <lastmod>2026-09-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-09-19</lastmod>
   </url>
   <url>
     <loc>https://elitrainer.it/ginoide-androide-test</loc>
-    <lastmod>2026-09-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-09-19</lastmod>
   </url>
   <url>
     <loc>https://elitrainer.it/partnership</loc>
-    <lastmod>2026-09-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-09-19</lastmod>
   </url>
   <url>
     <loc>https://elitrainer.it/contatti</loc>
-    <lastmod>2026-09-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-09-19</lastmod>
   </url>
   <url>
     <loc>https://elitrainer.it/privacy-policy</loc>
-    <lastmod>2026-09-15</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <lastmod>2026-09-19</lastmod>
   </url>
   <url>
     <loc>https://elitrainer.it/cookie-policy</loc>
-    <lastmod>2026-09-15</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <lastmod>2026-09-19</lastmod>
   </url>
 </urlset>

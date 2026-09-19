@@ -11,6 +11,7 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
+import cormorantItalicWoff2 from "@fontsource/cormorant-garamond/files/cormorant-garamond-latin-600-italic.woff2?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
@@ -95,24 +96,29 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Elisa Piovan Trainer" },
       { property: "og:locale", content: "it_IT" },
+      { property: "og:image", content: "https://elitrainer.it/og-cover.jpg" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      {
+        property: "og:image:alt",
+        content: "Elisa Piovan Trainer – coaching al femminile a Padova",
+      },
+      { name: "twitter:image", content: "https://elitrainer.it/og-cover.jpg" },
     ],
     links: [
+      {
+        rel: "preload",
+        as: "font",
+        type: "font/woff2",
+        href: cormorantItalicWoff2,
+        crossOrigin: "anonymous",
+      },
       {
         rel: "stylesheet",
         href: appCss,
       },
       { rel: "icon", type: "image/png", href: "/favicon.png" },
       { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      {
-        rel: "preconnect",
-        href: "https://fonts.gstatic.com",
-        crossOrigin: "anonymous",
-      },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,500;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap",
-      },
     ],
   }),
 
