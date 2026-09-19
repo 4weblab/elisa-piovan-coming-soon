@@ -259,7 +259,8 @@ function ContattiPage() {
             <p className="max-w-2xl text-base leading-relaxed text-muted-foreground">
               Sei una personal trainer, una nutrizionista o una psicologa specializzata in
               fitness? Inviaci il curriculum: valutiamo con costanza l'ampliamento dei servizi
-              che offriamo.
+              che offriamo. Inviaci una mail con tutti tuoi dati e CV aggiornato a
+              elisapiovantrainer@gmail.com
             </p>
             <a
               href="mailto:elisapiovantrainer@gmail.com?subject=Candidatura%20spontanea"
