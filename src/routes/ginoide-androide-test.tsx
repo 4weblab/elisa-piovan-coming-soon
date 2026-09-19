@@ -9,8 +9,8 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
-import ginoideIllustrazioneAsset from "@/assets/ginoide-illustrazione.webp.asset.json";
-import androideIllustrazioneAsset from "@/assets/androide-illustrazione.webp.asset.json";
+import ginoideIllustrazioneAsset from "@/assets/ginoide-illustrazione.webp";
+import androideIllustrazioneAsset from "@/assets/androide-illustrazione.webp";
 import { SITE_URL } from "@/lib/site";
 
 const PATH = "/ginoide-androide-test";
@@ -132,7 +132,7 @@ const RESULTS = {
   androide: {
     key: "androide" as const,
     label: "ANDROIDE",
-    cover: androideIllustrazioneAsset.url,
+    cover: androideIllustrazioneAsset,
     profile:
       "Tendi ad accumulare adipe prevalentemente nella zona addominale, sul girovita, sulle braccia e in generale tutta la parte alta del corpo. La circolazione a livello di inferiori è generalmente buona e le gambe sono visivamente più asciutte e snelle rispetto al tronco.",
     tips: [
@@ -163,7 +163,7 @@ const RESULTS = {
   ginoide: {
     key: "ginoide" as const,
     label: "GINOIDE",
-    cover: ginoideIllustrazioneAsset.url,
+    cover: ginoideIllustrazioneAsset,
     profile:
       "La concentrazione di adipe e ritenzione si localizza prevalentemente su fianchi, glutei e cosce. La parte superiore del tronco (spalle, torace, girovita) tende a rimanere sottile ed esile. Risenti maggiormente di rallentamento della microcircolazione, stasi linfatica e sensazione di pesantezza e gonfiore alle gambe.",
     tips: [

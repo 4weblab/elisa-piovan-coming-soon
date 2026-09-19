@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import elisaAllenamentoAsset from "@/assets/elisa-allenamento.webp.asset.json";
-import elisaRitrattoAsset from "@/assets/elisa-ritratto.webp.asset.json";
+import elisaAllenamentoAsset from "@/assets/elisa-allenamento.webp";
+import elisaRitrattoAsset from "@/assets/elisa-ritratto.webp";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import { INSTAGRAM_URL, ORGANIZATION_JSON_LD, SITE_URL, TIKTOK_URL } from "@/lib/site";
 
@@ -107,7 +107,7 @@ function ChiSonoPage() {
             {...revealProps}
           >
             <img
-              src={elisaRitrattoAsset.url}
+              src={elisaRitrattoAsset}
               alt="foto primo piano Elisa Piovan"
               width={900}
               height={1462}
@@ -136,7 +136,7 @@ function ChiSonoPage() {
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 md:grid-cols-2 md:gap-16">
           <motion.div {...revealProps}>
             <img
-              src={elisaAllenamentoAsset.url}
+              src={elisaAllenamentoAsset}
               alt="Elisa Piovan in allenamento"
               width={900}
               height={1350}

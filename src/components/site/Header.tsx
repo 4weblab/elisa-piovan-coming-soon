@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import logoAsset from "@/assets/elisa-piovan-logo-header.webp.asset.json";
+import logoAsset from "@/assets/elisa-piovan-logo-header.webp";
 
 const NAV_LINKS = [
   { to: "/", label: "Home" },
@@ -25,7 +25,7 @@ export function Header() {
           className="flex items-center gap-3 font-display text-sm font-bold tracking-[0.22em] uppercase"
         >
           <img
-            src={logoAsset.url}
+            src={logoAsset}
             alt="Logo Elisa Piovan Personal Trainer"
             width={240}
             height={240}
