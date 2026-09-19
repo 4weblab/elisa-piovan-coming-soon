@@ -48,6 +48,7 @@ export const Route = createFileRoute("/4weblab")({
     meta: [
       { title: PAGE_TITLE },
       { name: "description", content: PAGE_DESCRIPTION },
+      { name: "robots", content: "noindex, follow" },
       { property: "og:title", content: PAGE_TITLE },
       { property: "og:description", content: PAGE_DESCRIPTION },
       { property: "og:type", content: "website" },
@@ -57,7 +58,7 @@ export const Route = createFileRoute("/4weblab")({
       { name: "twitter:title", content: PAGE_TITLE },
       { name: "twitter:description", content: PAGE_DESCRIPTION },
     ],
-    links: [{ rel: "canonical", href: "https://elitrainer.it/4weblab" }],
+    links: [],
     scripts: [
       { type: "application/ld+json", children: JSON.stringify(jsonLd) },
     ],
