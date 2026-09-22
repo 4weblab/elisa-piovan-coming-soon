@@ -40,8 +40,8 @@
  */
 
 @theme {
-  --font-display: "Cormorant Garamond", ui-serif, Georgia, serif;
-  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Cormorant Garamond", "Cormorant Fallback", ui-serif, Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", "Jakarta Fallback", ui-sans-serif, system-ui, sans-serif;
 
   --color-forest: #2c3d2a;
   --color-sage: #a9bb93;
@@ -89,7 +89,7 @@
   --popover-foreground: #2c3d2a;
 
   /* CTA / conversions */
-  --primary: #c08552;
+  --primary: #96592a;
   --primary-foreground: #f3eee1;
 
   /* Sage secondary surfaces & badges */
