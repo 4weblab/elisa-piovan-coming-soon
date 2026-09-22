@@ -11,6 +11,26 @@
 @source "../src";
 @import "tw-animate-css";
 
+/* Fallback metrici: evitano lo spostamento del layout quando entrano i font reali */
+@font-face {
+  font-family: "Cormorant Fallback";
+  src: local("Georgia"), local("Times New Roman"), local("serif");
+  font-style: italic;
+  size-adjust: 88%;
+  ascent-override: 95%;
+  descent-override: 25%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "Jakarta Fallback";
+  src: local("Arial"), local("Helvetica"), local("sans-serif");
+  size-adjust: 104%;
+  ascent-override: 100%;
+  descent-override: 24%;
+  line-gap-override: 0%;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 /*
@@ -20,8 +40,8 @@
  */
 
 @theme {
-  --font-display: "Cormorant Garamond", ui-serif, Georgia, serif;
-  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Cormorant Garamond", "Cormorant Fallback", ui-serif, Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", "Jakarta Fallback", ui-sans-serif, system-ui, sans-serif;
 
   --color-forest: #2c3d2a;
   --color-sage: #a9bb93;
@@ -69,7 +89,7 @@
   --popover-foreground: #2c3d2a;
 
   /* CTA / conversions */
-  --primary: #c08552;
+  --primary: #96592a;
   --primary-foreground: #f3eee1;
 
   /* Sage secondary surfaces & badges */
