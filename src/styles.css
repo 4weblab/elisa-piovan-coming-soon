@@ -11,6 +11,26 @@
 @source "../src";
 @import "tw-animate-css";
 
+/* Fallback metrici: evitano lo spostamento del layout quando entrano i font reali */
+@font-face {
+  font-family: "Cormorant Fallback";
+  src: local("Georgia"), local("Times New Roman"), local("serif");
+  font-style: italic;
+  size-adjust: 88%;
+  ascent-override: 95%;
+  descent-override: 25%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "Jakarta Fallback";
+  src: local("Arial"), local("Helvetica"), local("sans-serif");
+  size-adjust: 104%;
+  ascent-override: 100%;
+  descent-override: 24%;
+  line-gap-override: 0%;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 /*
