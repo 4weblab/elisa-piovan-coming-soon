@@ -27,8 +27,8 @@ export function Header() {
           <img
             src={logoAsset}
             alt="Logo Elisa Piovan Personal Trainer"
-            width={240}
-            height={240}
+            width={144}
+            height={150}
             className="h-12 w-auto"
           />
           Elisa Piovan
